@@ -1,16 +1,22 @@
 import React from "react";
 import { GetStaticPaths, GetStaticProps } from "next";
+import { ParsedUrlQuery } from "querystring";
 import Head from "next/head";
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
 import Image from "next/image";
 import { getPort, getPorts } from "../lib/ports";
 
-export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const portProps = await getPort(params.port);
+interface IParams extends ParsedUrlQuery {
+  port: string;
+}
+
+export const getStaticProps: GetStaticProps = async (context) => {
+  const port = context.params as IParams;
+  const portProps = await getPort(port.port);
   return {
     props: {
-      portProps,
+      ...portProps,
     },
   };
 };
@@ -30,20 +36,11 @@ export const getStaticPaths: GetStaticPaths = async () => {
   };
 };
 
-export default function Port({
-  portProps,
-}: {
-  portProps: {
-    por: string;
-    title: string;
-    platform: Array<"all" | "mac" | "windows" | "linux">;
-    contentHtml: string;
-  };
-}) {
+export default function Port({ port, title, platform, contentHtml }: Port) {
   return (
     <div>
       <Head>
-        <title>{portProps.title} theme - Wildberries</title>
+        <title>{title} theme - Wildberries</title>
         <link
           href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap"
           rel="stylesheet"
@@ -54,14 +51,14 @@ export default function Port({
         ></link>
       </Head>
       <main className={styles.main}>
-        <h1 className={styles.title}>{portProps.title}</h1>
+        <h1 className={styles.title}>{title}</h1>
         <p className={styles.description}>
-          {`The wildberries theme port for ${portProps.title}`}
+          {`The wildberries theme port for ${title}`}
         </p>
 
         <img
-          src={`/img/screenshots/${portProps.port}.png`}
-          alt={`${portProps.title} preview`}
+          src={`/img/screenshots/${port}.png`}
+          alt={`${title} preview`}
           width="70%"
         />
       </main>
@@ -72,7 +69,7 @@ export default function Port({
 
       <div
         className={styles.center}
-        dangerouslySetInnerHTML={{ __html: portProps.contentHtml }}
+        dangerouslySetInnerHTML={{ __html: contentHtml }}
       />
 
       <Link href="/">
