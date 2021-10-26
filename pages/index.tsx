@@ -54,7 +54,7 @@ export default function Home({
       <div className={styles.grid}>
         {portsData.map((port) => {
           return (
-            <a href={port.port} className={styles.card}>
+            <a key={port.port} href={port.port} className={styles.card}>
               <h2>{port.title}</h2>
             </a>
           );
