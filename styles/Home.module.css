@@ -9,7 +9,7 @@
 }
 
 .main {
-  padding: 8rem 0;
+  padding-top: 8rem;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -49,6 +49,11 @@
   margin: 0;
   line-height: 1.15;
   font-size: 4rem;
+}
+@media (max-width: 600px) {
+  .title {
+    font-size: 3rem;
+  }
 }
 
 .title,
@@ -101,6 +106,11 @@
   border-radius: 10px;
   width: 40%;
 }
+@media (max-width: 600px) {
+  .card {
+    width: 80%;
+  }
+}
 
 .fab {
   background-color: #900048;
@@ -111,8 +121,8 @@
   align-items: center;
   justify-content: center;
   position: fixed;
-  bottom: 3rem;
-  right: 3rem;
+  bottom: 1rem;
+  right: 1rem;
   display: flex;
   font-size: larger;
 }
