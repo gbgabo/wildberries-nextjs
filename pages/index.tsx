@@ -3,6 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import { getPorts } from "../lib/ports";
+import { Footer } from "../components";
 
 export const getStaticProps: GetStaticProps = async () => {
   const portsData = getPorts();
@@ -37,11 +38,11 @@ export default function Home({
       <main className={styles.main}>
         <img
           src="/img/ui/wb.png"
-          width="250rem"
           style={{
             borderRadius: "2rem",
             border: "3px solid #00ffb7",
             marginBottom: "20px",
+            width: "12rem",
           }}
         />
         <h1 className={styles.title}>Wildberries</h1>
@@ -61,15 +62,7 @@ export default function Home({
         })}
       </div>
 
-      <footer className={styles.footer}>
-        <a
-          href="https://github.com/gbgabo"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Made with ♥ by gb_gabo
-        </a>
-      </footer>
+      <Footer />
     </div>
   );
 }
