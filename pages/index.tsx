@@ -41,7 +41,7 @@ export default function Home({
           style={{
             borderRadius: "2rem",
             border: "3px solid #00ffb7",
-            marginBottom: "20px",
+            marginBottom: "40px",
             width: "12rem",
           }}
         />
