@@ -6,6 +6,7 @@ import Link from "next/link";
 import styles from "../styles/Home.module.css";
 import Image from "next/image";
 import { getPort, getPorts } from "../lib/ports";
+import { Footer } from "../components";
 
 interface IParams extends ParsedUrlQuery {
   port: string;
@@ -71,6 +72,8 @@ export default function Port({ port, title, platform, contentHtml }: Port) {
         className={styles.center}
         dangerouslySetInnerHTML={{ __html: contentHtml }}
       />
+
+      <Footer />
 
       <Link href="/">
         <a className={styles.fab}>🍒</a>
