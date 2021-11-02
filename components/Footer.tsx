@@ -6,13 +6,19 @@ interface Props {}
 export default function Footer({}: Props): ReactElement {
   return (
     <footer className={styles.footer}>
-      <a
-        href="https://github.com/gbgabo"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Made with ♥ by gb_gabo
-      </a>
+      <p>
+        Made with ♥ by{" "}
+        <a href="https://github.com/gbgabo" target="_blank">
+          @gbgabo
+        </a>
+      </p>
+
+      <p>
+        View the project on{" "}
+        <a href="https://github.com/gbgabo/wildberries" target="_blank">
+          Github
+        </a>
+      </p>
     </footer>
   );
 }
