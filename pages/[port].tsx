@@ -7,6 +7,9 @@ import styles from "../styles/Home.module.css";
 import Image from "next/image";
 import { getPort, getPorts } from "../lib/ports";
 import { Footer } from "../components";
+import ReactMarkdown from "react-markdown";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { prism, hljs } from "../styles/highlight";
 
 interface IParams extends ParsedUrlQuery {
   port: string;
@@ -60,7 +63,7 @@ export default function Port({ port, title, platform, contentHtml }: Port) {
         <img
           src={`/img/screenshots/${port}.png`}
           alt={`${title} preview`}
-          width="70%"
+          width="50%"
         />
       </main>
 
@@ -68,10 +71,28 @@ export default function Port({ port, title, platform, contentHtml }: Port) {
         <span className="material-icons">file_download</span> Installation
       </p>
 
-      <div
+      <ReactMarkdown
         className={styles.center}
-        dangerouslySetInnerHTML={{ __html: contentHtml }}
-      />
+        components={{
+          code({ node, inline, className, children, ...props }) {
+            const match = /language-(\w+)/.exec(className || "");
+            return !inline && match ? (
+              <SyntaxHighlighter
+                children={String(children).replace(/\n$/, "")}
+                language={match[1]}
+                style={prism}
+                PreTag="div"
+              />
+            ) : (
+              <code className={className} {...props}>
+                {children}
+              </code>
+            );
+          },
+        }}
+      >
+        {contentHtml}
+      </ReactMarkdown>
 
       <Footer />
 
