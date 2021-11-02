@@ -2,4 +2,46 @@
 title: JSON Reader
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Once you have JSON Reader extension installed on your web browser, access the options page for the extension.
+
+On the **custom style** section, add the following css properties:
+
+```css
+.CodeMirror {
+  font-family: monaco, Consolas, Menlo, Courier, monospace;
+  font-size: 16px;
+  line-height: 1.5em;
+  background-color: #250046 !important;
+  color: #8d659c !important;
+  border: none;
+}
+.CodeMirror-gutters {
+  background-color: #240041 !important;
+}
+.CodeMirror-linenumber {
+  color: #00ffb7 !important;
+}
+
+span {
+  color: #a60954 !important;
+}
+span.cm-property {
+  color: #ff0e82 !important;
+}
+span.cm-atom {
+  color: #ff0e82 !important;
+}
+span.cm-number {
+  color: #bd93f9 !important;
+}
+span.cm-variable {
+  color: #50fa7b !important;
+}
+span.cm-string {
+  color: #a470d8 !important;
+}
+
+.extras .icon svg {
+  fill: #00ffb7 !important;
+}
+```
