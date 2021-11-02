@@ -8,14 +8,18 @@ export default function Footer({}: Props): ReactElement {
     <footer className={styles.footer}>
       <p>
         Made with ♥ by{" "}
-        <a href="https://github.com/gbgabo" target="_blank">
+        <a href="https://github.com/gbgabo" rel="noreferrer" target="_blank">
           @gbgabo
         </a>
       </p>
 
       <p>
         View the project on{" "}
-        <a href="https://github.com/gbgabo/wildberries" target="_blank">
+        <a
+          href="https://github.com/gbgabo/wildberries"
+          rel="noreferrer"
+          target="_blank"
+        >
           Github
         </a>
       </p>
