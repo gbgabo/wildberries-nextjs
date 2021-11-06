@@ -36,15 +36,7 @@ export default function Home({
       </Head>
 
       <main className={styles.main}>
-        <img
-          src="/img/ui/wb.png"
-          style={{
-            borderRadius: "2rem",
-            border: "3px solid #00ffb7",
-            marginBottom: "40px",
-            width: "12rem",
-          }}
-        />
+        <img src="/img/ui/wb.png" className={styles.icon} />
         <h1 className={styles.title}>Wildberries</h1>
 
         <p className={styles.description}>

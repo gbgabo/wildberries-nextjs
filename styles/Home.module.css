@@ -160,9 +160,11 @@
   line-height: 1.5;
 }
 
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
+.icon {
+  border-radius: 2rem;
+  border: 3px solid #00ffb7;
+  margin-bottom: 40px;
+  width: 12rem;
 }
 
 .center {
