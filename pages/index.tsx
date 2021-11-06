@@ -28,11 +28,13 @@ export default function Home({
       <Head>
         <title>Wildberries - Dark theme for purple lovers</title>
         <meta name="description" content="Wildberries theme" />
-        <link rel="icon" href="/favicon.ico" />
         <link
-          href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap"
-          rel="stylesheet"
+          rel="preload"
+          href="/fonts/JetBrainsMono-Regular.ttf"
+          as="font"
+          crossOrigin=""
         />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>

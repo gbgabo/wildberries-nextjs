@@ -45,8 +45,10 @@ export default function Port({ port, title, platform, contentHtml }: Port) {
       <Head>
         <title>{title} theme - Wildberries</title>
         <link
-          href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap"
-          rel="stylesheet"
+          rel="preload"
+          href="/fonts/JetBrainsMono-Regular.ttf"
+          as="font"
+          crossOrigin=""
         />
         <link
           href="https://fonts.googleapis.com/icon?family=Material+Icons"
