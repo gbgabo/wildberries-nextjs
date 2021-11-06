@@ -17,3 +17,12 @@ a {
 * {
   box-sizing: border-box;
 }
+
+code {
+  background: #c79bff;
+  color: #240041;
+  border-radius: 5px;
+  padding: 0.15rem;
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+    Bitstream Vera Sans Mono, Courier New, monospace;
+}
