@@ -1,6 +1,6 @@
 import type { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
+import Link from "next/link";
 import styles from "../styles/Home.module.css";
 import { getPorts } from "../lib/ports";
 import { Footer } from "../components";
@@ -55,9 +55,11 @@ export default function Home({
       <div className={styles.grid}>
         {portsData.map((port) => {
           return (
-            <a key={port.port} href={port.port} className={styles.card}>
-              <h2>{port.title}</h2>
-            </a>
+            <Link href={`/${port.port}`} key={port.port}>
+              <a className={styles.card}>
+                <h2>{port.title}</h2>
+              </a>
+            </Link>
           );
         })}
       </div>
