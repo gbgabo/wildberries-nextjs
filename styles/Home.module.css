@@ -76,14 +76,6 @@
   justify-content: center;
 }
 
-.grid {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin: 5rem 0;
-}
-
 .card,
 .fab {
   margin: 1rem;
@@ -167,13 +159,26 @@
   width: 12rem;
 }
 
-.center {
+.instructions {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 70%;
+  width: 840px;
+  padding: 0 2rem;
+}
+@media (max-width: 840px) {
+  .instructions {
+    width: auto;
+  }
 }
 
+.grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 5rem 0;
+}
 @media (max-width: 600px) {
   .grid {
     width: 100%;

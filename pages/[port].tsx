@@ -71,7 +71,7 @@ export default function Port({ port, title, platform, contentHtml }: Port) {
       </p>
 
       <ReactMarkdown
-        className={styles.center}
+        className={styles.instructions}
         components={{
           code({ node, inline, className, children, ...props }) {
             return inline ? (
