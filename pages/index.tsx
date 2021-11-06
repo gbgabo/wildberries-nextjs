@@ -38,7 +38,7 @@ export default function Home({
       </Head>
 
       <main className={styles.main}>
-        <img src="/img/ui/wb.png" className={styles.icon} />
+        <img className={styles.icon} src="/img/ui/wb.png" alt="Wildberries" />
         <h1 className={styles.title}>Wildberries</h1>
 
         <p className={styles.description}>
