@@ -1,0 +1,9 @@
+.codeContainer {
+  position: relative;
+}
+
+.copyButton {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+}
