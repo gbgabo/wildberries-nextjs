@@ -4,12 +4,11 @@ import { ParsedUrlQuery } from "querystring";
 import Head from "next/head";
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
+import CodeSnippet from "../components/CodeSnippet";
 import Image from "next/image";
 import { getPort, getPorts } from "../lib/ports";
 import { Footer } from "../components";
 import ReactMarkdown from "react-markdown";
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { prism, hljs } from "../styles/highlight";
 
 interface IParams extends ParsedUrlQuery {
   port: string;
@@ -75,15 +74,10 @@ export default function Port({ port, title, platform, contentHtml }: Port) {
         className={styles.center}
         components={{
           code({ node, inline, className, children, ...props }) {
-            const match = /language-(\w+)/.exec(className || "");
-            return !inline && match ? (
-              <SyntaxHighlighter language={match[1]} style={prism} PreTag="div">
-                {String(children).replace(/\n$/, "")}
-              </SyntaxHighlighter>
+            return inline ? (
+              <code className={className}>{children}</code>
             ) : (
-              <code className={className} {...props}>
-                {children}
-              </code>
+              <CodeSnippet className={className}>{children}</CodeSnippet>
             );
           },
         }}
