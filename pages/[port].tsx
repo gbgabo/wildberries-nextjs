@@ -50,10 +50,6 @@ export default function Port({ port, title, platform, contentHtml }: Port) {
           as="font"
           crossOrigin=""
         />
-        <link
-          href="https://fonts.googleapis.com/icon?family=Material+Icons"
-          rel="stylesheet"
-        ></link>
       </Head>
       <main className={styles.main}>
         <h1 className={styles.title}>{title}</h1>
@@ -69,7 +65,8 @@ export default function Port({ port, title, platform, contentHtml }: Port) {
       </main>
 
       <p className={styles.description}>
-        <span className="material-icons">file_download</span> Installation
+        <img className={styles.sectionIcon} src="/icons/file_download.svg" />
+        Installation
       </p>
 
       <ReactMarkdown

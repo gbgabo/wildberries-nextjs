@@ -20,7 +20,7 @@ export default function CodeSnippet({
     <div className={styles.codeContainer}>
       <div className={styles.copyButton}>
         <CopyToClipboard text={String(children).replace(/\n$/, "")}>
-          <span className="material-icons">content_copy</span>
+          <img className={styles.icon} src="/icons/content_copy.svg" />
         </CopyToClipboard>
       </div>
       <SyntaxHighlighter

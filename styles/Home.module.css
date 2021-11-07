@@ -160,6 +160,13 @@
   height: 220px;
 }
 
+.sectionIcon {
+  background: #c79bff;
+  color: #19002e;
+  border-radius: 5px;
+  padding: 0.15rem;
+}
+
 .instructions {
   display: block;
   margin-left: auto;

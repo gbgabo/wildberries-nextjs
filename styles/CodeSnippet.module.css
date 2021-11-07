@@ -6,4 +6,10 @@
   position: absolute;
   right: 14px;
   bottom: 14px;
+  border-radius: 5px;
+}
+
+.icon {
+  filter: invert(28%) sepia(91%) saturate(7000%) hue-rotate(322deg)
+    brightness(103%) contrast(101%);
 }
