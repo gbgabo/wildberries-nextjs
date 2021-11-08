@@ -9,7 +9,12 @@
   border-radius: 5px;
 }
 
-.icon {
+.checkIcon {
+  filter: invert(83%) sepia(95%) saturate(4281%) hue-rotate(81deg)
+    brightness(99%) contrast(106%);
+}
+
+.copyIcon {
   filter: invert(28%) sepia(91%) saturate(7000%) hue-rotate(322deg)
     brightness(103%) contrast(101%);
 }

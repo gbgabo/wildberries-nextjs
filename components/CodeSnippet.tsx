@@ -1,4 +1,4 @@
-import React, { ReactElement, ReactNode } from "react";
+import React, { ReactElement, ReactNode, useState } from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { prism } from "../styles/highlight";
 import styles from "../styles/CodeSnippet.module.css";
@@ -15,12 +15,27 @@ export default function CodeSnippet({
   className = "",
   style = prism,
 }: Props): ReactElement {
+  const [copied, setCopied] = useState(false);
+  const code = String(children).replace(/\n$/, "");
+
   const codeLanguage = /language-(\w+)/.exec(className);
+
   return (
     <div className={styles.codeContainer}>
       <div className={styles.copyButton}>
-        <CopyToClipboard text={String(children).replace(/\n$/, "")}>
-          <img className={styles.icon} src="/icons/content_copy.svg" />
+        <CopyToClipboard
+          text={code}
+          onCopy={() => {
+            setCopied(true);
+            setTimeout(() => {
+              setCopied(false);
+            }, 1000);
+          }}
+        >
+          <img
+            className={copied ? styles.checkIcon : styles.copyIcon}
+            src={copied ? "/icons/done.svg" : "/icons/content_copy.svg"}
+          />
         </CopyToClipboard>
       </div>
       <SyntaxHighlighter
@@ -28,7 +43,7 @@ export default function CodeSnippet({
         style={style}
         PreTag="div"
       >
-        {String(children).replace(/\n$/, "")}
+        {code}
       </SyntaxHighlighter>
     </div>
   );
