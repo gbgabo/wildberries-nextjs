@@ -54,11 +54,6 @@
   line-height: 1.15;
   font-size: 4rem;
 }
-@media (max-width: 600px) {
-  .title {
-    font-size: 3rem;
-  }
-}
 
 .title,
 .description {
@@ -94,11 +89,6 @@
   border-radius: 10px;
   width: 40%;
 }
-@media (max-width: 600px) {
-  .card {
-    width: 80%;
-  }
-}
 
 .fab {
   background-color: #900048;
@@ -113,13 +103,7 @@
   display: flex;
   font-size: larger;
 }
-@media (max-width: 600px) {
-  .fab {
-    position: fixed;
-    bottom: 1rem;
-    right: 1rem;
-  }
-}
+
 @media (min-width: 601px) {
   .fab {
     position: fixed;
@@ -187,9 +171,21 @@
   flex-wrap: wrap;
   margin: 5rem 0;
 }
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;
     flex-direction: column;
+  }
+  .title {
+    font-size: 3rem;
+  }
+  .card {
+    width: 80%;
+  }
+  .fab {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
   }
 }
