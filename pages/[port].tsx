@@ -64,10 +64,10 @@ export default function Port({ port, title, platform, contentHtml }: Port) {
         />
       </main>
 
-      <p className={styles.description}>
+      <div className={styles.description}>
         <img className={styles.sectionIcon} src="/icons/file_download.svg" />
-        Installation
-      </p>
+        <p>Installation</p>
+      </div>
 
       <ReactMarkdown
         className={styles.instructions}

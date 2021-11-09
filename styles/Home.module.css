@@ -73,8 +73,6 @@
 
 .card,
 .fab {
-  margin: 1rem;
-  padding: 1.5rem;
   color: inherit;
   text-decoration: none;
   transition: color 0.15s ease, background-color 0.15s ease,
@@ -83,6 +81,8 @@
 }
 
 .card {
+  margin: 1rem;
+  padding: 1.5rem;
   border: 2px solid #00ffb7;
   background-color: #900048;
   text-align: left;
@@ -96,7 +96,10 @@
   text-shadow: 0 0 40px #00ffb7;
   text-align: center;
   border-radius: 50%;
-  width: 5rem;
+  height: 66px;
+  width: 66px;
+  padding: 22px;
+  font-size: 24px;
   align-items: center;
   justify-content: center;
   position: fixed;
@@ -149,6 +152,7 @@
   color: #19002e;
   border-radius: 5px;
   padding: 0.15rem;
+  margin-right: 15px;
 }
 
 .instructions {
