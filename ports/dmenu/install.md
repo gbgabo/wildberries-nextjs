@@ -14,7 +14,7 @@ static const char *colors[SchemeLast][2] = {
 };
 ```
 
-And rebuild your dwm fork
+And rebuild your dmenu fork
 
 ```bash
 sudo make clean install
