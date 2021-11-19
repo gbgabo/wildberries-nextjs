@@ -176,6 +176,10 @@
   margin: 5rem 0;
 }
 
+.preview {
+  width: 50%;
+}
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;
@@ -191,5 +195,8 @@
     position: fixed;
     bottom: 1rem;
     right: 1rem;
+  }
+  .preview {
+    width: 90%;
   }
 }

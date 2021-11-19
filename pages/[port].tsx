@@ -60,7 +60,7 @@ export default function Port({ port, title, platform, contentHtml }: Port) {
         <img
           src={`/img/screenshots/${port}.png`}
           alt={`${title} preview`}
-          width="50%"
+          className={styles.preview}
         />
       </main>
 
