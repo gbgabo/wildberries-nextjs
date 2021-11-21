@@ -206,7 +206,7 @@
 
 @media (max-width: 600px) {
   .grid {
-    width: 50vw;
+    width: 100%;
     flex-direction: column;
   }
   .title {
