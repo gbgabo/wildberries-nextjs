@@ -57,11 +57,13 @@ export default function Port({ port, title, platform, contentHtml }: Port) {
           {`The wildberries theme port for ${title}`}
         </p>
 
-        <img
-          src={`/img/screenshots/${port}.png`}
-          alt={`${title} preview`}
-          className={styles.preview}
-        />
+        <div className={styles.lights}>
+          <img
+            className={styles.preview}
+            src={`/img/screenshots/${port}.png`}
+            alt={`${title} preview`}
+          />
+        </div>
       </main>
 
       <div className={styles.description}>
