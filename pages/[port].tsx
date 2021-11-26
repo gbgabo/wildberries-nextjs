@@ -7,7 +7,7 @@ import styles from "../styles/Home.module.css";
 import CodeSnippet from "../components/CodeSnippet";
 import Image from "next/image";
 import { getPort, getPorts } from "../lib/ports";
-import { Footer } from "../components";
+import { Footer, Header } from "../components";
 import ReactMarkdown from "react-markdown";
 
 interface IParams extends ParsedUrlQuery {
@@ -51,20 +51,11 @@ export default function Port({ port, title, platform, contentHtml }: Port) {
           crossOrigin=""
         />
       </Head>
-      <main className={styles.main}>
-        <h1 className={styles.title}>{title}</h1>
-        <p className={styles.description}>
-          {`The wildberries theme port for ${title}`}
-        </p>
-
-        <div className={styles.lights}>
-          <img
-            className={styles.preview}
-            src={`/img/screenshots/${port}.png`}
-            alt={`${title} preview`}
-          />
-        </div>
-      </main>
+      <Header
+        port={port}
+        title={title}
+        subtitle={`The wildberries theme port for ${title}`}
+      />
 
       <div className={styles.description}>
         <img className={styles.sectionIcon} src="/icons/file_download.svg" />

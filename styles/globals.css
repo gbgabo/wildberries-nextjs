@@ -6,6 +6,11 @@
   font-display: swap;
 }
 
+:root {
+  --primary-background: #282a36;
+  --secondary-background: #240041;
+}
+
 html,
 body {
   padding: 0;

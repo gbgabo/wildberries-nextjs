@@ -3,7 +3,7 @@ import Head from "next/head";
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
 import { getPorts } from "../lib/ports";
-import { Footer } from "../components";
+import { Footer, Header } from "../components";
 
 export const getStaticProps: GetStaticProps = async () => {
   const portsData = getPorts();
@@ -37,14 +37,11 @@ export default function Home({
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <img className={styles.icon} src="/img/ui/wb.png" alt="Wildberries" />
-        <h1 className={styles.title}>Wildberries</h1>
-
-        <p className={styles.description}>
-          A dark color theme for people who love purple
-        </p>
-      </main>
+      <Header
+        home
+        title="Wildberries"
+        subtitle="A dark color theme for people who love purple"
+      />
 
       <div className={styles.grid}>
         {portsData.map((port) => {
