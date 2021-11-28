@@ -28,27 +28,6 @@
   align-items: center;
 }
 
-.footer {
-  padding: 5rem 0;
-  width: 100%;
-  height: 200px;
-  border-top: 1px dashed #900048;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: #c79bff;
-  text-align: center;
-}
-
-.footer a {
-  color: #00ffb7;
-}
-
-.footer p {
-  margin: 1rem 0;
-}
-
 .title a {
   color: #0070f3;
   text-decoration: none;
@@ -242,5 +221,8 @@
   }
   .main {
     flex-direction: column;
+  }
+  .head {
+    height: 100vh;
   }
 }
