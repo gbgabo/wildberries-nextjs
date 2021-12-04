@@ -55,6 +55,7 @@
   position: fixed;
   display: flex;
   font-size: larger;
+  z-index: 3;
 }
 
 @media (min-width: 601px) {
@@ -101,13 +102,8 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 840px;
-  padding: 5rem 0;
-}
-@media (max-width: 840px) {
-  .instructions {
-    width: auto;
-  }
+  max-width: 840px;
+  padding: 0 2rem 2rem 2rem;
 }
 
 .grid {
@@ -130,5 +126,8 @@
     position: fixed;
     bottom: 1rem;
     right: 1rem;
+  }
+  .description {
+    font-size: 1.3rem;
   }
 }
