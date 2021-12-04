@@ -35,6 +35,9 @@ export default function Header({
             src={`/img/screenshots/${home ? "vscode" : port}.png`}
           />
         </div>
+        <a className={styles.down} href={home ? "#ports" : "#instructions"}>
+          <img src="/icons/expand_more.svg" />
+        </a>
       </main>
     </>
   );

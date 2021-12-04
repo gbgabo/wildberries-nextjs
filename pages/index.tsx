@@ -43,7 +43,7 @@ export default function Home({
         subtitle="A dark color theme for people who love purple"
       />
 
-      <div className={styles.grid}>
+      <div id="ports" className={styles.grid}>
         {portsData.map((port) => {
           return (
             <Link href={`/${port.port}`} key={port.port}>

@@ -57,25 +57,26 @@ export default function Port({ port, title, platform, contentHtml }: Port) {
         subtitle={`The wildberries theme port for ${title}`}
       />
 
-      <div className={styles.description}>
-        <img className={styles.sectionIcon} src="/icons/file_download.svg" />
-        <p>Installation</p>
-      </div>
+      <div id="instructions" className={styles.instructions}>
+        <div className={styles.description}>
+          <img className={styles.sectionIcon} src="/icons/file_download.svg" />
+          <p>Installation</p>
+        </div>
 
-      <ReactMarkdown
-        className={styles.instructions}
-        components={{
-          code({ node, inline, className, children, ...props }) {
-            return inline ? (
-              <code className={className}>{children}</code>
-            ) : (
-              <CodeSnippet className={className}>{children}</CodeSnippet>
-            );
-          },
-        }}
-      >
-        {contentHtml}
-      </ReactMarkdown>
+        <ReactMarkdown
+          components={{
+            code({ node, inline, className, children, ...props }) {
+              return inline ? (
+                <code className={className}>{children}</code>
+              ) : (
+                <CodeSnippet className={className}>{children}</CodeSnippet>
+              );
+            },
+          }}
+        >
+          {contentHtml}
+        </ReactMarkdown>
+      </div>
 
       <Footer />
 

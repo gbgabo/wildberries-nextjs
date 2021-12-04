@@ -11,6 +11,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 44%;
+  min-width: 500px;
 }
 
 .title a {
@@ -27,7 +29,7 @@
 .title {
   margin: 0;
   line-height: 1.15;
-  font-size: 4rem;
+  font-size: 3rem;
 }
 
 .title,
@@ -51,8 +53,18 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  align-content: center;
   background-color: #19002e;
+  flex-wrap: wrap;
   min-height: 100vh;
+  padding: 4%;
+}
+
+.down {
+  width: 100%;
+  filter: invert(83%) sepia(95%) saturate(4281%) hue-rotate(81deg)
+    brightness(99%) contrast(106%);
+  text-align: center;
 }
 
 .slider {
@@ -87,15 +99,24 @@
   z-index: 2;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1250px) {
+  .icon {
+    width: 180px;
+    height: 180px;
+  }
   .title {
-    font-size: 3rem;
+    font-size: 2rem;
+  }
+  .description {
+    font-size: 1.3rem;
   }
   .main {
     flex-direction: column;
   }
   .head {
     height: 100vh;
+    width: 100vw;
+    min-width: unset;
   }
   .preview {
     --x: -6px;
