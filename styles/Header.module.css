@@ -13,6 +13,7 @@
   align-items: center;
   width: 44%;
   min-width: 500px;
+  height: 85vh;
 }
 
 .title a {
@@ -97,6 +98,13 @@
   border-radius: 5px;
   width: 50vw;
   z-index: 2;
+}
+
+.main h3 {
+  display: flex;
+  justify-content: center;
+  font-weight: 500;
+  color: #c79bff;
 }
 
 @media (max-width: 1250px) {

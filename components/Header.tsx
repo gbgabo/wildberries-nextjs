@@ -29,11 +29,14 @@ export default function Header({
 
           <p className={styles.description}>{subtitle}</p>
         </div>
-        <div className={styles.preview}>
-          <img
-            className={styles.slider}
-            src={`/img/screenshots/${home ? "vscode" : port}.png`}
-          />
+        <div>
+          <h3>A purple theme for vscode...</h3>
+          <div className={styles.preview}>
+            <img
+              className={styles.slider}
+              src={`/img/screenshots/${home ? "vscode" : port}.png`}
+            />
+          </div>
         </div>
         <a className={styles.down} href={home ? "#ports" : "#instructions"}>
           <img src="/icons/expand_more.svg" />
