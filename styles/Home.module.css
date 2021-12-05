@@ -10,6 +10,10 @@
   }
 }
 
+.ports {
+  padding: 5rem 5rem;
+}
+
 .description {
   margin: 30px auto;
   line-height: 1.5;
@@ -31,13 +35,13 @@
 }
 
 .card {
-  margin: 1rem;
+  margin: 1% 1%;
   padding: 1.5rem;
   border: 2px solid #00ffb7;
   background-color: #900048;
   text-align: left;
   border-radius: 10px;
-  width: 40%;
+  width: 48%;
 }
 
 .fab {
@@ -79,7 +83,8 @@
   background-color: #00ffb7;
 }
 
-.card h2 {
+.card b {
+  display: block;
   margin: 0 0 1rem 0;
   font-size: 1.5rem;
 }
@@ -111,16 +116,12 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 5rem 0;
 }
 
 @media (max-width: 600px) {
   .grid {
     width: 100%;
     flex-direction: column;
-  }
-  .card {
-    width: 80%;
   }
   .fab {
     position: fixed;
@@ -129,5 +130,12 @@
   }
   .description {
     font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .card {
+    width: 100%;
+    margin: 2% 0;
   }
 }
