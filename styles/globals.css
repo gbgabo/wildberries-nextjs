@@ -43,3 +43,22 @@ code {
   font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
     Bitstream Vera Sans Mono, Courier New, monospace;
 }
+
+body::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+body::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.1);
+}
+body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: rgba(199, 155, 255, 0.4);
+}
+body::-webkit-scrollbar-thumb:hover {
+  background: rgba(199, 155, 255, 1);
+}
+body::-webkit-scrollbar-thumb:active {
+  background: rgba(0, 255, 183, 0.6);
+}
