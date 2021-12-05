@@ -26,6 +26,13 @@ html {
   scroll-behavior: smooth;
 }
 
+h2 {
+  line-height: 1.5;
+  font-size: 1.5rem;
+  color: #c79bff;
+  font-weight: 400;
+}
+
 a {
   color: inherit;
   text-decoration: none;

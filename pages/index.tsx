@@ -43,17 +43,22 @@ export default function Home({
         subtitle="A dark color theme for people who love purple"
       />
 
-      <div id="ports" className={styles.grid}>
-        {portsData.map((port) => {
-          return (
-            <Link href={`/${port.port}`} key={port.port}>
-              <a className={styles.card}>
-                <h2>{port.title}</h2>
-              </a>
-            </Link>
-          );
-        })}
-      </div>
+      <section id="ports" className={styles.ports}>
+        <h2 style={{ padding: "2rem" }}>
+          Check all apps wilberries is available for:
+        </h2>
+        <div className={styles.grid}>
+          {portsData.map((port) => {
+            return (
+              <Link href={`/${port.port}`} key={port.port}>
+                <a className={styles.card}>
+                  <b>{port.title}</b>
+                </a>
+              </Link>
+            );
+          })}
+        </div>
+      </section>
 
       <Footer />
     </div>
