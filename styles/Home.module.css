@@ -14,6 +14,12 @@
   padding: 5rem 5rem;
 }
 
+@media (max-width: 500px) {
+  .ports {
+    padding: 2rem;
+  }
+}
+
 .description {
   margin: 30px auto;
   line-height: 1.5;
