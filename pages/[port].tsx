@@ -4,7 +4,7 @@ import { ParsedUrlQuery } from "querystring";
 import Head from "next/head";
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
-import CodeSnippet from "../components/CodeSnippet";
+import Code from "../components/Code";
 import Image from "next/image";
 import { getPort, getPorts } from "../lib/ports";
 import { Footer, Header } from "../components";
@@ -69,7 +69,7 @@ export default function Port({ port, title, platform, contentHtml }: Port) {
               return inline ? (
                 <code className={className}>{children}</code>
               ) : (
-                <CodeSnippet className={className}>{children}</CodeSnippet>
+                <Code className={className}>{children}</Code>
               );
             },
           }}

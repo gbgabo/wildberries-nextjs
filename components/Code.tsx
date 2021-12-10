@@ -10,7 +10,7 @@ interface Props {
   style?: any;
 }
 
-export default function CodeSnippet({
+export default function Code({
   children,
   className = "",
   style = prism,
