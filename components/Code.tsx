@@ -1,7 +1,7 @@
 import React, { ReactElement, ReactNode, useState } from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { prism } from "../styles/highlight";
-import styles from "../styles/CodeSnippet.module.css";
+import styles from "../styles/Code.module.css";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 
 interface Props {
