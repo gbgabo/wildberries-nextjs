@@ -3,7 +3,7 @@ import { GetStaticPaths, GetStaticProps } from "next";
 import { ParsedUrlQuery } from "querystring";
 import Head from "next/head";
 import Link from "next/link";
-import styles from "../styles/Home.module.css";
+import styles from "../styles/Port.module.css";
 import Code from "../components/Code";
 import Image from "next/image";
 import { getPort, getPorts } from "../lib/ports";

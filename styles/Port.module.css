@@ -1,0 +1,66 @@
+.fab {
+  background-color: #900048;
+  border: 2px solid #00ffb7;
+  text-shadow: 0 0 40px #00ffb7;
+  text-align: center;
+  border-radius: 50%;
+  height: 66px;
+  width: 66px;
+  padding: 22px;
+  font-size: 24px;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  display: flex;
+  font-size: larger;
+  z-index: 3;
+}
+
+@media (max-width: 600px) {
+  .fab {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+  }
+}
+
+@media (min-width: 601px) {
+  .fab {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+  }
+}
+
+.fab:hover,
+.fab:focus,
+.fab:active {
+  background-color: #00ffb7;
+}
+
+.description {
+  margin: 30px auto;
+  line-height: 1.5;
+  font-size: 1.5rem;
+  color: #c79bff;
+  max-width: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.instructions {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 840px;
+  padding: 0 2rem 2rem 2rem;
+}
+
+.sectionIcon {
+  background: #c79bff;
+  color: #19002e;
+  border-radius: 5px;
+  padding: 0.15rem;
+  margin-right: 15px;
+}
