@@ -1,12 +1,15 @@
 import React, { ReactElement } from "react";
 import styles from "../styles/Header.module.css";
+import Slider from "./Slider";
 
 interface Props {
   title: string;
   subtitle: string;
-  port?: string;
+  port: string;
   home?: boolean;
 }
+
+const ports = ["vscode", "duckduckgo", "gtk"];
 
 export default function Header({
   home,
@@ -30,13 +33,8 @@ export default function Header({
           <p className={styles.description}>{subtitle}</p>
         </div>
         <div>
-          <h3>A purple theme for vscode...</h3>
-          <div className={styles.preview}>
-            <img
-              className={styles.slider}
-              src={`/img/screenshots/${home ? "vscode" : port}.png`}
-            />
-          </div>
+          {home && <h3>A purple theme for</h3>}
+          <Slider ports={home ? ports : [port]} />
         </div>
         <a className={styles.down} href={home ? "#ports" : "#instructions"}>
           <img src="/icons/expand_more.svg" />
