@@ -5,7 +5,7 @@ import Slider from "./Slider";
 interface Props {
   title: string;
   subtitle: string;
-  port: string;
+  ports: string[];
   home?: boolean;
 }
 
@@ -13,7 +13,7 @@ const ports = ["vscode", "duckduckgo", "gtk"];
 
 export default function Header({
   home,
-  port,
+  ports,
   title,
   subtitle,
 }: Props): ReactElement {
@@ -34,7 +34,7 @@ export default function Header({
         </div>
         <div>
           {home && <h3>A purple theme for</h3>}
-          <Slider ports={home ? ports : [port]} />
+          <Slider ports={ports} />
         </div>
         <a className={styles.down} href={home ? "#ports" : "#instructions"}>
           <img src="/icons/expand_more.svg" />

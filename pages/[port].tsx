@@ -52,7 +52,7 @@ export default function Port({ port, title, platform, contentHtml }: Port) {
         />
       </Head>
       <Header
-        port={port}
+        ports={[port]}
         title={title}
         subtitle={`The wildberries theme port for ${title}`}
       />

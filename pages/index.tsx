@@ -39,6 +39,7 @@ export default function Home({
 
       <Header
         home
+        ports={["vscode", "duckduckgo", "gtk"]}
         title="Wildberries"
         subtitle="A dark color theme for people who love purple"
       />
