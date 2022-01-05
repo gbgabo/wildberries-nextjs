@@ -7,7 +7,7 @@ interface Props {
 
 export default function Slider({ ports }: Props): ReactElement {
   return (
-    <>
+    <div>
       <div className={styles["slider-wrapper"]}>
         <div className={styles.slider}>
           {ports.map((port, index) => {
@@ -21,14 +21,17 @@ export default function Slider({ ports }: Props): ReactElement {
                   defaultChecked={index === 0}
                 />
                 <div className={styles.slide}>
+                  <figcaption>
+                    <div className={styles["slide-caption"]}>
+                      <p>A purple theme for</p>
+                      <p className={styles["slide-caption-port"]}>{port}</p>
+                    </div>
+                  </figcaption>
                   <figure className={styles["slide-figure"]}>
                     <img
                       className={styles["slide-img"]}
                       src={`/img/screenshots/${port}.png`}
                     />
-                    <figcaption className={styles["slide-caption"]}>
-                      <p>{port}</p>
-                    </figcaption>
                   </figure>
                 </div>
               </Fragment>
@@ -48,7 +51,7 @@ export default function Slider({ ports }: Props): ReactElement {
           );
         })}
       </ul>
-    </>
+    </div>
   );
 }
 

@@ -32,10 +32,7 @@ export default function Header({
 
           <p className={styles.description}>{subtitle}</p>
         </div>
-        <div>
-          {home && <h3>A purple theme for</h3>}
-          <Slider ports={ports} />
-        </div>
+        <Slider ports={ports} />
         <a className={styles.down} href={home ? "#ports" : "#instructions"}>
           <img src="/icons/expand_more.svg" />
         </a>
