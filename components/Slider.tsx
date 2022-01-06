@@ -46,7 +46,7 @@ export default function Slider({
         </div>
       </div>
 
-      {ports.length < 1 && (
+      {ports.length > 1 && (
         <ul className={styles["slider-nav"]}>
           {ports.map((port) => {
             return (
