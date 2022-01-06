@@ -32,7 +32,7 @@ export default function Header({
 
           <p className={styles.description}>{subtitle}</p>
         </div>
-        <Slider ports={ports} />
+        <Slider hasCaption={home} ports={ports} />
         <a className={styles.down} href={home ? "#ports" : "#instructions"}>
           <img src="/icons/expand_more.svg" />
         </a>

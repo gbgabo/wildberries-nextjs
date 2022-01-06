@@ -3,9 +3,13 @@ import styles from "../styles/Slider.module.css";
 
 interface Props {
   ports: string[];
+  hasCaption?: boolean;
 }
 
-export default function Slider({ ports }: Props): ReactElement {
+export default function Slider({
+  ports,
+  hasCaption = false,
+}: Props): ReactElement {
   return (
     <div>
       <div className={styles["slider-wrapper"]}>
@@ -21,12 +25,14 @@ export default function Slider({ ports }: Props): ReactElement {
                   defaultChecked={index === 0}
                 />
                 <div className={styles.slide}>
-                  <figcaption>
-                    <div className={styles["slide-caption"]}>
-                      <p>A purple theme for</p>
-                      <p className={styles["slide-caption-port"]}>{port}</p>
-                    </div>
-                  </figcaption>
+                  {hasCaption && (
+                    <figcaption>
+                      <div className={styles["slide-caption"]}>
+                        <p>A purple theme for</p>
+                        <p className={styles["slide-caption-port"]}>{port}</p>
+                      </div>
+                    </figcaption>
+                  )}
                   <figure className={styles["slide-figure"]}>
                     <img
                       className={styles["slide-img"]}
@@ -39,18 +45,21 @@ export default function Slider({ ports }: Props): ReactElement {
           })}
         </div>
       </div>
-      <ul className={styles["slider-nav"]}>
-        {ports.map((port) => {
-          return (
-            <li key={port} className={styles["slider-nav__item"]}>
-              <label
-                className={styles["slider-nav__label"]}
-                htmlFor={port}
-              ></label>
-            </li>
-          );
-        })}
-      </ul>
+
+      {ports.length < 1 && (
+        <ul className={styles["slider-nav"]}>
+          {ports.map((port) => {
+            return (
+              <li key={port} className={styles["slider-nav__item"]}>
+                <label
+                  className={styles["slider-nav__label"]}
+                  htmlFor={port}
+                ></label>
+              </li>
+            );
+          })}
+        </ul>
+      )}
     </div>
   );
 }
