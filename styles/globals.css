@@ -33,6 +33,12 @@ h2 {
   font-weight: 400;
 }
 
+@media (max-width: 1250px) {
+  h2 {
+    font-size: 1.3rem;
+  }
+}
+
 a {
   color: inherit;
   text-decoration: none;
