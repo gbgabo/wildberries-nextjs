@@ -69,3 +69,10 @@ body::-webkit-scrollbar-thumb:hover {
 body::-webkit-scrollbar-thumb:active {
   background: rgba(0, 255, 183, 0.6);
 }
+
+.highlight {
+  background-color: #c79bff;
+  color: #19002e;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
