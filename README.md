@@ -1,6 +1,8 @@
-<p align="center">
+<div align="center">
+<img src="./public/img/ui/wb.png" width="200px" style="border-radius: 25px">
 <h1>Wildberries</h1>
-</p>
+<h2>An experimental dark color theme for people who love purple</h2>
+</div>
 
 | Palette    | Hex       | RGB           | HSL             | 🎨                                                                          |
 | ---------- | --------- | ------------- | --------------- | --------------------------------------------------------------------------- |
