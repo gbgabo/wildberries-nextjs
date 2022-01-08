@@ -4,17 +4,15 @@
 <h2>An experimental dark color theme for people who love purple</h2>
 </div>
 
-| Palette    | Hex       | RGB           | HSL             | 🎨                                                                          |
-| ---------- | --------- | ------------- | --------------- | --------------------------------------------------------------------------- |
-| Background | `#282a36` | `40 42 54`    | `231° 15% 18%`  | ![Background Color](https://via.placeholder.com/20/282a36/282a36?text=+)    |
-| Green      | `#00ffb7` | `139 233 253` | `191° 97% 77%`  | ![Green Color](https://via.placeholder.com/20/00ffb7/00ffb7?text=+)         |
-| Orange     | `#ff4500` | `255 184 108` | `31° 100% 71%`  | ![Orange Color](https://via.placeholder.com/20/ff4500/ff4500?text=+)        |
-| Pink       | `#ff0e82` | `255 121 198` | `326° 100% 74%` | ![Pink Color](https://via.placeholder.com/20/ff0e82/ff0e82?text=+)          |
-| Purple     | `#240041` | `189 147 249` | `265° 89% 78%`  | ![Purple Color](https://draculatheme.com/static/img/color-boxes/purple.png) |
-| Red        | `#d70040` | `255 85 85`   | `0° 100% 67%`   | ![Red Color](https://via.placeholder.com/20/d70040/d70040?text=+)           |
-| Yellow     | `#ffb86c` | `241 250 140` | `65° 92% 76%`   | ![Yellow Color](https://via.placeholder.com/20/ffb86c/ffb86c?text=+)        |
-
-| Current Line | `#44475a` | `68 71 90` | `232° 14% 31%` | ![Current Line Color](https://draculatheme.com/static/img/color-boxes/current_line.png) |
-| Selection | `#44475a` | `68 71 90` | `232° 14% 31%` | ![Selection Color](https://draculatheme.com/static/img/color-boxes/selection.png) |
-| Foreground | `#f8f8f2` | `248 248 242` | `60° 30% 96%` | ![Foreground Color](https://draculatheme.com/static/img/color-boxes/foreground.png) |
-| Comment | `#6272a4` | `98 114 164` | `225° 27% 51%` | ![Comment Color](https://draculatheme.com/static/img/color-boxes/comment.png) |
+| Palette        | Hex       | RGB           | HSL                 | 🎨                                                                           |
+| -------------- | --------- | ------------- | ------------------- | ---------------------------------------------------------------------------- |
+| Background     | `#19002E` | `25 00 46`    | `272.6° 100% 9%`    | ![Background Color](https://via.placeholder.com/20/19002E/19002E?text=+)     |
+| Background 2   | `#240041` | `36 00 65`    | `273.2° 100% 12.7%` | ![Background 2 Color](https://via.placeholder.com/20/240041/240041?text=+)   |
+| Primary Button | `#900048` | `144 00 72`   | `330° 100% 28.2%`   | ![Primary Button Color](https://via.placeholder.com/20/900048/900048?text=+) |
+| Green          | `#00ffb7` | `0 255 183`   | `163.1° 100% 50%`   | ![Green Color](https://via.placeholder.com/20/00ffb7/00ffb7?text=+)          |
+| Orange         | `#ff4500` | `255 69 0`    | `16.2° 100% 50%`    | ![Orange Color](https://via.placeholder.com/20/ff4500/ff4500?text=+)         |
+| Pink           | `#ff0e82` | `255 14 130`  | `331.1° 100% 52.7%` | ![Pink Color](https://via.placeholder.com/20/ff0e82/ff0e82?text=+)           |
+| Purple         | `#c79bff` | `199 155 255` | `266.4° 100% 80.4%` | ![Purple Color](https://via.placeholder.com/20/c79bff/c79bff?text=+)         |
+| Red            | `#d70040` | `215 0 64`    | `342.1° 100% 42.2%` | ![Red Color](https://via.placeholder.com/20/d70040/d70040?text=+)            |
+| Yellow         | `#ffd700` | `255 215 0`   | `50.6° 100% 50%`    | ![Yellow Color](https://via.placeholder.com/20/ffd700/ffd700?text=+)         |
+| Blue           | `#399ee6` | `57 158 230`  | `205° 77.6% 56.3%`  | ![Blue Color](https://via.placeholder.com/20/399ee6/399ee6?text=+)           |
