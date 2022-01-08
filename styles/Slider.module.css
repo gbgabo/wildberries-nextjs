@@ -47,20 +47,9 @@
 .slide-caption {
   position: absolute;
   top: 10%;
-  text-align: center;
+  text-align: left;
   color: #c79bff;
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.slide-caption-port {
-  background-color: #c79bff;
-  color: #19002e;
-  border-radius: 5px;
-  padding: 5px 10px;
-  margin-left: 7px;
 }
 
 .trigger:checked + .slide {

@@ -28,8 +28,10 @@ export default function Slider({
                   {hasCaption && (
                     <figcaption>
                       <div className={styles["slide-caption"]}>
-                        <p>A purple theme for</p>
-                        <p className={styles["slide-caption-port"]}>{port}</p>
+                        <p>
+                          {`A purple theme for `}
+                          <span className="highlight">{port}</span>
+                        </p>
                       </div>
                     </figcaption>
                   )}
