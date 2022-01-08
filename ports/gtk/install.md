@@ -1,5 +1,6 @@
 ---
 title: GTK
+platform: ["linux"]
 includeFile: true
 ---
 

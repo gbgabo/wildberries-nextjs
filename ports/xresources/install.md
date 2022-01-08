@@ -1,5 +1,6 @@
 ---
 title: Xresources
+platform: ["linux"]
 ---
 
 On your home directory find a `.Xresources` file, or else create it, and paste the snippet below:

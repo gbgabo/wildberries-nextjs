@@ -1,5 +1,6 @@
 ---
 title: dwm
+platform: ["linux"]
 ---
 
 On your config.h or config.def.h, replace the `colors` array values to:
