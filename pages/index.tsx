@@ -37,12 +37,9 @@ export default function Home({
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header
-        home
-        ports={["vscode", "duckduckgo", "gtk"]}
-        title="Wildberries"
-        subtitle="A dark color theme for people who love purple"
-      />
+      <Header home ports={["vscode", "duckduckgo", "gtk"]} title="Wildberries">
+        <>An experimental dark color theme for people who love purple</>
+      </Header>
 
       <section id="ports" className={styles.ports}>
         <h2 style={{ padding: "2rem" }}>

@@ -57,11 +57,13 @@ export default function Port({
           crossOrigin=""
         />
       </Head>
-      <Header
-        ports={[port]}
-        title={title}
-        subtitle={`The wildberries theme port for ${title}`}
-      />
+      <Header ports={[port]} title="Wildberries">
+        <>
+          {`A dark purple theme for `}
+          <span className="highlight">{title}</span>
+          {` and many other apps`}
+        </>
+      </Header>
 
       <div id="instructions" className={styles.instructions}>
         <div className={styles.description}>

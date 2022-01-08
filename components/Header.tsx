@@ -1,12 +1,12 @@
-import React, { ReactElement } from "react";
+import React, { ReactElement, ReactNode } from "react";
 import styles from "../styles/Header.module.css";
 import Slider from "./Slider";
 
 interface Props {
   title: string;
-  subtitle: string;
   ports: string[];
   home?: boolean;
+  children: ReactNode;
 }
 
 const ports = ["vscode", "duckduckgo", "gtk"];
@@ -15,7 +15,7 @@ export default function Header({
   home,
   ports,
   title,
-  subtitle,
+  children,
 }: Props): ReactElement {
   return (
     <>
@@ -30,7 +30,7 @@ export default function Header({
           )}
           <h1 className={styles.title}>{title}</h1>
 
-          <p className={styles.description}>{subtitle}</p>
+          <div className={styles.description}>{children}</div>
         </div>
         <Slider hasCaption={home} ports={ports} />
         <a className={styles.down} href={home ? "#ports" : "#instructions"}>
