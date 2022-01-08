@@ -12,13 +12,15 @@ export async function getPort(slug: string) {
   const installPath = path.join(portsDirectory, slug, "install.md");
   const fileContent = fs.readFileSync(installPath, "utf8");
 
-  const matterResult = matter(fileContent);
+  const { content, data } = matter(fileContent);
 
-  const contentHtml = matterResult.content.toString();
+  const contentHtml = content.toString();
+  const includeFile = data.includeFile ? data.includeFile : false;
 
   return {
     ...port,
     contentHtml,
+    includeFile,
   };
 }
 

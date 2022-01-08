@@ -39,7 +39,13 @@ export const getStaticPaths: GetStaticPaths = async () => {
   };
 };
 
-export default function Port({ port, title, platform, contentHtml }: Port) {
+export default function Port({
+  port,
+  title,
+  platform,
+  includeFile,
+  contentHtml,
+}: Port) {
   return (
     <div>
       <Head>
@@ -59,11 +65,12 @@ export default function Port({ port, title, platform, contentHtml }: Port) {
 
       <div id="instructions" className={styles.instructions}>
         <div className={styles.description}>
-          <img className={styles.sectionIcon} src="/icons/file_download.svg" />
+          <img className={styles.sectionIcon} src="/icons/brush.svg" />
           <p>Installation</p>
         </div>
 
         <ReactMarkdown
+          className={styles["instructions-content"]}
           components={{
             code({ node, inline, className, children, ...props }) {
               return inline ? (
@@ -76,6 +83,12 @@ export default function Port({ port, title, platform, contentHtml }: Port) {
         >
           {contentHtml}
         </ReactMarkdown>
+
+        {includeFile && (
+          <a className={styles.button} href={`/ports/${port}.zip`}>
+            <img src="/icons/file_download.svg" /> Download
+          </a>
+        )}
       </div>
 
       <Footer />
