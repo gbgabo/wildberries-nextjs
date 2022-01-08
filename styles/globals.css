@@ -82,3 +82,46 @@ body::-webkit-scrollbar-thumb:active {
   border-radius: 5px;
   padding: 5px 10px;
 }
+
+/* List items style*/
+
+ol {
+  counter-reset: li; /* Initiate a counter */
+  margin-left: 0; /* Remove the default left margin */
+  padding-left: 0; /* Remove the default left padding */
+}
+ol > li {
+  position: relative; /* Create a positioning context */
+  margin: 20px 0px 20px 3em; /* Give each list item a left margin to make room for the numbers */
+  padding: 4px 16px; /* Add some spacing around the content */
+  list-style: none; /* Disable the normal item numbering */
+}
+ol > li:before {
+  content: counter(li); /* Use the counter as content */
+  counter-increment: li; /* Increment the counter by 1 */
+  /* Position and style the number */
+  position: absolute;
+  top: -2px;
+  left: -2em;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 2em;
+  /* Some space between the number and the content in browsers that support
+     generated content but not positioning it (Camino 2 is one example) */
+  margin-right: 8px;
+  padding: 8px;
+  color: #19002e;
+  background: #c79bff;
+  border-radius: 10px;
+  font-weight: bold;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  text-align: center;
+}
+li ol,
+li ul {
+  margin-top: 6px;
+}
+ol ol li:last-child {
+  margin-bottom: 0;
+}
