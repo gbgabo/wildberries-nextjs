@@ -79,4 +79,10 @@
     width: 100%;
     margin: 2% 0;
   }
+
+  .card b {
+    display: block;
+    margin: 0 0 0.5rem 0;
+    font-size: 1.3rem;
+  }
 }
