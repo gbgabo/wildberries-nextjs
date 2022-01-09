@@ -82,12 +82,15 @@
   text-align: center;
   color: #00ffb7;
   font-weight: 700;
+  transition: color 0.15s ease, background-color 0.15s ease,
+    box-shadow 0.2s ease;
 }
 
 .button img {
   filter: invert(83%) sepia(95%) saturate(4281%) hue-rotate(81deg)
     brightness(99%) contrast(106%);
   margin-right: 10px;
+  transition: filter 0.2s ease;
 }
 
 .button:hover {
