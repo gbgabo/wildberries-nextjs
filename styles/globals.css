@@ -7,8 +7,23 @@
 }
 
 :root {
-  --primary-background: #282a36;
-  --secondary-background: #240041;
+  --black-berry: #19002e;
+  --grape: #240041;
+  --cherry: #900048;
+  --purple: #c79bff;
+  --red: #d70040;
+  --pink: #ff0e82;
+  --green: #00ffb7;
+  --orange: #ff4500;
+  --yellow: #ffd700;
+  --blue: #399ee6;
+
+  --background-dark: var(--grape);
+  --background-darker: var(--black-berry);
+  --foreground-text: var(--pink);
+  --secondary-foreground-text: var(--purple);
+  --element-foreground: var(--cherry);
+  --element-foreground-text: var(--green);
 }
 
 html,
@@ -101,7 +116,7 @@ ol > li:before {
   counter-increment: li; /* Increment the counter by 1 */
   /* Position and style the number */
   position: absolute;
-  top: -2px;
+  top: -3px;
   left: -2em;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
