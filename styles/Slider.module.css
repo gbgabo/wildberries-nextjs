@@ -15,7 +15,7 @@
 }
 
 .slide {
-  background-color: #19002e;
+  background-color: var(--background-darker);
   width: 100%;
   overflow: hidden;
   position: absolute;
@@ -47,7 +47,7 @@
   position: absolute;
   top: 10%;
   text-align: left;
-  color: #c79bff;
+  color: var(--secondary-foreground);
   width: 100%;
 }
 
@@ -71,7 +71,7 @@
 
 .slider-nav__label {
   font-size: 13px;
-  background-color: #c79bff;
+  background-color: var(--secondary-foreground);
   display: block;
   height: 1em;
   line-height: 2em;
@@ -86,7 +86,7 @@
 .slider-nav__label:hover,
 .slider-nav__label:active,
 .slider-nav__label:focus {
-  background-color: #900048;
+  background-color: var(--element-background);
   color: black;
 }
 

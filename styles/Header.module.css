@@ -1,6 +1,6 @@
 .icon {
   border-radius: 2rem;
-  border: 3px solid #00ffb7;
+  border: 3px solid var(--element-foreground);
   margin-bottom: 40px;
   width: 220px;
   height: 220px;
@@ -17,7 +17,7 @@
 }
 
 .title a {
-  color: #0070f3;
+  color: var(--blue);
   text-decoration: none;
 }
 
@@ -43,7 +43,7 @@
   margin: 30px auto;
   line-height: 1.5;
   font-size: 1.5rem;
-  color: #c79bff;
+  color: var(--secondary-foreground);
   max-width: 75%;
   align-items: center;
   justify-content: center;
@@ -55,7 +55,7 @@
   justify-content: center;
   align-items: center;
   align-content: center;
-  background-color: #19002e;
+  background-color: var(--background-darker);
   flex-wrap: wrap;
   min-height: 100vh;
   padding: 4%;
@@ -77,8 +77,8 @@
   --x: -20px;
   --y: 20px;
   --blur: 1px;
-  --color-one: #ff0e82;
-  --color-two: #00ffb7;
+  --color-one: var(--pink);
+  --color-two: var(--green);
   width: fit-content;
   height: fit-content;
   border-radius: 8px;
@@ -104,7 +104,7 @@
   display: flex;
   justify-content: center;
   font-weight: 500;
-  color: #c79bff;
+  color: var(--secondary-foreground);
 }
 
 @media (max-width: 1250px) {

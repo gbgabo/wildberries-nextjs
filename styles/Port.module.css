@@ -1,7 +1,7 @@
 .fab {
-  background-color: #900048;
-  border: 2px solid #00ffb7;
-  text-shadow: 0 0 40px #00ffb7;
+  background-color: var(--element-background);
+  border: 2px solid var(--element-foreground);
+  text-shadow: 0 0 40px var(--element-foreground);
   text-align: center;
   border-radius: 50%;
   height: 66px;
@@ -35,14 +35,14 @@
 .fab:hover,
 .fab:focus,
 .fab:active {
-  background-color: #00ffb7;
+  background-color: var(--element-foreground);
 }
 
 .description {
   margin: 30px auto;
   line-height: 1.5;
   font-size: 1.5rem;
-  color: #c79bff;
+  color: var(--secondary-foreground);
   max-width: 75%;
   display: flex;
   align-items: center;
@@ -62,8 +62,8 @@
 }
 
 .sectionIcon {
-  background: #c79bff;
-  color: #19002e;
+  background: var(--secondary-foreground);
+  color: var(--background-darker);
   border-radius: 5px;
   padding: 0.15rem;
   margin-right: 15px;
@@ -75,12 +75,12 @@
   justify-content: center;
   margin: auto;
   padding: 1.5rem;
-  border: 2px solid #00ffb7;
-  background-color: #900048;
+  border: 2px solid var(--element-foreground);
+  background-color: var(--element-background);
   border-radius: 10px;
   max-width: 840px;
   text-align: center;
-  color: #00ffb7;
+  color: var(--element-foreground);
   font-weight: 700;
   transition: color 0.15s ease, background-color 0.15s ease,
     box-shadow 0.2s ease;
@@ -94,8 +94,8 @@
 }
 
 .button:hover {
-  color: #900048;
-  background-color: #00ffb7;
+  color: var(--element-background);
+  background-color: var(--element-foreground);
 }
 
 .button:hover img {
