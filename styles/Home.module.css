@@ -25,14 +25,14 @@
   text-decoration: none;
   transition: color 0.15s ease, background-color 0.15s ease,
     box-shadow 0.2s ease;
-  color: #00ffb7;
+  color: var(--element-foreground);
 }
 
 .card {
   margin: 1% 1%;
   padding: 1.5rem;
-  border: 2px solid #00ffb7;
-  background-color: #900048;
+  border: 2px solid var(--element-foreground);
+  background-color: var(--element-background);
   text-align: left;
   border-radius: 10px;
   width: 48%;
@@ -41,8 +41,8 @@
 .card:hover,
 .card:focus,
 .card:active {
-  color: #900048;
-  background-color: #00ffb7;
+  color: var(--element-background);
+  background-color: var(--element-foreground);
 }
 
 .card b {

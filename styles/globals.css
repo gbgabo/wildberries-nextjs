@@ -20,10 +20,11 @@
 
   --background-dark: var(--grape);
   --background-darker: var(--black-berry);
-  --foreground-text: var(--pink);
-  --secondary-foreground-text: var(--purple);
-  --element-foreground: var(--cherry);
-  --element-foreground-text: var(--green);
+  --foreground: var(--pink);
+  --secondary-foreground: var(--purple);
+
+  --element-background: var(--cherry);
+  --element-foreground: var(--green);
 }
 
 html,
@@ -33,8 +34,8 @@ body {
   font-family: "JetBrains Mono", monospace, -apple-system, BlinkMacSystemFont,
     Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
     Helvetica Neue, sans-serif;
-  background-color: #240041;
-  color: #ff0e82;
+  background-color: var(--background-dark);
+  color: var(--foreground);
 }
 
 html {
@@ -44,7 +45,7 @@ html {
 h2 {
   line-height: 1.5;
   font-size: 1.5rem;
-  color: #c79bff;
+  color: var(--secondary-foreground);
   font-weight: 400;
 }
 
@@ -64,8 +65,8 @@ a {
 }
 
 code {
-  background: #19002e;
-  color: #c79bff;
+  background: var(--background-darker);
+  color: var(--secondary-foreground);
   border-radius: 5px;
   padding: 0.15rem;
   font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
@@ -92,8 +93,8 @@ body::-webkit-scrollbar-thumb:active {
 }
 
 .highlight {
-  background-color: #c79bff;
-  color: #19002e;
+  background-color: var(--secondary-foreground);
+  color: var(--background-darker);
   border-radius: 5px;
   padding: 5px 10px;
 }
@@ -126,8 +127,8 @@ ol > li:before {
      generated content but not positioning it (Camino 2 is one example) */
   margin-right: 8px;
   padding: 8px;
-  color: #19002e;
-  background: #c79bff;
+  color: var(--background-darker);
+  background: var(--secondary-foreground);
   border-radius: 10px;
   font-weight: bold;
   font-family: "Helvetica Neue", Arial, sans-serif;
