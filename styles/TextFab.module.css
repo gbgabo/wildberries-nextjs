@@ -1,0 +1,24 @@
+.container {
+  text-align: center;
+  height: 66px;
+  width: 100%;
+  z-index: 3;
+  position: fixed;
+  bottom: 2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fab {
+  color: var(--element-foreground);
+  background-color: var(--element-background);
+  /* border: 2px solid var(--element-foreground); */
+  padding: 22px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: large;
+}
