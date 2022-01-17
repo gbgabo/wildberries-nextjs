@@ -25,14 +25,10 @@
   text-decoration: none;
   transition: color 0.15s ease, background-color 0.15s ease,
     box-shadow 0.2s ease;
-  color: var(--element-foreground);
-}
-
-.card {
-  margin: 1% 1%;
-  padding: 1.5rem;
-  border: 2px solid var(--element-foreground);
   background-color: var(--element-background);
+  color: var(--element-foreground);
+  margin: 0.7% 0.7%;
+  padding: 1.5rem;
   text-align: left;
   border-radius: 10px;
   width: 48%;

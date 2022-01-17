@@ -3,7 +3,7 @@ import Head from "next/head";
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
 import { getPorts } from "../lib/ports";
-import { Footer, Header } from "../components";
+import { Footer, Header, TextFab } from "../components";
 
 export const getStaticProps: GetStaticProps = async () => {
   const portsData = getPorts();
@@ -57,7 +57,9 @@ export default function Home({
           })}
         </div>
       </section>
-
+      <TextFab href="/about" variant="secondary">
+        About Wildberries Theme
+      </TextFab>
       <Footer />
     </div>
   );
