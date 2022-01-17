@@ -24,6 +24,7 @@ export default function About({}: Props): ReactElement {
               style={{
                 backgroundColor: `var(--${color})`,
               }}
+              key={color}
               className={styles.color}
             ></div>
           );
