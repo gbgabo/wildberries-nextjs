@@ -1,0 +1,95 @@
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.title {
+  position: absolute;
+  top: 15%;
+  left: 26.5%;
+  text-align: center;
+}
+
+.accents {
+  color: var(--element-foreground);
+  position: absolute;
+  bottom: 21%;
+  right: 14.7%;
+  text-align: center;
+}
+
+.content {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 840px;
+  padding: 0 2rem 2rem 2rem;
+}
+
+.content h2 {
+  text-align: center;
+}
+
+/* Palletes and colors */
+
+.background {
+  border-radius: 15px;
+  width: fit-content;
+  height: fit-content;
+  overflow: hidden;
+  margin: 30px;
+  position: relative;
+}
+
+.background > * > .color {
+  height: 44vh;
+  width: 32vw;
+}
+
+.foreground {
+  border-radius: 5px;
+  height: 50px;
+  width: fit-content;
+  height: fit-content;
+  overflow: hidden;
+  z-index: 3;
+  margin: auto;
+  position: absolute;
+  bottom: 20%;
+  left: 19%;
+}
+
+.foreground > * > .color {
+  height: 15px;
+  width: 20vw;
+}
+
+.auxiliar {
+  height: 50px;
+  width: fit-content;
+  height: fit-content;
+  overflow: hidden;
+  z-index: 3;
+  margin: auto;
+  position: absolute;
+  bottom: 3%;
+  left: 1%;
+}
+
+.auxiliar > * > .color {
+  margin: 10px;
+  height: 20px;
+  width: 20px;
+  border-radius: 5px;
+}
