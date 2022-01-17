@@ -5,13 +5,18 @@ import styles from "../styles/TextFab.module.css";
 interface Props {
   href: string;
   children: string;
+  variant?: "primary" | "secondary";
 }
 
-export default function TextFab({ href, children }: Props): ReactElement {
+export default function TextFab({
+  href,
+  children,
+  variant = "primary",
+}: Props): ReactElement {
   return (
     <div className={styles.container}>
       <Link href={href}>
-        <a className={styles.fab}>{children}</a>
+        <a className={styles[variant]}>{children}</a>
       </Link>
     </div>
   );
