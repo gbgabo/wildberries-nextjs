@@ -1,6 +1,11 @@
+.background {
+  padding-bottom: 7rem;
+  background-color: var(--background-darker);
+}
+
 .footer {
   background-color: var(--background-darker);
-  padding: 5rem 0;
+  padding-top: 5rem;
   width: 100%;
   height: 200px;
   border-top: 1px dashed var(--element-background);
@@ -10,6 +15,8 @@
   align-items: center;
   color: var(--secondary-foreground);
   text-align: center;
+  position: relative;
+  z-index: 4;
 }
 
 .footer a {
