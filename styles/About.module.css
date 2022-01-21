@@ -17,16 +17,18 @@
 .title {
   position: absolute;
   top: 15%;
-  left: 26.5%;
-  text-align: center;
+  text-align: start;
+  width: 100%;
+  padding: 0px 15%;
 }
 
 .accents {
   color: var(--element-foreground);
   position: absolute;
   bottom: 21%;
-  right: 14.7%;
-  text-align: center;
+  text-align: end;
+  width: 100%;
+  padding: 0px 15%;
 }
 
 .content {
