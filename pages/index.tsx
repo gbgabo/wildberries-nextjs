@@ -58,7 +58,7 @@ export default function Home({
         </div>
       </section>
       <TextFab href="/about" variant="secondary">
-        About Wildberries Theme
+        About Wildberries
       </TextFab>
       <Footer />
     </div>
