@@ -1,43 +1,3 @@
-.fab {
-  background-color: var(--element-background);
-  border: 2px solid var(--element-foreground);
-  text-shadow: 0 0 40px var(--element-foreground);
-  text-align: center;
-  border-radius: 50%;
-  height: 66px;
-  width: 66px;
-  padding: 22px;
-  font-size: 24px;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  display: flex;
-  font-size: larger;
-  z-index: 3;
-}
-
-@media (max-width: 600px) {
-  .fab {
-    position: fixed;
-    bottom: 1rem;
-    right: 1rem;
-  }
-}
-
-@media (min-width: 601px) {
-  .fab {
-    position: fixed;
-    top: 1rem;
-    left: 1rem;
-  }
-}
-
-.fab:hover,
-.fab:focus,
-.fab:active {
-  background-color: var(--element-foreground);
-}
-
 .description {
   margin: 30px auto;
   line-height: 1.5;
@@ -75,7 +35,6 @@
   justify-content: center;
   margin: auto;
   padding: 1.5rem;
-  border: 2px solid var(--element-foreground);
   background-color: var(--element-background);
   border-radius: 10px;
   max-width: 840px;
@@ -84,6 +43,7 @@
   font-weight: 700;
   transition: color 0.15s ease, background-color 0.15s ease,
     box-shadow 0.2s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
 .button img {
