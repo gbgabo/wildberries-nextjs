@@ -1,0 +1,62 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  max-width: 840px;
+  padding: 0 2rem 2rem 2rem;
+  margin: auto;
+}
+
+.container h1 {
+  font-size: 7rem;
+  margin: 0px;
+}
+
+.options {
+  display: flex;
+  flex-direction: row;
+}
+
+@media (max-width: 600px) {
+  .options {
+    flex-direction: column;
+  }
+}
+
+.options a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  padding: 1.5rem;
+  background-color: var(--element-background);
+  border-radius: 40px;
+  max-width: 840px;
+  text-align: center;
+  color: var(--element-foreground);
+  font-weight: 700;
+  transition: color 0.15s ease, background-color 0.15s ease,
+    box-shadow 0.2s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.options a:hover {
+  color: var(--element-background);
+  background-color: var(--element-foreground);
+}
+
+.options > a > img {
+  filter: invert(83%) sepia(95%) saturate(4281%) hue-rotate(81deg)
+    brightness(99%) contrast(106%);
+  margin-left: 10px;
+  transition: filter 0.2s ease;
+}
+
+.options > a:hover > img {
+  filter: invert(8%) sepia(79%) saturate(6545%) hue-rotate(322deg)
+    brightness(86%) contrast(103%);
+}
