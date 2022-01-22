@@ -57,7 +57,7 @@ export default function Home({
           })}
         </div>
       </section>
-      <TextFab href="/about" variant="secondary">
+      <TextFab href="/about" variant="secondary" icon="pallete">
         About Wildberries
       </TextFab>
       <Footer />

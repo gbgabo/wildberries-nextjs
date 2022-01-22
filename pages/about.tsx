@@ -80,7 +80,9 @@ export default function About({}: Props): ReactElement {
           perspiciatis deleniti pariatur officia fuga obcaecati!
         </p>
       </div>
-      <TextFab href="/">Check all Wildberries ports</TextFab>
+      <TextFab href="/" icon="brush">
+        Check all Wildberries ports
+      </TextFab>
       <Footer />
     </>
   );
