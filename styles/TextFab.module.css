@@ -16,11 +16,10 @@
   transition: filter 0.2s ease;
 }
 
-.primary {
-  color: var(--element-foreground);
-  background-color: var(--element-background);
+.primary,
+.secondary {
   padding: 22px;
-  border-radius: 30px;
+  border-radius: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -28,6 +27,11 @@
   transition: color 0.15s ease, background-color 0.15s ease,
     box-shadow 0.2s ease;
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+
+.primary {
+  color: var(--element-foreground);
+  background-color: var(--element-background);
 }
 
 .primary:hover,
@@ -50,15 +54,6 @@
 .secondary {
   background-color: var(--secondary-foreground);
   color: var(--background-darker);
-  padding: 22px;
-  border-radius: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: large;
-  transition: color 0.15s ease, background-color 0.15s ease,
-    box-shadow 0.2s ease;
-  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
 }
 
 .secondary:hover,
