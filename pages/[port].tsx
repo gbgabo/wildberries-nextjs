@@ -7,7 +7,7 @@ import styles from "../styles/Port.module.css";
 import Code from "../components/Code";
 import Image from "next/image";
 import { getPort, getPorts } from "../lib/ports";
-import { Footer, Header, TextFab } from "../components";
+import { Footer, Header, Navbar, TextFab } from "../components";
 import ReactMarkdown from "react-markdown";
 
 interface IParams extends ParsedUrlQuery {
@@ -48,6 +48,7 @@ export default function Port({
 }: Port) {
   return (
     <div>
+      <Navbar />
       <Head>
         <title>{title} theme - Wildberries</title>
         <link
@@ -93,8 +94,8 @@ export default function Port({
         )}
       </div>
 
-      <TextFab href="/" variant="secondary">
-        Check all Wildberries ports
+      <TextFab href="/" icon="brush" variant="secondary">
+        Check all ports
       </TextFab>
 
       <Footer />

@@ -1,5 +1,5 @@
 import React, { ReactElement } from "react";
-import { Footer, TextFab } from "../components";
+import { Footer, Navbar, TextFab } from "../components";
 import styles from "../styles/About.module.css";
 
 interface Props {}
@@ -35,6 +35,7 @@ export default function About({}: Props): ReactElement {
 
   return (
     <>
+      <Navbar />
       <div className={styles.background}>
         <h1 className={styles.title}>If you like purple</h1>
 
@@ -81,7 +82,7 @@ export default function About({}: Props): ReactElement {
         </p>
       </div>
       <TextFab href="/" icon="brush">
-        Check all Wildberries ports
+        Check all theme ports
       </TextFab>
       <Footer />
     </>

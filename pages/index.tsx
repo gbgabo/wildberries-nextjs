@@ -3,7 +3,7 @@ import Head from "next/head";
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
 import { getPorts } from "../lib/ports";
-import { Footer, Header, TextFab } from "../components";
+import { Footer, Header, Navbar, TextFab } from "../components";
 
 export const getStaticProps: GetStaticProps = async () => {
   const portsData = getPorts();
@@ -25,6 +25,7 @@ export default function Home({
 }) {
   return (
     <div>
+      <Navbar />
       <Head>
         <title>Wildberries - Dark theme for purple lovers</title>
         <meta name="description" content="Wildberries theme" />
