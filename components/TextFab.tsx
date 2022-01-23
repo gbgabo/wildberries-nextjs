@@ -19,7 +19,8 @@ export default function TextFab({
     <div className={styles.container}>
       <Link href={href}>
         <a className={styles[variant]}>
-          {children} {icon && <img src={`/icons/${icon}.svg`} />}
+          {icon && <img src={`/icons/${icon}.svg`} />}
+          {children}
         </a>
       </Link>
     </div>

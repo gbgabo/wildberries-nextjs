@@ -12,7 +12,7 @@
 }
 
 .container > * > img {
-  margin-left: 10px;
+  margin-right: 10px;
   transition: filter 0.2s ease;
 }
 
