@@ -2,15 +2,26 @@ import React, { ReactElement } from "react";
 import styles from "../styles/Navbar.module.css";
 import Link from "next/link";
 
-interface Props {}
+interface Props {
+  port?: string;
+}
 
-export default function Navbar({}: Props): ReactElement {
+export default function Navbar({ port }: Props): ReactElement {
   return (
     <div className={styles.bar}>
       <Link href="/">
         <a className={styles.logo}>
           <img src="/img/ui/wb.png" />
-          <h1>Wildberries</h1>
+
+          <div className={styles.text}>
+            <h1>Wildberries</h1>
+            {port && (
+              <p>
+                {" "}
+                for <span className="highlight">{port}</span>
+              </p>
+            )}
+          </div>
         </a>
       </Link>
     </div>

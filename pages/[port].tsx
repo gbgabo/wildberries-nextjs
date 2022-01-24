@@ -48,7 +48,7 @@ export default function Port({
 }: Port) {
   return (
     <div>
-      <Navbar />
+      <Navbar port={title} />
       <Head>
         <title>{title} theme - Wildberries</title>
         <link

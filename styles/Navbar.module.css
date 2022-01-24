@@ -31,10 +31,27 @@
 
 .logo h1 {
   font-size: 1.5rem;
+  margin: 0;
 }
 
 .logo img {
   height: 50%;
   margin-right: 20px;
   border-radius: 0.5rem;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+}
+
+.text p {
+  margin: 0;
+}
+
+.text span {
+  background-color: var(--secondary-foreground);
+  color: var(--background-darker);
+  border-radius: 5px;
+  padding: 2px 7px;
 }
