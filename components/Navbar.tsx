@@ -14,10 +14,9 @@ export default function Navbar({ port }: Props): ReactElement {
           <img src="/img/ui/wb.png" />
 
           <div className={styles.text}>
-            <h1>Wildberries</h1>
+            <h1>Wildberries&ensp;</h1>
             {port && (
               <p>
-                {" "}
                 for <span className="highlight">{port}</span>
               </p>
             )}
