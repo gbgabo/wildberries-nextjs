@@ -54,9 +54,9 @@ export default function About({}: Props): ReactElement {
       <div className={styles.content}>
         <h2>Wildberries can be the colortheme for you</h2>
         <p>
-          And yeah, it's not for everyone, but once I couldn't find any color
-          theme for my daily applications in such style, I started to customize
-          everything on a common color scheme, now called wildberries
+          And yeah, it&apos;s not for everyone, but once I couldn&apos;t find
+          any color theme for my daily applications in such style, I started to
+          customize everything on a common color scheme, now called wildberries
         </p>
         <p>
           Being just a developer and not a graphic designer, I came up with this
