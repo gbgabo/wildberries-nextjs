@@ -64,7 +64,7 @@
   width: fit-content;
   height: fit-content;
   overflow: hidden;
-  z-index: 3;
+  /* z-index: 3; */
   margin: auto;
   position: absolute;
   bottom: 20%;
@@ -76,12 +76,26 @@
   width: 20vw;
 }
 
+.pallete {
+  border-radius: 5px;
+  height: 50px;
+  width: fit-content;
+  height: fit-content;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.pallete > * > .color {
+  height: 100px;
+  width: 80px;
+  position: relative;
+}
+
 .auxiliar {
   height: 50px;
   width: fit-content;
   height: fit-content;
   overflow: hidden;
-  z-index: 3;
   margin: auto;
   position: absolute;
   bottom: 3%;
@@ -93,4 +107,26 @@
   height: 20px;
   width: 20px;
   border-radius: 5px;
+}
+
+* > .label {
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  position: absolute;
+  bottom: 0;
+  background-color: var(--background-dark);
+  padding: 5%;
+  color: white;
+}
+
+.card {
+  width: fit-content;
+  height: fit-content;
+  margin: 30px auto;
+}
+
+.card > h3 {
+  text-align: center;
+  margin: 10px;
 }

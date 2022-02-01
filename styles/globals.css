@@ -43,10 +43,13 @@ html {
 }
 
 h2 {
-  line-height: 1.5;
-  font-size: 1.5rem;
   color: var(--secondary-foreground);
   font-weight: 400;
+}
+
+h3 {
+  color: var(--secondary-foreground);
+  font-weight: bold;
 }
 
 @media (max-width: 1250px) {
@@ -131,7 +134,7 @@ ol > li:before {
   background: var(--secondary-foreground);
   border-radius: 10px;
   font-weight: bold;
-  font-family: "Helvetica Neue", Arial, sans-serif;
+  /* font-family: "Helvetica Neue", Arial, sans-serif; */
   text-align: center;
 }
 li ol,
@@ -140,4 +143,9 @@ li ul {
 }
 ol ol li:last-child {
   margin-bottom: 0;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--purple);
 }

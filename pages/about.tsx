@@ -5,28 +5,30 @@ import styles from "../styles/About.module.css";
 interface Props {}
 
 export default function About({}: Props): ReactElement {
-  const backgroundColors = ["black-berry", "grape", "cherry"];
-  const foregroundColors = ["pink", "purple", "green"];
-  const auxiliarColors = ["blue", "yellow", "red", "orange"];
+  const backgroundColors = ["#19002e", "#240041", "#900048"];
+  const foregroundColors = ["#ff0e82", "#c79bff", "#00ffb7"];
+  const auxiliarColors = ["#399ee6", "#ffd700", "#d70040", "#ff4500"];
 
   const Pallete = ({
     colors,
     direction = "row",
+    label = false,
   }: {
     colors: string[];
     direction?: "row" | "column";
+    label?: boolean;
   }) => {
     return (
       <div className={styles[direction]}>
         {colors.map((color) => {
           return (
             <div
-              style={{
-                backgroundColor: `var(--${color})`,
-              }}
+              style={{ backgroundColor: color }}
               key={color}
               className={styles.color}
-            ></div>
+            >
+              {label && <p className={styles.label}>{color}</p>}
+            </div>
           );
         })}
       </div>
@@ -52,34 +54,40 @@ export default function About({}: Props): ReactElement {
       <div className={styles.content}>
         <h2>Wildberries can be the colortheme for you</h2>
         <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-          Reprehenderit exercitationem, sunt eius deserunt hic ea consequuntur
-          voluptatibus omnis doloremque. Amet optio facilis fugit dicta fugiat
-          molestiae, quod voluptatem non voluptas! Lorem ipsum dolor sit amet
-          consectetur adipisicing elit. Libero nisi, quo consequuntur veritatis
-          eos aliquid repudiandae itaque quasi reprehenderit dolorum quas est
-          sapiente qui ad facere. Optio praesentium magni iste. Lorem ipsum
-          dolor sit amet consectetur adipisicing elit. Qui eius minus ipsum
-          officiis tempora quas sed, distinctio illo a autem dicta alias
-          voluptate doloribus nihil, harum aliquid? Sed, laborum debitis. Lorem
-          ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, dolor!
-          Aliquam, fuga ullam nisi reprehenderit recusandae accusantium ex! Quia
-          voluptate, deserunt ut suscipit placeat aperiam tenetur alias officia
-          quidem eius? Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Odio porro provident fuga. Obcaecati, nam! Officia ut numquam aliquid
-          recusandae quaerat sed minus perferendis ducimus? Explicabo, esse
-          architecto. Consectetur, veritatis eum? Lorem ipsum dolor, sit amet
-          consectetur adipisicing elit. Aliquam exercitationem facere fuga
-          neque? Accusamus, libero! Accusantium exercitationem quod harum iure
-          nihil enim ratione vel quidem! Rerum fugit a dignissimos saepe. Lorem
-          ipsum dolor sit amet consectetur adipisicing elit. Voluptas quia
-          distinctio tempora porro magni repellendus assumenda impedit, alias
-          ullam consectetur quo atque labore facere blanditiis cum mollitia amet
-          maxime voluptatibus! Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Suscipit id dignissimos, sit quia doloribus
-          officiis, ipsam neque minima laboriosam odio mollitia quo vero eveniet
-          perspiciatis deleniti pariatur officia fuga obcaecati!
+          And yeah, it's not for everyone, but once I couldn't find any color
+          theme for my daily applications in such style, I started to customize
+          everything on a common color scheme, now called wildberries
         </p>
+        <p>
+          Being just a developer and not a graphic designer, I came up with this
+          color scheme by pure personal taste, however, by time passing and many
+          applications being customized, I tried to follow some consistencies.
+        </p>
+        <p>
+          Wildberries theme is supposed to be a dark theme, with additional
+          bright accents, almost in a cyberpunkish way.
+        </p>
+        <div className={styles.card}>
+          <h3>Background Colors</h3>
+          <hr />
+          <div className={styles.pallete}>
+            <Pallete label colors={backgroundColors} />
+          </div>
+        </div>
+        <div className={styles.card}>
+          <h3>Foreground Colors</h3>
+          <hr />
+          <div className={styles.pallete}>
+            <Pallete label colors={foregroundColors} />
+          </div>
+        </div>
+        <div className={styles.card}>
+          <h3>Auxiliar Colors</h3>
+          <hr />
+          <div className={styles.pallete}>
+            <Pallete label colors={auxiliarColors} />
+          </div>
+        </div>
       </div>
       <TextFab href="/" icon="brush">
         Check all theme ports
