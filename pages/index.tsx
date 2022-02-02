@@ -39,7 +39,7 @@ export default function Home({
       </Head>
 
       <Header home ports={["vscode", "duckduckgo", "gtk"]} title="Wildberries">
-        <>An experimental dark color theme for people who love purple</>
+        <>An experimental dark theme for people who love purple</>
       </Header>
 
       <section id="ports" className={styles.ports}>
