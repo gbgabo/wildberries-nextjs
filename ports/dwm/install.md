@@ -12,7 +12,6 @@ platform: ["linux"]
    	[SchemeNorm] 	= { "#c79bff", "#240041", "#444444" },
    	[SchemeSel] 	= { "#00ffb7", "#900048", "#900048" },
    };
-
    ```
 
 2. Rebuild your dwm fork
