@@ -144,6 +144,9 @@ li ul {
 ol ol li:last-child {
   margin-bottom: 0;
 }
+li > * {
+  margin: 0;
+}
 
 hr {
   border: 0;
