@@ -1,4 +1,5 @@
 import React, { ReactElement } from "react";
+import Head from "next/head";
 import { Footer, Navbar, TextFab } from "../components";
 import styles from "../styles/About.module.css";
 
@@ -37,6 +38,15 @@ export default function About({}: Props): ReactElement {
 
   return (
     <>
+      <Head>
+        <title>About Wildberries Theme</title>
+        <link
+          rel="preload"
+          href="/fonts/JetBrainsMono-Regular.ttf"
+          as="font"
+          crossOrigin=""
+        />
+      </Head>
       <Navbar />
       <div className={styles.background}>
         <h1 className={styles.title}>If you like purple</h1>

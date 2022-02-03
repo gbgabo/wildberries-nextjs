@@ -148,4 +148,5 @@ ol ol li:last-child {
 hr {
   border: 0;
   border-top: 1px solid var(--purple);
+  margin: 15px 40px;
 }
