@@ -119,6 +119,7 @@
 }
 
 * > .label {
+  font-size: 0.875em;
   width: 100%;
   text-align: center;
   margin: 0;
