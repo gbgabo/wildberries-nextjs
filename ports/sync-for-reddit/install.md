@@ -3,4 +3,19 @@ title: Sync for Reddit
 platform: ["android", "ios"]
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+1. On your Sync for reddit app opened, go to `Settings > Theme customization`;
+2. At the bottom of the page, click on `load`
+3. Paste the data below on the `Theme data` field that is presented:
+   ```json
+   {
+     "name": "wildberries",
+     "primary_color": "#240041",
+     "accent_color": "#ff0e82",
+     "highlight_color": "#00ffb7",
+     "primary_text_color": "#ffffff",
+     "secondary_text_color": "#c79bff",
+     "window_color": "#400074",
+     "content_color": "#900048",
+     "sticky_text_color": "#03a5c9"
+   }
+   ```
