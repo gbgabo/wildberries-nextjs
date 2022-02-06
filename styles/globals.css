@@ -100,6 +100,7 @@ body::-webkit-scrollbar-thumb:active {
   color: var(--background-darker);
   border-radius: 5px;
   padding: 5px 10px;
+  white-space: pre;
 }
 
 /* List items style*/
