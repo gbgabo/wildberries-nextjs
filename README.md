@@ -40,6 +40,6 @@ applications being customized, I tried to follow some consistencies, and came up
 This repo contains:
 
 - The next.js project of the [wildberries.style](https://wildberries.style/) website;
-- The original ports source files, on [/port](https://github.com/gbgabo/wildberries/tree/main/ports);
+- The original ports source files, on [/ports](https://github.com/gbgabo/wildberries/tree/main/ports);
   <!-- alternative for purple: #a470d8 -->
   <!-- Another interesting purple: #ac4ea4 -->
