@@ -1,6 +1,11 @@
 ---
 title: Telegram X
 platform: ["android"]
+includeFile: true
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+1. Download telegram-x.zip;
+2. Extract the .zip file;
+3. Send It to yourself on a telegram chat, like on `Saved Messages`;
+4. Click on the message including the file;
+5. Click on `Apply`;
