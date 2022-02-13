@@ -12,11 +12,11 @@ applications being customized, I tried to follow some consistencies, and came up
 
 ### Background Colors
 
-| Palette        | Hex       | RGB         | HSL                 | 🎨                                                                           |
-| -------------- | --------- | ----------- | ------------------- | ---------------------------------------------------------------------------- |
-| Background     | `#19002E` | `25 00 46`  | `272.6° 100% 9%`    | ![Background Color](https://via.placeholder.com/20/19002E/19002E?text=+)     |
-| Background 2   | `#240041` | `36 00 65`  | `273.2° 100% 12.7%` | ![Background 2 Color](https://via.placeholder.com/20/240041/240041?text=+)   |
-| Primary Button | `#900048` | `144 00 72` | `330° 100% 28.2%`   | ![Primary Button Color](https://via.placeholder.com/20/900048/900048?text=+) |
+| Palette     | Hex       | RGB         | HSL                 | 🎨                                                                  |
+| ----------- | --------- | ----------- | ------------------- | ------------------------------------------------------------------- |
+| Black Berry | `#19002E` | `25 00 46`  | `272.6° 100% 9%`    | ![Black Berry](https://via.placeholder.com/20/19002E/19002E?text=+) |
+| Grape       | `#240041` | `36 00 65`  | `273.2° 100% 12.7%` | ![Grape](https://via.placeholder.com/20/240041/240041?text=+)       |
+| Cherry      | `#900048` | `144 00 72` | `330° 100% 28.2%`   | ![Cherry](https://via.placeholder.com/20/900048/900048?text=+)      |
 
 ### Foreground Colors
 
