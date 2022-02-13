@@ -74,8 +74,8 @@ export default function About({}: Props): ReactElement {
           applications being customized, I tried to follow some consistencies.
         </p>
         <p>
-          Wildberries theme is supposed to be a dark theme, with additional
-          bright accents, almost in a cyberpunkish way.
+          Wildberries is a dark theme, with additional bright accents, almost in
+          a cyberpunkish way.
         </p>
         <div className={styles.card}>
           <h3>Background Colors</h3>
