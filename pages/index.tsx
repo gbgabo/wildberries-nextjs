@@ -27,8 +27,16 @@ export default function Home({
     <div>
       <Navbar />
       <Head>
-        <title>Wildberries - Dark theme for purple lovers</title>
+        <title>Wildberries - A dark theme for purple lovers</title>
         <meta name="description" content="Wildberries theme" />
+
+        <meta property="og:image" content="/img/ui/og-image.png" />
+        <meta property="og:title" content="Wildberries" key="ogtitle" />
+        <meta
+          property="og:description"
+          content="A dark theme for purple lovers"
+          key="ogdesc"
+        />
         <link
           rel="preload"
           href="/fonts/JetBrainsMono-Regular.ttf"
