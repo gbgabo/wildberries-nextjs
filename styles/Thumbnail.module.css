@@ -1,0 +1,78 @@
+.icon {
+  border-radius: 1.5rem;
+  border: 3px solid var(--element-foreground);
+  margin-bottom: 40px;
+  width: 150px;
+  height: 150px;
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  min-width: 500px;
+  height: 85vh;
+  position: absolute;
+  left: 0;
+  z-index: 5;
+  background: var(--background-darker);
+  height: 100vh;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  border-right: 2px solid var(--element-foreground);
+}
+
+.title a {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+.title a:hover,
+.title a:focus,
+.title a:active {
+  text-decoration: underline;
+}
+
+.title {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 3rem;
+}
+
+.title,
+.description {
+  text-align: center;
+}
+
+.description {
+  display: inline;
+  margin: 30px auto;
+  line-height: 1.5;
+  font-size: 1.5rem;
+  color: var(--secondary-foreground);
+  max-width: 75%;
+  align-items: center;
+  justify-content: center;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  background-color: var(--background-darker);
+  flex-wrap: wrap;
+  min-height: 100vh;
+  padding: 4%;
+  position: relative;
+  z-index: 4;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.main > img {
+  height: 100vh;
+  position: absolute;
+  right: 0;
+}
