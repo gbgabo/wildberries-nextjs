@@ -4,4 +4,5 @@ interface Port {
   platform: Array<"all" | "mac" | "windows" | "linux" | "android" | "IOS">;
   includeFile: boolean;
   contentHtml: string;
+  ogImage: string;
 }

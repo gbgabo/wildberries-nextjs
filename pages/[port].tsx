@@ -6,6 +6,7 @@ import Link from "next/link";
 import styles from "../styles/Port.module.css";
 import Code from "../components/Code";
 import Image from "next/image";
+import getOgImage from "../lib/getOgImage";
 import { getPort, getPorts } from "../lib/ports";
 import { Footer, Header, Navbar, TextFab } from "../components";
 import ReactMarkdown from "react-markdown";
@@ -16,10 +17,12 @@ interface IParams extends ParsedUrlQuery {
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const port = context.params as IParams;
+  const ogImage = await getOgImage(`thumbnail/${port.port}`);
   const portProps = await getPort(port.port);
   return {
     props: {
       ...portProps,
+      ogImage,
     },
   };
 };
@@ -45,6 +48,7 @@ export default function Port({
   platform,
   includeFile,
   contentHtml,
+  ogImage,
 }: Port) {
   return (
     <div>
@@ -57,6 +61,7 @@ export default function Port({
           as="font"
           crossOrigin=""
         />
+        <meta name="og:image" content={ogImage} />
       </Head>
       <Header ports={[port]} title="Wildberries">
         <>
