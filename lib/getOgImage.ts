@@ -1,26 +1,25 @@
 import fs from "fs";
 import { createHash } from "crypto";
-import chromium from "chrome-aws-lambda";
-import { chromium as playwrightChromium } from "playwright-core";
+// import chromium from "chrome-aws-lambda";
+// import { chromium as playwrightChromium } from "playwright-core";
+// const { chromium } = require("chrome-aws-lambda");
+import { chromium } from "playwright-chromium";
 
 export default async function getOgImage(
   path: string,
-  baseUrl = "https://wildberries.style"
+  baseUrl = "localhost:3000/"
 ) {
-  //   if (process.env.NODE_ENV === "development") {
-  //     return "og image will be generated in production";
-  //   }
+  // if (process.env.NODE_ENV === "development") {
+  //   return "og image will be generated in production";
+  // }
 
   const url = `${baseUrl}${path}`;
   const hash = createHash("md5").update(url).digest("hex");
-  const browser = await playwrightChromium.launch({
-    args: chromium.args,
-    executablePath: await chromium.executablePath,
-    headless: chromium.headless,
-  });
+
+  const browser = await chromium.launch();
   const ogImageDir = `./public/img/og`;
   const imagePath = `${ogImageDir}/${hash}.png`;
-  const publicPath = `${process.env.BASE_URL}/images/og/${hash}.png`;
+  const publicPath = `${baseUrl}img/og/${hash}.png`;
 
   try {
     fs.statSync(imagePath);
