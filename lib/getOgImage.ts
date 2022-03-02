@@ -7,11 +7,11 @@ import { chromium } from "playwright-chromium";
 
 export default async function getOgImage(
   path: string,
-  baseUrl = "localhost:3000/"
+  baseUrl = "https://wildberries.style/"
 ) {
-  // if (process.env.NODE_ENV === "development") {
-  //   return "og image will be generated in production";
-  // }
+  if (process.env.NODE_ENV === "development") {
+    return "og image will be generated in production";
+  }
 
   const url = `${baseUrl}${path}`;
   const hash = createHash("md5").update(url).digest("hex");
