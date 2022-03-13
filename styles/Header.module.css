@@ -63,7 +63,11 @@
   z-index: 4;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 
-  background: linear-gradient(180deg, #900048, rgba(25, 0, 46, 1) 70%);
+  background: linear-gradient(
+    180deg,
+    var(--element-background),
+    var(--background-darker) 70%
+  );
 }
 
 .down {
@@ -139,5 +143,12 @@
   .preview img {
     border-radius: 3px;
     width: 90vw;
+  }
+  .main {
+    background: linear-gradient(
+      180deg,
+      var(--element-background),
+      var(--background-darker) 40%
+    );
   }
 }
