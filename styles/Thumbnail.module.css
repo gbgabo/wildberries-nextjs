@@ -17,21 +17,10 @@
   position: absolute;
   left: 0;
   z-index: 5;
-  background: var(--background-darker);
   height: 100vh;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-  border-right: 2px solid var(--element-foreground);
-}
 
-.title a {
-  color: var(--blue);
-  text-decoration: none;
-}
-
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
+  background: linear-gradient(180deg, #900048, rgba(25, 0, 46, 1) 70%);
 }
 
 .title {
