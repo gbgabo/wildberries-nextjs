@@ -77,25 +77,27 @@ export default function About({}: Props): ReactElement {
           Wildberries is a dark theme, with additional bright accents, almost in
           a cyberpunkish way.
         </p>
-        <div className={styles.card}>
-          <h3>Background Colors</h3>
-          <hr />
-          <div className={styles.pallete}>
-            <Pallete label colors={backgroundColors} />
+        <div class={styles.grid}>
+          <div className={styles.card}>
+            <h3>Background Colors</h3>
+            <hr />
+            <div className={styles.pallete}>
+              <Pallete label colors={backgroundColors} />
+            </div>
           </div>
-        </div>
-        <div className={styles.card}>
-          <h3>Foreground Colors</h3>
-          <hr />
-          <div className={styles.pallete}>
-            <Pallete label colors={foregroundColors} />
+          <div className={styles.card}>
+            <h3>Foreground Colors</h3>
+            <hr />
+            <div className={styles.pallete}>
+              <Pallete label colors={foregroundColors} />
+            </div>
           </div>
-        </div>
-        <div className={styles.card}>
-          <h3>Auxiliar Colors</h3>
-          <hr />
-          <div className={styles.pallete}>
-            <Pallete label colors={auxiliarColors} />
+          <div className={styles.card}>
+            <h3>Auxiliar Colors</h3>
+            <hr />
+            <div className={styles.pallete}>
+              <Pallete label colors={auxiliarColors} />
+            </div>
           </div>
         </div>
       </div>

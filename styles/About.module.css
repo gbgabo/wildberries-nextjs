@@ -14,6 +14,20 @@
   align-content: center;
 }
 
+.grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+  .grid {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+
 .title {
   position: absolute;
   top: 15%;
@@ -35,7 +49,7 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-  max-width: 840px;
+  max-width: 80vw;
   padding: 0 2rem 2rem 2rem;
 }
 
