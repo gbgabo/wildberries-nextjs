@@ -1,9 +1,13 @@
 import React, { ReactElement } from "react";
 import styles from "../styles/Footer.module.css";
 
-export default function Footer(): ReactElement {
+interface Props {
+  variant?: "primary" | "secondary";
+}
+
+export default function Footer({ variant = "primary" }: Props): ReactElement {
   return (
-    <div className={styles.background}>
+    <div className={styles[variant]}>
       <footer className={styles.footer}>
         <p>
           Made with ♥ by{" "}

@@ -1,6 +1,22 @@
-.background {
+.primary,
+.secondary {
   padding-bottom: 9rem;
-  background: linear-gradient(0deg, #900048, rgba(25, 0, 46, 1) 40%);
+}
+
+.primary {
+  background: linear-gradient(
+    0deg,
+    var(--element-background),
+    var(--background-darker) 40%
+  );
+}
+
+.secondary {
+  background: linear-gradient(
+    0deg,
+    var(--secondary-foreground) -50%,
+    var(--background-darker) 40%
+  );
 }
 
 .footer {
