@@ -1,6 +1,6 @@
 .background {
-  padding-bottom: 7rem;
-  background-color: var(--background-darker);
+  padding-bottom: 9rem;
+  background: linear-gradient(0deg, #900048, rgba(25, 0, 46, 1) 40%);
 }
 
 .footer {
