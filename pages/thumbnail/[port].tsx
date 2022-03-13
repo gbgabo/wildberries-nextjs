@@ -48,9 +48,8 @@ export default function Port({
           <img className={styles.icon} src="/img/ui/wb.png" alt="Wildberries" />
           <h1 className={styles.title}>Wildberries</h1>
           <p className={styles.description}>
-            {`A purple theme for `}
+            {`theme for `}
             <span className="highlight">{title}</span>
-            {` and many other applications`}
           </p>
         </div>
         <img src={`/img/screenshots/${port}.png`} />
