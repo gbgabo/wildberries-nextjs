@@ -1,9 +1,9 @@
 .icon {
-  border-radius: 1.5rem;
+  border-radius: 2rem;
   border: 3px solid var(--element-foreground);
   margin-bottom: 40px;
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
 }
 
 .head {
@@ -49,7 +49,7 @@
   display: inline;
   margin: 30px auto;
   line-height: 1.5;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   color: var(--secondary-foreground);
   max-width: 75%;
   align-items: center;
