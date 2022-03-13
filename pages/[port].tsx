@@ -62,6 +62,11 @@ export default function Port({
           crossOrigin=""
         />
         <meta name="og:image" content={ogImage} />
+        <meta
+          property="og:description"
+          content={`A dark purple theme for ${title} and many other apps`}
+          key="ogdesc"
+        />
       </Head>
       <Header ports={[port]} title="Wildberries">
         <>
