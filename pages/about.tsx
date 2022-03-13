@@ -77,7 +77,7 @@ export default function About({}: Props): ReactElement {
           Wildberries is a dark theme, with additional bright accents, almost in
           a cyberpunkish way.
         </p>
-        <div class={styles.grid}>
+        <div className={styles.grid}>
           <div className={styles.card}>
             <h3>Background Colors</h3>
             <hr />
