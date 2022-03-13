@@ -104,7 +104,7 @@ export default function About({}: Props): ReactElement {
       <TextFab href="/" icon="brush">
         Check all theme ports
       </TextFab>
-      <Footer />
+      <Footer variant="secondary" />
     </>
   );
 }
