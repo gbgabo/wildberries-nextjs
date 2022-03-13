@@ -19,6 +19,7 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  align-content: center;
 }
 
 @media (max-width: 600px) {
@@ -145,7 +146,7 @@
 .card {
   width: fit-content;
   height: fit-content;
-  margin: 30px auto;
+  margin: 30px 5vw;
 }
 
 .card > h3 {
