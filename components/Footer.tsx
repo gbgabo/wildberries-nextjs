@@ -1,4 +1,5 @@
 import React, { ReactElement } from "react";
+import { BioCard } from "../components";
 import styles from "../styles/Footer.module.css";
 
 interface Props {
@@ -9,23 +10,17 @@ export default function Footer({ variant = "primary" }: Props): ReactElement {
   return (
     <div className={styles[variant]}>
       <footer className={styles.footer}>
-        <p>
-          Made with ♥ by{" "}
-          <a href="https://github.com/gbgabo" rel="noreferrer" target="_blank">
-            @gbgabo
-          </a>
-        </p>
-
-        <p>
-          View the project on{" "}
-          <a
-            href="https://github.com/gbgabo/wildberries"
-            rel="noreferrer"
-            target="_blank"
-          >
-            Github
-          </a>
-        </p>
+        <BioCard
+          top="Check the project on"
+          bottom="Github"
+          href="https://github.com/gbgabo/wildberries"
+        />
+        <BioCard
+          top="Made with ♥ by"
+          bottom="@gbgabo"
+          image="/img/ui/profile.png"
+          href="https://github.com/gbgabo"
+        />
       </footer>
     </div>
   );
