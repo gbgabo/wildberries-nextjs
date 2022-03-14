@@ -103,6 +103,14 @@ body::-webkit-scrollbar-thumb:active {
   white-space: pre;
 }
 
+.berry {
+  background-color: var(--element-background);
+  color: var(--element-foreground);
+  border-radius: 5px;
+  padding: 5px 10px;
+  white-space: pre;
+}
+
 /* List items style*/
 
 ol {
