@@ -66,7 +66,8 @@ export default function About({}: Props): ReactElement {
         <p>
           And yeah, it&apos;s not for everyone, but once I couldn&apos;t find
           any color theme for my daily applications in such style, I started to
-          customize everything on a common color scheme, now called wildberries
+          customize everything on a common color scheme, now called{" "}
+          <span className="berry">wildberries</span>
         </p>
         <p>
           Being just a developer and not a graphic designer, I came up with this
