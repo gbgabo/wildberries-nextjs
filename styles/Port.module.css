@@ -17,6 +17,15 @@
   padding: 0 2rem 2rem 2rem;
 }
 
+.instructions a {
+  color: var(--element-foreground);
+  text-decoration: none;
+}
+
+.instructions a:hover {
+  text-decoration: underline;
+}
+
 .instructions-content {
   padding-bottom: 2rem;
 }
