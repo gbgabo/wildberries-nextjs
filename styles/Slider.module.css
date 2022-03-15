@@ -63,6 +63,10 @@
   vertical-align: middle;
 }
 
+.slider-nav__item::before {
+  display: none;
+}
+
 .slider-nav__item {
   display: inline-block;
   margin: 5px;
