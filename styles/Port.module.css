@@ -20,6 +20,7 @@
 .instructions a {
   color: var(--element-foreground);
   text-decoration: none;
+  line-break: anywhere;
 }
 
 .instructions a:hover {
