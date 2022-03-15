@@ -113,39 +113,52 @@ body::-webkit-scrollbar-thumb:active {
 
 /* List items style*/
 
-ol {
+ol,
+ul {
   counter-reset: li; /* Initiate a counter */
   margin-left: 0; /* Remove the default left margin */
   padding-left: 0; /* Remove the default left padding */
 }
-ol > li {
+ol > li,
+ul > li {
   position: relative; /* Create a positioning context */
   margin: 20px 0px 20px 3em; /* Give each list item a left margin to make room for the numbers */
   padding: 4px 16px; /* Add some spacing around the content */
   list-style: none; /* Disable the normal item numbering */
 }
-ol > li:before {
-  content: counter(li); /* Use the counter as content */
-  counter-increment: li; /* Increment the counter by 1 */
-  /* Position and style the number */
+ol > li::before,
+ul > li:before {
   position: absolute;
-  top: -3px;
-  left: -2em;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  width: 2em;
-  /* Some space between the number and the content in browsers that support
-     generated content but not positioning it (Camino 2 is one example) */
-  margin-right: 8px;
-  padding: 8px;
   color: var(--background-darker);
   background: var(--secondary-foreground);
-  border-radius: 10px;
   font-weight: bold;
-  /* font-family: "Helvetica Neue", Arial, sans-serif; */
   text-align: center;
+  margin-right: 8px;
 }
+
+ol > li:before {
+  content: counter(li); /* Use the counter as content */
+  counter-increment: li; /* Increment the counter by 1 */
+  top: -3px;
+  left: -2em;
+  /* Some space between the number and the content in browsers that support
+     generated content but not positioning it (Camino 2 is one example) */
+  padding: 8px;
+  border-radius: 10px;
+  width: 2em;
+}
+
+ul > li:before {
+  content: "•";
+  left: -1.6em;
+  border-radius: 35%;
+  width: 1.2em;
+  height: 1.2em;
+}
+
 li ol,
 li ul {
   margin-top: 6px;
