@@ -1,0 +1,68 @@
+.icon {
+  border-radius: 2rem;
+  border: 3px solid var(--element-foreground);
+  margin-bottom: 40px;
+  width: 200px;
+  height: 200px;
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  min-width: 500px;
+  height: 100vh;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+
+  background: linear-gradient(
+    180deg,
+    var(--element-background),
+    var(--background-darker) 70%
+  );
+}
+
+.title {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 3rem;
+}
+
+.title,
+.description {
+  text-align: center;
+}
+
+.description {
+  display: inline;
+  margin: 30px auto;
+  line-height: 1.5;
+  font-size: 1.7rem;
+  color: var(--secondary-foreground);
+  max-width: 75%;
+  align-items: center;
+  justify-content: center;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: center;
+  background-color: var(--background-darker);
+  flex-wrap: wrap;
+  min-height: 100vh;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.screenshot {
+  width: 29vw;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.screenshot > img {
+  height: 100vh;
+}
