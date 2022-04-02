@@ -1,11 +1,24 @@
 import React, { ReactElement } from "react";
+import type { GetStaticProps } from "next";
 import Head from "next/head";
 import { Footer, Navbar, TextFab } from "../components";
 import styles from "../styles/About.module.css";
+import getOgImage from "../lib/getOgImage";
 
-interface Props {}
+interface Props {
+  ogImage: string;
+}
 
-export default function About({}: Props): ReactElement {
+export const getStaticProps: GetStaticProps = async () => {
+  const ogImage = await getOgImage(`thumbnail`);
+  return {
+    props: {
+      ogImage,
+    },
+  };
+};
+
+export default function About({ ogImage }: Props): ReactElement {
   const backgroundColors = ["#19002e", "#240041", "#900048"];
   const foregroundColors = ["#ff0e82", "#c79bff", "#00ffb7"];
   const auxiliarColors = ["#399ee6", "#ffd700", "#d70040", "#ff4500"];
@@ -39,13 +52,24 @@ export default function About({}: Props): ReactElement {
   return (
     <>
       <Head>
-        <title>About Wildberries Theme</title>
+        <meta name="og:image" content={ogImage} />
+
+        <title>About Wildberries</title>
+        <meta property="og:title" content="About Wildberries" key="ogtitle" />
+
+        <meta name="description" content="A dark theme for purple lovers" />
+        <meta
+          property="og:description"
+          content="A dark theme for purple lovers"
+          key="ogdesc"
+        />
         <link
           rel="preload"
           href="/fonts/JetBrainsMono-Regular.ttf"
           as="font"
           crossOrigin=""
         />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
       <div className={styles.background}>

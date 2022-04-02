@@ -3,35 +3,39 @@ import Head from "next/head";
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
 import { getPorts } from "../lib/ports";
+import getOgImage from "../lib/getOgImage";
 import { Footer, Header, Navbar, TextFab } from "../components";
 
-export const getStaticProps: GetStaticProps = async () => {
-  const portsData = getPorts();
-
-  return {
-    props: {
-      portsData,
-    },
-  };
-};
-
-export default function Home({
-  portsData,
-}: {
+interface Props {
   portsData: {
     port: string;
     title: string;
   }[];
-}) {
+  ogImage: string;
+}
+
+export const getStaticProps: GetStaticProps = async () => {
+  const ogImage = await getOgImage(`thumbnail`);
+  const portsData = getPorts();
+  return {
+    props: {
+      portsData,
+      ogImage,
+    },
+  };
+};
+
+export default function Home({ portsData, ogImage }: Props) {
   return (
     <div>
       <Navbar />
       <Head>
-        <title>Wildberries - A dark theme for purple lovers</title>
-        <meta name="description" content="A dark theme for purple lovers" />
+        <meta name="og:image" content={ogImage} />
 
-        <meta property="og:image" content="/img/ui/og-image.png" />
+        <title>Wildberries - A dark theme for purple lovers</title>
         <meta property="og:title" content="Wildberries" key="ogtitle" />
+
+        <meta name="description" content="A dark theme for purple lovers" />
         <meta
           property="og:description"
           content="A dark theme for purple lovers"
