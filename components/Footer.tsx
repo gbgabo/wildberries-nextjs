@@ -18,7 +18,7 @@ export default function Footer({ variant = "primary" }: Props): ReactElement {
         <BioCard
           top="Made with ♥ by"
           bottom="@gbgabo"
-          image="/icons/profile.svg"
+          image="/icons/profile_alpha.svg"
           href="https://github.com/gbgabo"
         />
       </footer>
