@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
-const portsDirectory = path.join(process.cwd(), "ports");
+const portsDirectory = path.join(process.cwd(), "public/ports");
 const portNames = fs.readdirSync(portsDirectory);
 
 export async function getPort(slug: string) {

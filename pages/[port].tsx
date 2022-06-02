@@ -98,7 +98,7 @@ export default function Port({
         </ReactMarkdown>
 
         {includeFile && (
-          <a className={styles.button} href={`/ports/${port}.zip`}>
+          <a className={styles.button} href={`/ports/${port}/${port}.zip`}>
             <img src="/icons/file_download.svg" /> Download
           </a>
         )}
