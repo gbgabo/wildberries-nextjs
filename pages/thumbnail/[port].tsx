@@ -34,13 +34,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   };
 };
 
-export default function Port({
-  port,
-  title,
-  platform,
-  includeFile,
-  contentHtml,
-}: Port) {
+export default function Port({ port, title }: Port) {
   return (
     <>
       <main className={styles.main}>
