@@ -47,7 +47,7 @@ export default function Port({
   title,
   platform,
   includeFile,
-  contentHtml,
+  instructions,
   ogImage,
 }: Port) {
   return (
@@ -94,7 +94,7 @@ export default function Port({
             },
           }}
         >
-          {contentHtml}
+          {instructions}
         </ReactMarkdown>
 
         {includeFile && (
