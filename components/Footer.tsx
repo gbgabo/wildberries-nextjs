@@ -8,20 +8,18 @@ interface Props {
 
 export default function Footer({ variant = "primary" }: Props): ReactElement {
   return (
-    <div className={styles[variant]}>
-      <footer className={styles.footer}>
-        <BioCard
-          top="Check the project on"
-          bottom="Github"
-          href="https://github.com/gbgabo/wildberries"
-        />
-        <BioCard
-          top="Made with ♥ by"
-          bottom="@gbgabo"
-          image="/icons/profile_alpha.svg"
-          href="https://github.com/gbgabo"
-        />
-      </footer>
-    </div>
+    <footer className={`${styles[variant]} ${styles.footer}`}>
+      <BioCard
+        top="Check the project on"
+        bottom="Github"
+        href="https://github.com/gbgabo/wildberries"
+      />
+      <BioCard
+        top="Made with ♥ by"
+        bottom="@gbgabo"
+        image="/icons/profile_alpha.svg"
+        href="https://github.com/gbgabo"
+      />
+    </footer>
   );
 }

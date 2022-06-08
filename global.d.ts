@@ -3,6 +3,6 @@ interface Port {
   title: string;
   platform: Array<"all" | "mac" | "windows" | "linux" | "android" | "IOS">;
   includeFile: boolean;
-  contentHtml: string;
+  instructions: string;
   ogImage: string;
 }

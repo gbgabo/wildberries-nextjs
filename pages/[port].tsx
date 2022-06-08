@@ -47,7 +47,7 @@ export default function Port({
   title,
   platform,
   includeFile,
-  contentHtml,
+  instructions,
   ogImage,
 }: Port) {
   return (
@@ -94,11 +94,11 @@ export default function Port({
             },
           }}
         >
-          {contentHtml}
+          {instructions}
         </ReactMarkdown>
 
         {includeFile && (
-          <a className={styles.button} href={`/ports/${port}.zip`}>
+          <a className={styles.button} href={`/ports/${port}/${port}.zip`}>
             <img src="/icons/file_download.svg" /> Download
           </a>
         )}

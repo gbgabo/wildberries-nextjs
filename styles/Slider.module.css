@@ -11,7 +11,7 @@
 .slider-wrapper {
   position: relative;
   height: 350px;
-  width: 80vw;
+  width: 100vw;
 }
 
 .slide {
@@ -47,7 +47,10 @@
   top: 10%;
   text-align: left;
   color: var(--secondary-foreground);
-  width: 100%;
+  width: 60%;
+  line-height: 2rem;
+  z-index: 1;
+  margin-left: 20px;
 }
 
 .trigger:checked + .slide {
@@ -74,14 +77,15 @@
 
 .slider-nav__label {
   font-size: 13px;
-  background-color: var(--secondary-foreground);
+  background-color: var(--background-dark);
+  color: var(--secondary-foreground);
+  border: 3px solid;
   display: block;
-  height: 1em;
+  height: 1.5em;
+  width: 1.5em;
   line-height: 2em;
-  width: 1em;
   text-align: center;
   border-radius: 50%;
-  color: white;
   cursor: pointer;
   transition: background-color 0.25s, color 0.25s ease-in-out;
 }
@@ -89,8 +93,7 @@
 .slider-nav__label:hover,
 .slider-nav__label:active,
 .slider-nav__label:focus {
-  background-color: var(--element-background);
-  color: black;
+  background-color: var(--secondary-foreground);
 }
 
 @media only screen and (min-width: 1024px) {
