@@ -22,7 +22,6 @@
 .footer {
   background-color: var(--background-darker);
   padding-top: 5rem;
-  height: 300px;
   border-top: 1px dashed var(--element-background);
   display: flex;
   flex-direction: row;
@@ -30,8 +29,6 @@
   align-items: center;
   color: var(--secondary-foreground);
   text-align: center;
-  position: relative;
-  z-index: 4;
 }
 
 .footer a {
