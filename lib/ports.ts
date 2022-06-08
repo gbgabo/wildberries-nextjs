@@ -8,14 +8,15 @@ const portNames = fs.readdirSync(portsDirectory);
 export async function getPort(slug: string) {
   const ports = getPorts();
   const port = ports.find((port) => port.port === slug);
+  const portDirectory = path.join(portsDirectory, slug);
 
-  const installPath = path.join(portsDirectory, slug, "install.md");
-  const fileContent = fs.readFileSync(installPath, "utf8");
-
-  const { content, data } = matter(fileContent);
-
+  const instructionsPath = path.join(portDirectory, "install.md");
+  const instructionsFile = fs.readFileSync(instructionsPath, "utf8");
+  const { content } = matter(instructionsFile);
   const contentHtml = content.toString();
-  const includeFile = data.includeFile ? data.includeFile : false;
+
+  const filePath = path.join(portDirectory, `${slug}.zip`);
+  const includeFile = fs.existsSync(filePath);
 
   return {
     ...port,

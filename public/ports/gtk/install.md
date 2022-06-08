@@ -1,7 +1,6 @@
 ---
 title: GTK
 platform: ["linux"]
-includeFile: true
 ---
 
 1. Download gtk.zip;

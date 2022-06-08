@@ -1,7 +1,6 @@
 ---
 title: Telegram X
 platform: ["android"]
-includeFile: true
 ---
 
 1. Download telegram-x.zip;

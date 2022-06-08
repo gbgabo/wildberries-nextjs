@@ -1,7 +1,6 @@
 ---
 title: Wildberries Icons
 platform: ["linux"]
-includeFile: true
 ---
 
 1. Download papirus-wildberries.zip;
