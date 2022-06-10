@@ -98,9 +98,9 @@ export default function Port({
         </ReactMarkdown>
 
         {assets &&
-          assets.map((asset) => {
+          assets.map((asset, index) => {
             return (
-              <div>
+              <div key={index}>
                 <p className={styles.asset}>{asset}</p>
                 <a className={styles.button} href={`/ports/${port}/${asset}`}>
                   <img src="/icons/file_download.svg" /> Download
