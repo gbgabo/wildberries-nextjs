@@ -46,8 +46,8 @@ export default function Port({
   port,
   title,
   platform,
-  includeFile,
   instructions,
+  assets,
   ogImage,
 }: Port) {
   return (
@@ -97,11 +97,17 @@ export default function Port({
           {instructions}
         </ReactMarkdown>
 
-        {includeFile && (
-          <a className={styles.button} href={`/ports/${port}/${port}.zip`}>
-            <img src="/icons/file_download.svg" /> Download
-          </a>
-        )}
+        {assets &&
+          assets.map((asset) => {
+            return (
+              <div>
+                <p className={styles.asset}>{asset}</p>
+                <a className={styles.button} href={`/ports/${port}/${asset}`}>
+                  <img src="/icons/file_download.svg" /> Download
+                </a>
+              </div>
+            );
+          })}
       </div>
 
       <TextFab href="/" icon="brush" variant="secondary">

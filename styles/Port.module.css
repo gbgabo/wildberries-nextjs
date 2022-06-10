@@ -54,6 +54,7 @@
   transition: color 0.15s ease, background-color 0.15s ease,
     box-shadow 0.2s ease;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  margin-bottom: 30px;
 }
 
 .button img {
@@ -71,4 +72,13 @@
 .button:hover img {
   filter: invert(8%) sepia(79%) saturate(6545%) hue-rotate(322deg)
     brightness(86%) contrast(103%);
+}
+
+.asset {
+  background: var(--background-darker);
+  color: var(--secondary-foreground);
+  border-radius: 15px 15px 0 0;
+  padding: 0.8rem;
+  width: fit-content;
+  margin: auto;
 }

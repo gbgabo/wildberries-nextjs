@@ -15,13 +15,15 @@ export async function getPort(slug: string) {
   const { content } = matter(instructionsFile);
   const instructions = content;
 
-  const filePath = path.join(portDirectory, `${slug}.zip`);
-  const includeFile = fs.existsSync(filePath);
+  const portFiles = fs.readdirSync(portDirectory);
+  const assets = portFiles.filter((file) =>
+    new RegExp("^" + "*.zip$".replace(/\*/g, ".*") + "$").test(file)
+  );
 
   return {
     ...port,
     instructions,
-    includeFile,
+    assets,
   };
 }
 
