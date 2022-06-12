@@ -15,10 +15,8 @@ export async function getPort(slug: string) {
   const { content } = matter(instructionsFile);
   const instructions = content;
 
-  const portFiles = fs.readdirSync(portDirectory);
-  const assets = portFiles.filter((file) =>
-    new RegExp("^" + "*.zip$".replace(/\*/g, ".*") + "$").test(file)
-  );
+  const assetsDirectory = path.join(portDirectory, "assets");
+  const assets = fs.readdirSync(assetsDirectory);
 
   return {
     ...port,

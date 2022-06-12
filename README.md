@@ -72,9 +72,9 @@ public/ports
         ├── doom-emacs
         │   ├── install.md
         │   ├── screenshot.png
-        │   ├── installer-windows.zip
-        │   ├── installer-linux.zip
-        │   └── ...
+        │   └── assets
+        │       ├── windows.zip
+        │       └── linux.conf
         ├── chrome
         │   └── ...
         ├── slack
@@ -96,10 +96,8 @@ public/ports
 
 - A **screenshot.png** image, to be displayed in the port instruction page
 
-- **Installation assets**, in the case it's needed to install the port. All assets need to be stored as a zip file. For each zip file, a download button is created on the port page.
+- **Installation assets**, in the case it's needed to install the port. All assets need to be stored in an "assets" folder. If the assets need to be contained within a dedicated folder name, zip it to be listed as one file. For each file, a download button is created on the port page.
 </details>
-
-<br>
 
 <details>
 <summary>🎨 <b>Customising the theme</b></summary>
