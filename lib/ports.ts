@@ -16,7 +16,12 @@ export async function getPort(slug: string) {
   const instructions = content;
 
   const assetsDirectory = path.join(portDirectory, "assets");
-  const assets = fs.readdirSync(assetsDirectory);
+  let assets;
+  try {
+    assets = fs.readdirSync(assetsDirectory);
+  } catch (err) {
+    assets = null;
+  }
 
   return {
     ...port,
