@@ -135,4 +135,4 @@ On `styles/globals.css`, the `:root` selector contains all the color variables t
 
 ## ⚖️ License
 
-[MIT License](./LICENSE) © Dracula Theme
+[MIT License](./LICENSE) - Wildberries Theme
