@@ -38,7 +38,7 @@ applications being customized, I tried to follow some consistencies, and came up
   <!-- alternative for purple: #a470d8 -->
   <!-- Another interesting purple: #ac4ea4 -->
 
-## ⚙️ Install
+## ⚙️ Install the theme
 
 All instructions can be found at [wildberries.style](https://wildberries.style/).
 
@@ -46,7 +46,7 @@ All instructions can be found at [wildberries.style](https://wildberries.style/)
 
 This repository is:
 
-- The **next.js project** of the [wildberries.style](https://wildberries.style/) website;
+- The **next.js project** of the [wildberries.style](https://wildberries.style/) website, with minimum javascript on the client-side (only for clipboard);
 - The original **ports' source files** and install instructions, on [/public/ports](https://github.com/gbgabo/wildberries/tree/main/ports);
 
 ### 🪄 A boilerplate for any custom theme repository/website:
@@ -59,6 +59,29 @@ The generated website offers:
 - Dedicated **Instruction** pages for each application port, accessible in `custom-domain.com/{port-name}`
 - An **About** page, to describe the theme and display colors;
 - **Open Graph images** for every page;
+
+<details>
+<summary><b>⚙️ Running/Deploying the project</b></summary>
+
+**Running**
+
+First, run the Next.js development server:
+
+```bash
+yarn dev
+```
+
+And open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+**Building the project**
+
+```bash
+yarn build
+```
+
+To learn more, take a look at the [Next.js Documentation](https://nextjs.org/docs)
+
+</details>
 
 <details>
 <summary>➕ <b>Adding a new port</b></summary>
