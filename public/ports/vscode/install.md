@@ -5,11 +5,20 @@ platform: ["windows", "linux", "mac"]
 
 ### From the marketplace:
 
-Coming Soon...
+- Currently only available on Open VSX Registry
+
+1. On vscode, go to `View -> Command Palette` or press `Ctrl+Shift+P`;
+2. Type `Install Extension`;
+3. Then Type `Wildberries`;
+4. Click on `Set Color Theme`;
 
 ### Manually from VSIX:
 
-- Download the VSIX file found on this page;
-- Open vscode(ium) and on the command palette (`Ctrl+Shift+P`, `Cmd+Shift+P` for mac), type `Install from VSIX...`
-- Select the downloaded VSIX file to install it;
-- Go to Extensions (`Ctrl+Shift+X`, `Cmd+Shift+X` for mac) find the wildberries theme and click on `Set Color Theme`
+1. Download the VSIX file found on this page;
+2. On vscode, go to `View -> Command Palette` or press `Ctrl+Shift+P`;
+3. Type `Install from VSIX...`;
+4. Select the downloaded VSIX file to install it;
+
+### Activating the theme:
+
+To activate and manage your themes at any time, go to your command palette and type `Preferences: Color Theme`.
