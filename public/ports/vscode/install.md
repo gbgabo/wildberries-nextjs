@@ -5,8 +5,6 @@ platform: ["windows", "linux", "mac"]
 
 ### From the marketplace:
 
-- Currently only available on Open VSX Registry
-
 1. On vscode, go to `View -> Command Palette` or press `Ctrl+Shift+P`;
 2. Type `Install Extension`;
 3. Then Type `Wildberries`;
