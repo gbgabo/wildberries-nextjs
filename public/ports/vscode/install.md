@@ -3,4 +3,13 @@ title: VScode
 platform: ["windows", "linux", "mac"]
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+### From the marketplace:
+
+Coming Soon...
+
+### Manually from VSIX:
+
+- Download the VSIX file found on this page;
+- Open vscode(ium) and on the command palette (`Ctrl+Shift+P`, `Cmd+Shift+P` for mac), type `Install from VSIX...`
+- Select the downloaded VSIX file to install it;
+- Go to Extensions (`Ctrl+Shift+X`, `Cmd+Shift+X` for mac) find the wildberries theme and click on `Set Color Theme`
