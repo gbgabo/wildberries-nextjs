@@ -10,6 +10,7 @@ import getOgImage from "../lib/getOgImage";
 import { getPort, getPorts } from "../lib/ports";
 import { Footer, Header, Navbar, TextFab } from "../components";
 import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
 interface IParams extends ParsedUrlQuery {
   port: string;
@@ -83,6 +84,7 @@ export default function Port({
         </div>
 
         <ReactMarkdown
+          remarkPlugins={[remarkGfm]}
           className={styles["instructions-content"]}
           components={{
             code({ node, inline, className, children, ...props }) {
