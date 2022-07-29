@@ -3,4 +3,26 @@ title: zsh
 platform: ["linux", "mac"]
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+#### This port requires:
+
+- [oh-my-zsh](https://ohmyz.sh/);
+- [nerd-fonts](https://www.nerdfonts.com/);
+
+1. Download the `wildberries.zsh-theme` file available below in this page;
+2. Source it on your `.zshrc`;
+
+   ```bash
+   source "$PATH_TO_FILE/wildberries.zsh-theme"
+   ```
+
+3. Relaunch your terminal or just type the previous command on your prompt and the theme should be visible;
+
+- If you want to use the theme colors on other prompt layout, you can use the following **ANSI escape codes to represent 256-colors**:
+
+| Color   | Code |
+| ------- | ---- |
+| #900048 | 013  |
+| #00ffb7 | 014  |
+| #19002E | 016  |
+| #240041 | 053  |
+| #c79bff | 171  |
