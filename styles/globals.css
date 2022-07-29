@@ -126,7 +126,7 @@ body::-webkit-scrollbar-thumb:active {
   white-space: pre;
 }
 
-/* List items style*/
+/* List items style */
 
 ol,
 ul {
@@ -189,4 +189,30 @@ hr {
   border: 0;
   border-top: 1px solid var(--purple);
   margin: 15px 40px;
+}
+
+/* Table styles */
+
+table {
+  margin: auto;
+  width: 100%;
+}
+
+thead {
+  background-color: var(--element-background);
+  color: var(--element-foreground);
+}
+
+th {
+  padding: 10px;
+}
+
+td {
+  text-align: center;
+  color: var(--secondary-foreground);
+  padding: 5px;
+}
+
+tr:nth-child(even) {
+  background-color: var(--background-darker);
 }

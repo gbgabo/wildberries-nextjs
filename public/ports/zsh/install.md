@@ -9,7 +9,7 @@ platform: ["linux", "mac"]
 - [nerd-fonts](https://www.nerdfonts.com/);
 
 1. Download the `wildberries.zsh-theme` file available below in this page;
-2. Source it on your .zshrc;
+2. Source it on your `.zshrc`;
 
    ```bash
    source "$PATH_TO_FILE/wildberries.zsh-theme"
@@ -17,16 +17,12 @@ platform: ["linux", "mac"]
 
 3. Relaunch your terminal or just type the previous command on your prompt and the theme should be visible;
 
-<!--
-1- TODO: Enable table layout rendering on the front-end
+- If you want to use the theme colors on other prompt layout, you can use the following **ANSI escape codes to represent 256-colors**:
 
-If you want to use the theme colors on other prompt layout, you can use the following ANSI escape codes to represent 256-colors:
-
-  | Color   | Code |
-  | ------- | ---- |
-  | #900048 | 013  |
-  | #00ffb7 | 014  |
-  | #19002E | 016  |
-  | #240041 | 053  |
-  | #c79bff | 171  |
--->
+| Color   | Code |
+| ------- | ---- |
+| #900048 | 013  |
+| #00ffb7 | 014  |
+| #19002E | 016  |
+| #240041 | 053  |
+| #c79bff | 171  |
