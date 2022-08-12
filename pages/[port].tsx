@@ -104,7 +104,10 @@ export default function Port({
             return (
               <div key={index}>
                 <p className={styles.asset}>{asset}</p>
-                <a className={styles.button} href={`/ports/${port}/${asset}`}>
+                <a
+                  className={styles.button}
+                  href={`/ports/${port}/assets/${asset}`}
+                >
                   <img src="/icons/file_download.svg" /> Download
                 </a>
               </div>
