@@ -20,6 +20,7 @@
     "remark-gfm": "^3.0.1"
   },
   "devDependencies": {
+    "@types/node": "^18.7.2",
     "@types/react": "17.0.27",
     "@types/react-copy-to-clipboard": "^5.0.2",
     "@types/react-syntax-highlighter": "^13.5.2",
