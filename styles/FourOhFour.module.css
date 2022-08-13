@@ -6,14 +6,24 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  max-width: 840px;
-  padding: 0 2rem 2rem 2rem;
-  margin: auto;
 }
 
-.container h1 {
+.section h1 {
   font-size: 7rem;
   margin: 0px;
+}
+
+.section {
+  background-color: var(--background-darker);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  width: 100vw;
+  padding: 90px 0;
 }
 
 .options {
