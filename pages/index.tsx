@@ -2,10 +2,10 @@ import type { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
-import headerStyles from "../styles/Header.module.css";
+import heroStyles from "../styles/Hero.module.css";
 import { getPorts } from "../lib/ports";
 import getOgImage from "../lib/getOgImage";
-import { Footer, Header, Navbar, TextFab, Slider } from "../components";
+import { Footer, Hero, Navbar, TextFab, Slider } from "../components";
 
 interface Props {
   portsData: {
@@ -51,16 +51,16 @@ export default function Home({ portsData, ogImage }: Props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header href="#ports">
-        <div className={headerStyles.head}>
+      <Hero href="#ports">
+        <div className={heroStyles.head}>
           <img
-            className={headerStyles.icon}
+            className={heroStyles.icon}
             src="/img/ui/wb.png"
             alt="Wildberries"
           />
-          <h1 className={headerStyles.title}>Wildberries</h1>
+          <h1 className={heroStyles.title}>Wildberries</h1>
 
-          <div className={headerStyles.description}>
+          <div className={heroStyles.description}>
             An experimental dark theme for people who love purple
           </div>
         </div>
@@ -95,7 +95,7 @@ export default function Home({ portsData, ogImage }: Props) {
             },
           ]}
         />
-      </Header>
+      </Hero>
 
       <section id="ports" className={styles.ports}>
         <h2 style={{ padding: "2rem" }}>

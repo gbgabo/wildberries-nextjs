@@ -3,11 +3,11 @@ import { GetStaticPaths, GetStaticProps } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import styles from "../styles/Port.module.css";
-import headerStyles from "../styles/Header.module.css";
+import heroStyles from "../styles/Hero.module.css";
 import Image from "next/image";
 import getOgImage from "../lib/getOgImage";
 import { getPort, getPorts } from "../lib/ports";
-import { Footer, Header, Navbar, TextFab, Code, Slider } from "../components";
+import { Footer, Hero, Navbar, TextFab, Code, Slider } from "../components";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
@@ -64,11 +64,11 @@ export default function Port({
           key="ogdesc"
         />
       </Head>
-      <Header href="#instructions">
-        <div className={headerStyles.head}>
-          <h1 className={headerStyles.title}>Wildberries</h1>
+      <Hero href="#instructions">
+        <div className={heroStyles.head}>
+          <h1 className={heroStyles.title}>Wildberries</h1>
 
-          <div className={headerStyles.description}>
+          <div className={heroStyles.description}>
             An experimental dark theme for people who love purple
           </div>
         </div>
@@ -79,7 +79,7 @@ export default function Port({
             },
           ]}
         />
-      </Header>
+      </Hero>
 
       <div id="instructions" className={styles.instructions}>
         <div className={styles.description}>
