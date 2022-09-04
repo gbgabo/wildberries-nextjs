@@ -94,7 +94,9 @@ A port directory is expected to have three main files:
 public/ports
         ├── doom-emacs
         │   ├── install.md
-        │   ├── screenshot.png
+        │   ├── screenshots
+        │   │   ├── image.png
+        │   │   └── image2.png
         │   └── assets
         │       ├── windows.zip
         │       └── linux.conf
@@ -117,7 +119,7 @@ public/ports
   2. step two
   ```
 
-- A **screenshot.png** image, to be displayed in the port instruction page
+- A **screenshots folder**, to store the images to be displayed in the port instruction page
 
 - **Installation assets**, in the case it's needed to install the port. All assets need to be stored in an "assets" folder. If the assets need to be contained within a dedicated folder name, zip it to be listed as one file. For each file, a download button is created on the port page.
 </details>
