@@ -67,7 +67,7 @@ export default function Home({ portsData, ogImage }: Props) {
         <Slider
           slides={[
             {
-              url: "/img/screenshots/vscode.png",
+              url: "/ports/vscode/screenshots/vscode.png",
               caption: (
                 <p>
                   {`A purple theme for `}
@@ -76,7 +76,7 @@ export default function Home({ portsData, ogImage }: Props) {
               ),
             },
             {
-              url: "/img/screenshots/duckduckgo.png",
+              url: "/ports/duckduckgo/screenshots/duckduckgo.png",
               caption: (
                 <p>
                   {`A purple theme for `}
@@ -85,7 +85,7 @@ export default function Home({ portsData, ogImage }: Props) {
               ),
             },
             {
-              url: "/img/screenshots/gtk.png",
+              url: "/ports/gtk/screenshots/gtk.png",
               caption: (
                 <p>
                   {`A purple theme for `}

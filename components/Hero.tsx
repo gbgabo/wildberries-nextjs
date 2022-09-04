@@ -6,8 +6,6 @@ interface Props {
   children: ReactNode;
 }
 
-const ports = ["vscode", "duckduckgo", "gtk"];
-
 export default function Hero({ href, children }: Props): ReactElement {
   return (
     <>

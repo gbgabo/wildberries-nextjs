@@ -42,10 +42,17 @@ export default function Port({
   port,
   title,
   platform,
+  screenshots,
   instructions,
   assets,
   ogImage,
 }: Port) {
+  const slides =
+    screenshots &&
+    screenshots.map((screenshot) => {
+      return { url: `/ports/${port}/screenshots/${screenshot}` };
+    });
+
   return (
     <div>
       <Navbar port={title} />
@@ -72,13 +79,7 @@ export default function Port({
             An experimental dark theme for people who love purple
           </div>
         </div>
-        <Slider
-          slides={[
-            {
-              url: `/img/screenshots/${port}.png`,
-            },
-          ]}
-        />
+        <Slider slides={slides} />
       </Hero>
 
       <div id="instructions" className={styles.instructions}>
