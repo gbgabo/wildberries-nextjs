@@ -3,10 +3,11 @@ import { GetStaticPaths, GetStaticProps } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import styles from "../styles/Port.module.css";
+import headerStyles from "../styles/Header.module.css";
 import Image from "next/image";
 import getOgImage from "../lib/getOgImage";
 import { getPort, getPorts } from "../lib/ports";
-import { Footer, Header, Navbar, TextFab, Code } from "../components";
+import { Footer, Header, Navbar, TextFab, Code, Slider } from "../components";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
@@ -63,12 +64,21 @@ export default function Port({
           key="ogdesc"
         />
       </Head>
-      <Header ports={[port]} title="Wildberries">
-        <>
-          {`A dark purple theme for `}
-          <span className="highlight">{title}</span>
-          {` and many other apps`}
-        </>
+      <Header href="#instructions">
+        <div className={headerStyles.head}>
+          <h1 className={headerStyles.title}>Wildberries</h1>
+
+          <div className={headerStyles.description}>
+            An experimental dark theme for people who love purple
+          </div>
+        </div>
+        <Slider
+          slides={[
+            {
+              url: `/img/screenshots/${port}.png`,
+            },
+          ]}
+        />
       </Header>
 
       <div id="instructions" className={styles.instructions}>

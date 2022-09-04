@@ -2,9 +2,10 @@ import type { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
+import headerStyles from "../styles/Header.module.css";
 import { getPorts } from "../lib/ports";
 import getOgImage from "../lib/getOgImage";
-import { Footer, Header, Navbar, TextFab } from "../components";
+import { Footer, Header, Navbar, TextFab, Slider } from "../components";
 
 interface Props {
   portsData: {
@@ -50,8 +51,50 @@ export default function Home({ portsData, ogImage }: Props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header home ports={["vscode", "duckduckgo", "gtk"]} title="Wildberries">
-        <>An experimental dark theme for people who love purple</>
+      <Header href="#ports">
+        <div className={headerStyles.head}>
+          <img
+            className={headerStyles.icon}
+            src="/img/ui/wb.png"
+            alt="Wildberries"
+          />
+          <h1 className={headerStyles.title}>Wildberries</h1>
+
+          <div className={headerStyles.description}>
+            An experimental dark theme for people who love purple
+          </div>
+        </div>
+        <Slider
+          slides={[
+            {
+              url: "/img/screenshots/vscode.png",
+              caption: (
+                <p>
+                  {`A purple theme for `}
+                  <span className="highlight">vscode</span>
+                </p>
+              ),
+            },
+            {
+              url: "/img/screenshots/duckduckgo.png",
+              caption: (
+                <p>
+                  {`A purple theme for `}
+                  <span className="highlight">duckduckgo</span>
+                </p>
+              ),
+            },
+            {
+              url: "/img/screenshots/gtk.png",
+              caption: (
+                <p>
+                  {`A purple theme for `}
+                  <span className="highlight">gtk</span>
+                </p>
+              ),
+            },
+          ]}
+        />
       </Header>
 
       <section id="ports" className={styles.ports}>
