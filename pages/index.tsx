@@ -2,9 +2,10 @@ import type { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
+import heroStyles from "../styles/Hero.module.css";
 import { getPorts } from "../lib/ports";
 import getOgImage from "../lib/getOgImage";
-import { Footer, Header, Navbar, TextFab } from "../components";
+import { Footer, Hero, Navbar, TextFab, Slider } from "../components";
 
 interface Props {
   portsData: {
@@ -50,9 +51,51 @@ export default function Home({ portsData, ogImage }: Props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header home ports={["vscode", "duckduckgo", "gtk"]} title="Wildberries">
-        <>An experimental dark theme for people who love purple</>
-      </Header>
+      <Hero href="#ports">
+        <div className={heroStyles.head}>
+          <img
+            className={heroStyles.icon}
+            src="/img/ui/wb.png"
+            alt="Wildberries"
+          />
+          <h1 className={heroStyles.title}>Wildberries</h1>
+
+          <div className={heroStyles.description}>
+            An experimental dark theme for people who love purple
+          </div>
+        </div>
+        <Slider
+          slides={[
+            {
+              url: "/ports/vscode/screenshots/vscode.png",
+              caption: (
+                <p>
+                  {`A purple theme for `}
+                  <span className="highlight">vscode</span>
+                </p>
+              ),
+            },
+            {
+              url: "/ports/duckduckgo/screenshots/duckduckgo.png",
+              caption: (
+                <p>
+                  {`A purple theme for `}
+                  <span className="highlight">duckduckgo</span>
+                </p>
+              ),
+            },
+            {
+              url: "/ports/gtk/screenshots/gtk.png",
+              caption: (
+                <p>
+                  {`A purple theme for `}
+                  <span className="highlight">gtk</span>
+                </p>
+              ),
+            },
+          ]}
+        />
+      </Hero>
 
       <section id="ports" className={styles.ports}>
         <h2 style={{ padding: "2rem" }}>

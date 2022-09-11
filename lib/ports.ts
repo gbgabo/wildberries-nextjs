@@ -23,8 +23,17 @@ export async function getPort(slug: string) {
     assets = null;
   }
 
+  const screenshotsDirectory = path.join(portDirectory, "screenshots");
+  let screenshots;
+  try {
+    screenshots = fs.readdirSync(screenshotsDirectory);
+  } catch (err) {
+    screenshots = null;
+  }
+
   return {
     ...port,
+    screenshots,
     instructions,
     assets,
   };

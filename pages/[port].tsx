@@ -3,10 +3,11 @@ import { GetStaticPaths, GetStaticProps } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import styles from "../styles/Port.module.css";
+import heroStyles from "../styles/Hero.module.css";
 import Image from "next/image";
 import getOgImage from "../lib/getOgImage";
 import { getPort, getPorts } from "../lib/ports";
-import { Footer, Header, Navbar, TextFab, Code } from "../components";
+import { Footer, Hero, Navbar, TextFab, Code, Slider } from "../components";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
@@ -41,10 +42,17 @@ export default function Port({
   port,
   title,
   platform,
+  screenshots,
   instructions,
   assets,
   ogImage,
 }: Port) {
+  const slides =
+    screenshots &&
+    screenshots.map((screenshot) => {
+      return { url: `/ports/${port}/screenshots/${screenshot}` };
+    });
+
   return (
     <div>
       <Navbar port={title} />
@@ -63,13 +71,16 @@ export default function Port({
           key="ogdesc"
         />
       </Head>
-      <Header ports={[port]} title="Wildberries">
-        <>
-          {`A dark purple theme for `}
-          <span className="highlight">{title}</span>
-          {` and many other apps`}
-        </>
-      </Header>
+      <Hero href="#instructions">
+        <div className={heroStyles.head}>
+          <h1 className={heroStyles.title}>Wildberries</h1>
+
+          <div className={heroStyles.description}>
+            An experimental dark theme for people who love purple
+          </div>
+        </div>
+        {slides && <Slider slides={slides} />}
+      </Hero>
 
       <div id="instructions" className={styles.instructions}>
         <div className={styles.description}>

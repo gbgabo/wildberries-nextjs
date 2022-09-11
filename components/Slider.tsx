@@ -2,60 +2,54 @@ import React, { Fragment, ReactElement } from "react";
 import styles from "../styles/Slider.module.css";
 
 interface Props {
-  ports: string[];
-  hasCaption?: boolean;
+  slides: {
+    url: string;
+    caption?: any;
+  }[];
 }
 
-export default function Slider({
-  ports,
-  hasCaption = false,
-}: Props): ReactElement {
+export default function Slider({ slides }: Props): ReactElement {
   return (
     <div>
       <div className={styles["slider-wrapper"]}>
         <div className={styles.slider}>
-          {ports.map((port, index) => {
-            return (
-              <Fragment key={port}>
-                <input
-                  type="radio"
-                  name="slider"
-                  className={styles.trigger}
-                  id={port}
-                  defaultChecked={index === 0}
-                />
-                <div className={styles.slide}>
-                  {hasCaption && (
-                    <figcaption>
-                      <div className={styles["slide-caption"]}>
-                        <p>
-                          {`A purple theme for `}
-                          <span className="highlight">{port}</span>
-                        </p>
-                      </div>
-                    </figcaption>
-                  )}
-                  <figure className={styles["slide-figure"]}>
-                    <img
-                      className={styles["slide-img"]}
-                      src={`/img/screenshots/${port}.png`}
-                    />
-                  </figure>
-                </div>
-              </Fragment>
-            );
-          })}
+          {slides.length > 0 &&
+            slides.map((slide, index) => {
+              return (
+                <Fragment key={index}>
+                  <input
+                    type="radio"
+                    name="slider"
+                    className={styles.trigger}
+                    id={`slide${index}`}
+                    defaultChecked={index === 0}
+                  />
+                  <div className={styles.slide}>
+                    {slide.caption && (
+                      <figcaption>
+                        <div className={styles["slide-caption"]}>
+                          {slide.caption}
+                        </div>
+                      </figcaption>
+                    )}
+                    <figure className={styles["slide-figure"]}>
+                      <img className={styles["slide-img"]} src={slide.url} />
+                    </figure>
+                  </div>
+                </Fragment>
+              );
+            })}
         </div>
       </div>
 
-      {ports.length > 1 && (
+      {slides.length > 1 && (
         <ul className={styles["slider-nav"]}>
-          {ports.map((port) => {
+          {slides.map((slide, index) => {
             return (
-              <li key={port} className={styles["slider-nav__item"]}>
+              <li key={index} className={styles["slider-nav__item"]}>
                 <label
                   className={styles["slider-nav__label"]}
-                  htmlFor={port}
+                  htmlFor={`slide${index}`}
                 ></label>
               </li>
             );
