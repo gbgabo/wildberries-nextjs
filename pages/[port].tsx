@@ -47,9 +47,12 @@ export default function Port({
   assets,
   ogImage,
 }: Port) {
-  const slides = screenshots.map((screenshot) => {
-    return { url: `/ports/${port}/screenshots/${screenshot}` };
-  });
+  const slides =
+    screenshots.length > 0
+      ? screenshots.map((screenshot) => {
+          return { url: `/ports/${port}/screenshots/${screenshot}` };
+        })
+      : [{ url: `/img/not-found.png` }];
 
   return (
     <div>
