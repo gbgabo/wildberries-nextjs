@@ -13,31 +13,32 @@ export default function Slider({ slides }: Props): ReactElement {
     <div>
       <div className={styles["slider-wrapper"]}>
         <div className={styles.slider}>
-          {slides.map((slide, index) => {
-            return (
-              <Fragment key={index}>
-                <input
-                  type="radio"
-                  name="slider"
-                  className={styles.trigger}
-                  id={`slide${index}`}
-                  defaultChecked={index === 0}
-                />
-                <div className={styles.slide}>
-                  {slide.caption && (
-                    <figcaption>
-                      <div className={styles["slide-caption"]}>
-                        {slide.caption}
-                      </div>
-                    </figcaption>
-                  )}
-                  <figure className={styles["slide-figure"]}>
-                    <img className={styles["slide-img"]} src={slide.url} />
-                  </figure>
-                </div>
-              </Fragment>
-            );
-          })}
+          {slides.length > 0 &&
+            slides.map((slide, index) => {
+              return (
+                <Fragment key={index}>
+                  <input
+                    type="radio"
+                    name="slider"
+                    className={styles.trigger}
+                    id={`slide${index}`}
+                    defaultChecked={index === 0}
+                  />
+                  <div className={styles.slide}>
+                    {slide.caption && (
+                      <figcaption>
+                        <div className={styles["slide-caption"]}>
+                          {slide.caption}
+                        </div>
+                      </figcaption>
+                    )}
+                    <figure className={styles["slide-figure"]}>
+                      <img className={styles["slide-img"]} src={slide.url} />
+                    </figure>
+                  </div>
+                </Fragment>
+              );
+            })}
         </div>
       </div>
 
