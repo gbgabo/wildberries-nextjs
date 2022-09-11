@@ -48,11 +48,10 @@ export default function Port({
   ogImage,
 }: Port) {
   const slides =
-    screenshots.length > 0
-      ? screenshots.map((screenshot) => {
-          return { url: `/ports/${port}/screenshots/${screenshot}` };
-        })
-      : [{ url: `/img/not-found.png` }];
+    screenshots &&
+    screenshots.map((screenshot) => {
+      return { url: `/ports/${port}/screenshots/${screenshot}` };
+    });
 
   return (
     <div>
@@ -80,7 +79,7 @@ export default function Port({
             An experimental dark theme for people who love purple
           </div>
         </div>
-        {screenshots.length > 0 && <Slider slides={slides} />}
+        {slides && <Slider slides={slides} />}
       </Hero>
 
       <div id="instructions" className={styles.instructions}>
