@@ -55,7 +55,7 @@ export default function Home({ portsData, ogImage }: Props) {
         <div className={heroStyles.head}>
           <img
             className={heroStyles.icon}
-            src="/img/ui/wb.png"
+            src="/img/ui/wb_logo.svg"
             alt="Wildberries"
           />
           <h1 className={heroStyles.title}>Wildberries</h1>
