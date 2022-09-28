@@ -1,6 +1,10 @@
 <div align="center">
-<img src="./public/img/ui/logo.jpg" alt="Wildberries" width="500px">
+<img src="./public/img/ui/wb_brand.svg" alt="Wildberries" width="500px">
 <h2>An experimental dark theme for people who love purple 🍒</h2>
+</div>
+
+<div align="center">
+<img src="./public/img/screenshot.jpg" alt="Wildberries">
 </div>
 
 Wildberries is a purple dark theme, with additional

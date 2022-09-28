@@ -11,7 +11,7 @@ export default function Navbar({ port }: Props): ReactElement {
     <div className={styles.bar}>
       <Link href="/">
         <a className={styles.logo}>
-          <img src="/img/ui/wb.png" />
+          <img src="/img/ui/wb_logo.svg" />
 
           <div className={styles.text}>
             <h1>Wildberries&ensp;</h1>
