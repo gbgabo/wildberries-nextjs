@@ -53,16 +53,22 @@ export default function Home({ portsData, ogImage }: Props) {
 
       <Hero href="#ports">
         <div className={heroStyles.head}>
-          <img
-            className={heroStyles.icon}
-            src="/img/ui/wb_logo.svg"
-            alt="Wildberries"
-          />
-          <h1 className={heroStyles.title}>Wildberries</h1>
+          <div className={heroStyles.brand}>
+            <img
+              className={heroStyles.icon}
+              src="/img/ui/wb_logo.svg"
+              alt="Wildberries"
+            />
+            <h1 className={heroStyles.title}>Wildberries</h1>
+          </div>
 
           <div className={heroStyles.description}>
             An experimental dark theme for people who love purple
           </div>
+
+          <a className={heroStyles.cta} href="#ports">
+            Install Wildberries
+          </a>
         </div>
         <Slider
           slides={[

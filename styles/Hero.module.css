@@ -1,16 +1,13 @@
 .icon {
-  border-radius: 2rem;
-  border: 3px solid var(--element-foreground);
-  margin-bottom: 40px;
-  width: 220px;
-  height: 220px;
+  width: 150px;
+  height: 150px;
 }
 
 .head {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   width: 44%;
   min-width: 500px;
   height: 85vh;
@@ -33,20 +30,13 @@
   font-size: 3rem;
 }
 
-.title,
-.description {
-  text-align: center;
-}
-
 .description {
   display: inline;
-  margin: 30px auto;
+  margin: 30px 0;
   line-height: 1.5;
   font-size: 1.5rem;
   color: var(--secondary-foreground);
   max-width: 75%;
-  align-items: center;
-  justify-content: center;
 }
 
 .main {
@@ -70,43 +60,8 @@
   );
 }
 
-.down {
-  width: 100%;
-  filter: invert(83%) sepia(95%) saturate(4281%) hue-rotate(81deg)
-    brightness(99%) contrast(106%);
-  text-align: center;
-}
-
 .slider {
   width: 50%;
-}
-
-.preview {
-  --spread: 0px;
-  --x: -20px;
-  --y: 20px;
-  --blur: 1px;
-  --color-one: var(--pink);
-  --color-two: var(--green);
-  width: fit-content;
-  height: fit-content;
-  border-radius: 8px;
-  color: #fff;
-  box-shadow: var(--x) var(--y) var(--blur) var(--spread) var(--color-one),
-    calc(var(--x) * -1) calc(var(--y) * -1) var(--blur) var(--spread)
-      var(--color-two);
-  z-index: 1;
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  align-items: center;
-  margin: 40px 0 75px 0;
-}
-
-.preview img {
-  border-radius: 5px;
-  width: 50vw;
-  z-index: 2;
 }
 
 .main h3 {
@@ -114,6 +69,25 @@
   justify-content: center;
   font-weight: 500;
   color: var(--secondary-foreground);
+}
+
+.cta {
+  background-color: var(--secondary-foreground);
+  color: var(--background-darker);
+  padding: 20px;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  width: 100%;
+  width: fit-content;
 }
 
 @media (max-width: 1250px) {
@@ -131,18 +105,10 @@
     flex-direction: column;
   }
   .head {
-    height: 100vh;
+    height: 80vh;
     width: 100vw;
     min-width: unset;
-  }
-  .preview {
-    --x: -6px;
-    --y: 9px;
-    border-radius: 3px;
-  }
-  .preview img {
-    border-radius: 3px;
-    width: 90vw;
+    align-items: center;
   }
   .main {
     background: linear-gradient(

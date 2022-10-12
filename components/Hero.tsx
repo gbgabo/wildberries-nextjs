@@ -7,14 +7,5 @@ interface Props {
 }
 
 export default function Hero({ href, children }: Props): ReactElement {
-  return (
-    <>
-      <main className={styles.main}>
-        {children}
-        <a className={styles.down} href={href}>
-          <img src="/icons/expand_more.svg" />
-        </a>
-      </main>
-    </>
-  );
+  return <main className={styles.main}>{children}</main>;
 }
