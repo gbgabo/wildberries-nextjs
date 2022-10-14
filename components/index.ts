@@ -5,5 +5,6 @@ import TextFab from "./TextFab";
 import Navbar from "./Navbar";
 import BioCard from "./BioCard";
 import Code from "./Code";
+import Button from "./Button";
 
-export { Hero, Footer, Slider, TextFab, Navbar, BioCard, Code };
+export { Hero, Footer, Slider, TextFab, Navbar, BioCard, Code, Button };

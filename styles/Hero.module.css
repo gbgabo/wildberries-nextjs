@@ -71,15 +71,6 @@
   color: var(--secondary-foreground);
 }
 
-.cta {
-  background-color: var(--secondary-foreground);
-  color: var(--background-darker);
-  padding: 20px;
-  border-radius: 10px;
-  font-weight: 500;
-  font-size: 1.2rem;
-}
-
 .brand {
   display: flex;
   align-items: center;

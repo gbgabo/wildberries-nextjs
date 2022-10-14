@@ -7,7 +7,15 @@ import heroStyles from "../styles/Hero.module.css";
 import Image from "next/image";
 import getOgImage from "../lib/getOgImage";
 import { getPort, getPorts } from "../lib/ports";
-import { Footer, Hero, Navbar, TextFab, Code, Slider } from "../components";
+import {
+  Footer,
+  Hero,
+  Navbar,
+  TextFab,
+  Code,
+  Slider,
+  Button,
+} from "../components";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
@@ -76,8 +84,15 @@ export default function Port({
           <h1 className={heroStyles.title}>Wildberries</h1>
 
           <div className={heroStyles.description}>
-            An experimental dark theme for people who love purple
+            <>
+              {`A dark purple theme for `}
+              <span className="highlight">{title}</span>
+              {` and many other apps`}
+            </>
           </div>
+          <Button href="#instructions" icon="brush">
+            Apply Theme
+          </Button>
         </div>
         {slides && <Slider slides={slides} />}
       </Hero>

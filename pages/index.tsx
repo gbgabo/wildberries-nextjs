@@ -5,7 +5,7 @@ import styles from "../styles/Home.module.css";
 import heroStyles from "../styles/Hero.module.css";
 import { getPorts } from "../lib/ports";
 import getOgImage from "../lib/getOgImage";
-import { Footer, Hero, Navbar, TextFab, Slider } from "../components";
+import { Footer, Hero, Navbar, TextFab, Slider, Button } from "../components";
 
 interface Props {
   portsData: {
@@ -66,9 +66,9 @@ export default function Home({ portsData, ogImage }: Props) {
             An experimental dark theme for people who love purple
           </div>
 
-          <a className={heroStyles.cta} href="#ports">
+          <Button href="#ports" icon="brush">
             Install Wildberries
-          </a>
+          </Button>
         </div>
         <Slider
           slides={[
