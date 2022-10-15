@@ -58,7 +58,7 @@ export default function Home({ portsData, ogImage }: Props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Hero href="#ports">
+      <Hero>
         <div className={heroStyles.head}>
           <div className={heroStyles.brand}>
             <img

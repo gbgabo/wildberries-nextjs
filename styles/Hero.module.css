@@ -60,10 +60,6 @@
   );
 }
 
-.slider {
-  width: 50%;
-}
-
 .main h3 {
   display: flex;
   justify-content: center;
