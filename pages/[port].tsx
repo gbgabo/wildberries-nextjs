@@ -11,7 +11,7 @@ import {
   Footer,
   Hero,
   Navbar,
-  TextFab,
+  ExtendedFab,
   Code,
   Slider,
   Button,
@@ -135,9 +135,9 @@ export default function Port({
           })}
       </div>
 
-      <TextFab href="/" icon="brush" variant="secondary">
+      <ExtendedFab href="/" icon="brush" variant="secondary">
         Check all ports
-      </TextFab>
+      </ExtendedFab>
 
       <Footer />
     </div>

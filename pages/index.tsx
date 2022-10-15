@@ -5,7 +5,14 @@ import styles from "../styles/Home.module.css";
 import heroStyles from "../styles/Hero.module.css";
 import { getPorts } from "../lib/ports";
 import getOgImage from "../lib/getOgImage";
-import { Footer, Hero, Navbar, TextFab, Slider, Button } from "../components";
+import {
+  Footer,
+  Hero,
+  Navbar,
+  ExtendedFab,
+  Slider,
+  Button,
+} from "../components";
 
 interface Props {
   portsData: {
@@ -119,9 +126,9 @@ export default function Home({ portsData, ogImage }: Props) {
           })}
         </div>
       </section>
-      <TextFab href="/about" variant="secondary" icon="pallete">
+      <ExtendedFab href="/about" variant="secondary" icon="pallete">
         About Wildberries
-      </TextFab>
+      </ExtendedFab>
       <Footer />
     </div>
   );

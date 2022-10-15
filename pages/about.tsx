@@ -1,7 +1,7 @@
 import React, { ReactElement } from "react";
 import type { GetStaticProps } from "next";
 import Head from "next/head";
-import { Footer, Navbar, TextFab } from "../components";
+import { Footer, Navbar, ExtendedFab } from "../components";
 import styles from "../styles/About.module.css";
 import getOgImage from "../lib/getOgImage";
 
@@ -126,9 +126,9 @@ export default function About({ ogImage }: Props): ReactElement {
           </div>
         </div>
       </div>
-      <TextFab href="/" icon="brush">
+      <ExtendedFab href="/" icon="brush">
         Check all theme ports
-      </TextFab>
+      </ExtendedFab>
       <Footer variant="secondary" />
     </>
   );

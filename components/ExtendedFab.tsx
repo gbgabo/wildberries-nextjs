@@ -1,9 +1,9 @@
 import React, { ReactElement } from "react";
 import Link from "next/link";
-import styles from "../styles/TextFab.module.css";
+import styles from "../styles/ExtendedFab.module.css";
 import Button, { Props } from "./Button";
 
-export default function TextFab({
+export default function ExtendedFab({
   href,
   children,
   variant = "primary",
