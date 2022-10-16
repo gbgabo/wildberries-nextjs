@@ -79,7 +79,7 @@ export default function Port({
           key="ogdesc"
         />
       </Head>
-      <Hero href="#instructions">
+      <Hero>
         <div className={heroStyles.head}>
           <h1 className={heroStyles.title}>Wildberries</h1>
 
