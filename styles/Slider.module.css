@@ -185,8 +185,8 @@
 .csslider > .arrows label:before {
   content: '';
   position: absolute;
-  top: -100%;
-  left: -100%;
+  top: -201%;
+  left: -0%;
   height: 300%;
   width: 300%;
 }

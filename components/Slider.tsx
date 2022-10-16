@@ -11,7 +11,9 @@ interface Props {
 export default function Slider({ slides }: Props): ReactElement {
   return (
     <div
-      className={`${styles.csslider} ${slides.length > 2 && styles.infinity}`}
+      className={`${styles.csslider} ${
+        slides.length > 2 ? styles.infinity : ""
+      }`}
     >
       {slides.map((slide, index) => {
         return (

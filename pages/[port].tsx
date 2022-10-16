@@ -62,7 +62,7 @@ export default function Port({
     });
 
   return (
-    <div>
+    <>
       <Navbar port={title} />
       <Head>
         <title>{title} theme - Wildberries</title>
@@ -140,6 +140,6 @@ export default function Port({
       </ExtendedFab>
 
       <Footer />
-    </div>
+    </>
   );
 }
