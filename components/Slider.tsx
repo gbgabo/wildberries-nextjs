@@ -10,51 +10,45 @@ interface Props {
 
 export default function Slider({ slides }: Props): ReactElement {
   return (
-    <div>
-      <div className={styles["slider-wrapper"]}>
-        <div className={styles.slider}>
-          {slides.length > 0 &&
-            slides.map((slide, index) => {
-              return (
-                <Fragment key={index}>
-                  <input
-                    type="radio"
-                    name="slider"
-                    className={styles.trigger}
-                    id={`slide${index}`}
-                    defaultChecked={index === 0}
-                  />
-                  <div className={styles.slide}>
-                    {slide.caption && (
-                      <figcaption>
-                        <div className={styles["slide-caption"]}>
-                          {slide.caption}
-                        </div>
-                      </figcaption>
-                    )}
-                    <figure className={styles["slide-figure"]}>
-                      <img className={styles["slide-img"]} src={slide.url} />
-                    </figure>
-                  </div>
-                </Fragment>
-              );
-            })}
-        </div>
-      </div>
-
+    <div
+      className={`${styles.csslider} ${slides.length > 2 && styles.infinity}`}
+    >
+      {slides.map((slide, index) => {
+        return (
+          <input
+            type="radio"
+            defaultChecked={index === 0}
+            name="slides"
+            id={`slides_${index + 1}`}
+          />
+        );
+      })}
+      <ul>
+        {slides.map((slide) => {
+          return (
+            <li>
+              <div className={styles.container}>
+                <img src={slide.url} />
+              </div>
+            </li>
+          );
+        })}
+      </ul>
       {slides.length > 1 && (
-        <ul className={styles["slider-nav"]}>
-          {slides.map((slide, index) => {
-            return (
-              <li key={index} className={styles["slider-nav__item"]}>
-                <label
-                  className={styles["slider-nav__label"]}
-                  htmlFor={`slide${index}`}
-                ></label>
-              </li>
-            );
-          })}
-        </ul>
+        <>
+          <div className={styles.arrows}>
+            {slides.map((slide, index) => {
+              return <label htmlFor={`slides_${index + 1}`}></label>;
+            })}
+          </div>
+          <div className={styles.navigation}>
+            <div>
+              {slides.map((slide, index) => {
+                return <label htmlFor={`slides_${index + 1}`}></label>;
+              })}
+            </div>
+          </div>
+        </>
       )}
     </div>
   );

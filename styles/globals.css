@@ -128,21 +128,21 @@ body::-webkit-scrollbar-thumb:active {
 
 /* List items style */
 
-ol,
-ul {
+#instructions ol,
+#instructions ul {
   counter-reset: li; /* Initiate a counter */
   margin-left: 0; /* Remove the default left margin */
   padding-left: 0; /* Remove the default left padding */
 }
-ol > li,
-ul > li {
+#instructions ol > li,
+#instructions ul > li {
   position: relative; /* Create a positioning context */
   margin: 20px 0px 20px 3em; /* Give each list item a left margin to make room for the numbers */
   padding: 4px 16px; /* Add some spacing around the content */
   list-style: none; /* Disable the normal item numbering */
 }
-ol > li::before,
-ul > li:before {
+#instructions ol > li::before,
+#instructions ul > li:before {
   position: absolute;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -154,7 +154,7 @@ ul > li:before {
   margin-right: 8px;
 }
 
-ol > li:before {
+#instructions ol > li:before {
   content: counter(li); /* Use the counter as content */
   counter-increment: li; /* Increment the counter by 1 */
   top: -3px;
@@ -166,7 +166,7 @@ ol > li:before {
   width: 2em;
 }
 
-ul > li:before {
+#instructions ul > li:before {
   content: "•";
   left: -1.6em;
   border-radius: 35%;
@@ -174,18 +174,18 @@ ul > li:before {
   height: 1.2em;
 }
 
-li ol,
-li ul {
+#instructions li ol,
+#instructions li ul {
   margin-top: 6px;
 }
-ol ol li:last-child {
+#instructions ol ol li:last-child {
   margin-bottom: 0;
 }
-li > p {
+#instructions li > p {
   margin: 0;
 }
 
-hr {
+#instructions hr {
   border: 0;
   border-top: 1px solid var(--purple);
   margin: 15px 40px;

@@ -33,9 +33,39 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 };
 
+const slides = [
+  {
+    url: "/ports/vscode/screenshots/vscode.png",
+    caption: (
+      <p>
+        {`A purple theme for `}
+        <span className="highlight">vscode</span>
+      </p>
+    ),
+  },
+  {
+    url: "/ports/duckduckgo/screenshots/duckduckgo.png",
+    caption: (
+      <p>
+        {`A purple theme for `}
+        <span className="highlight">duckduckgo</span>
+      </p>
+    ),
+  },
+  {
+    url: "/ports/gtk/screenshots/gtk.png",
+    caption: (
+      <p>
+        {`A purple theme for `}
+        <span className="highlight">gtk</span>
+      </p>
+    ),
+  },
+];
+
 export default function Home({ portsData, ogImage }: Props) {
   return (
-    <div>
+    <>
       <Navbar />
       <Head>
         <meta name="og:image" content={ogImage} />
@@ -77,37 +107,7 @@ export default function Home({ portsData, ogImage }: Props) {
             Install Wildberries
           </Button>
         </div>
-        <Slider
-          slides={[
-            {
-              url: "/ports/vscode/screenshots/vscode.png",
-              caption: (
-                <p>
-                  {`A purple theme for `}
-                  <span className="highlight">vscode</span>
-                </p>
-              ),
-            },
-            {
-              url: "/ports/duckduckgo/screenshots/duckduckgo.png",
-              caption: (
-                <p>
-                  {`A purple theme for `}
-                  <span className="highlight">duckduckgo</span>
-                </p>
-              ),
-            },
-            {
-              url: "/ports/gtk/screenshots/gtk.png",
-              caption: (
-                <p>
-                  {`A purple theme for `}
-                  <span className="highlight">gtk</span>
-                </p>
-              ),
-            },
-          ]}
-        />
+        <Slider slides={slides} />
       </Hero>
 
       <section id="ports" className={styles.ports}>
@@ -130,6 +130,6 @@ export default function Home({ portsData, ogImage }: Props) {
         About Wildberries
       </ExtendedFab>
       <Footer />
-    </div>
+    </>
   );
 }
