@@ -3,8 +3,7 @@ import styles from "../styles/Slider.module.css";
 
 interface Props {
   slides: {
-    url: string;
-    caption?: any;
+    element: any;
   }[];
 }
 
@@ -30,9 +29,7 @@ export default function Slider({ slides }: Props): ReactElement {
         {slides.map((slide, index) => {
           return (
             <li key={index}>
-              <div className={styles.container}>
-                <img src={slide.url} />
-              </div>
+              <div className={styles.container}>{slide.element}</div>
             </li>
           );
         })}

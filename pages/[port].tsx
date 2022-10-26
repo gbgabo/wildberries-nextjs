@@ -58,25 +58,40 @@ export default function Port({
   const slides =
     screenshots &&
     screenshots.map((screenshot) => {
-      return { url: `/ports/${port}/screenshots/${screenshot}` };
+      return {
+        element: (
+          <img
+            alt={`${port} screenshot`}
+            src={`/ports/${port}/screenshots/${screenshot}`}
+          />
+        ),
+      };
     });
 
   return (
     <>
       <Navbar port={title} />
       <Head>
+        <meta name="og:image" content={ogImage} />
+
         <title>{title} theme - Wildberries</title>
+        <meta property="og:title" content="Wildberries" key="ogtitle" />
+
+        <meta
+          name="description"
+          content={`A dark purple theme for ${title} and many other apps`}
+        />
+        <meta
+          property="og:description"
+          content={`A dark purple theme for ${title} and many other apps`}
+          key="ogdesc"
+        />
+
         <link
           rel="preload"
           href="/fonts/JetBrainsMono-Regular.ttf"
           as="font"
           crossOrigin=""
-        />
-        <meta name="og:image" content={ogImage} />
-        <meta
-          property="og:description"
-          content={`A dark purple theme for ${title} and many other apps`}
-          key="ogdesc"
         />
       </Head>
       <Hero>
@@ -99,7 +114,11 @@ export default function Port({
 
       <div id="instructions" className={styles.instructions}>
         <div className={styles.description}>
-          <img className={styles.sectionIcon} src="/icons/brush.svg" />
+          <img
+            alt="brush icon"
+            className={styles.sectionIcon}
+            src="/icons/brush.svg"
+          />
           <p>Installation</p>
         </div>
 
@@ -128,7 +147,8 @@ export default function Port({
                   className={styles.button}
                   href={`/ports/${port}/assets/${asset}`}
                 >
-                  <img src="/icons/file_download.svg" /> Download
+                  <img alt="download icon" src="/icons/file_download.svg" />{" "}
+                  Download
                 </a>
               </div>
             );

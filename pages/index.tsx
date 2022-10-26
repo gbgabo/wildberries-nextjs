@@ -35,31 +35,20 @@ export const getStaticProps: GetStaticProps = async () => {
 
 const slides = [
   {
-    url: "/ports/vscode/screenshots/vscode.png",
-    caption: (
-      <p>
-        {`A purple theme for `}
-        <span className="highlight">vscode</span>
-      </p>
+    element: (
+      <img alt="vscode screenshot" src="/ports/vscode/screenshots/vscode.png" />
     ),
   },
   {
-    url: "/ports/duckduckgo/screenshots/duckduckgo.png",
-    caption: (
-      <p>
-        {`A purple theme for `}
-        <span className="highlight">duckduckgo</span>
-      </p>
+    element: (
+      <img
+        alt="duckduckgo screenshot"
+        src="/ports/duckduckgo/screenshots/duckduckgo.png"
+      />
     ),
   },
   {
-    url: "/ports/gtk/screenshots/gtk.png",
-    caption: (
-      <p>
-        {`A purple theme for `}
-        <span className="highlight">gtk</span>
-      </p>
-    ),
+    element: <img alt="gtk screenshot" src="/ports/gtk/screenshots/gtk.png" />,
   },
 ];
 

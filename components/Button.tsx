@@ -18,7 +18,7 @@ export default function Button({
   return (
     <Link href={href}>
       <a className={styles[variant]}>
-        {icon && <img src={`/icons/${icon}.svg`} />}
+        {icon && <img alt={icon} src={`/icons/${icon}.svg`} />}
         {children}
       </a>
     </Link>
