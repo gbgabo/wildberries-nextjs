@@ -100,9 +100,7 @@ export default function Home({ portsData, ogImage }: Props) {
       </Hero>
 
       <section id="ports" className={styles.ports}>
-        <h2 style={{ padding: "2rem" }}>
-          Check all apps wilberries is available for:
-        </h2>
+        <h2>Check all apps wilberries is available for:</h2>
         <div className={styles.grid}>
           {portsData.map((port) => {
             return (

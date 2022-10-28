@@ -44,18 +44,15 @@ html {
 
 h2 {
   color: var(--secondary-foreground);
-  font-weight: 400;
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin-bottom: 40px;
+  margin-top: 40px;
 }
 
 h3 {
   color: var(--secondary-foreground);
   font-weight: bold;
-}
-
-@media (max-width: 1250px) {
-  h2 {
-    font-size: 1.3rem;
-  }
 }
 
 a {
@@ -137,8 +134,8 @@ body::-webkit-scrollbar-thumb:active {
 #instructions ol > li,
 #instructions ul > li {
   position: relative; /* Create a positioning context */
-  margin: 20px 0px 20px 3em; /* Give each list item a left margin to make room for the numbers */
-  padding: 4px 16px; /* Add some spacing around the content */
+  margin: 20px 0px 20px 2em; /* Give each list item a left margin to make room for the numbers */
+  padding: 4px 0px 4px 16px; /* Add some spacing around the content */
   list-style: none; /* Disable the normal item numbering */
 }
 #instructions ol > li::before,
