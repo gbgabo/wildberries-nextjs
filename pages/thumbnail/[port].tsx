@@ -1,7 +1,6 @@
 import { GetStaticPaths, GetStaticProps } from "next";
 import { ParsedUrlQuery } from "querystring";
 import styles from "../../styles/Thumbnail.module.css";
-import Image from "next/image";
 import { getPort, getPorts } from "../../lib/ports";
 
 interface IParams extends ParsedUrlQuery {
@@ -33,19 +32,25 @@ export const getStaticPaths: GetStaticPaths = async () => {
   };
 };
 
-export default function Port({ port, title }: Port) {
+export default function Port({ port, title, screenshots }: Port) {
   return (
     <>
       <main className={styles.main}>
         <div className={styles.head}>
-          <img className={styles.icon} src="/img/ui/wb.png" alt="Wildberries" />
+          <img
+            className={styles.icon}
+            src="/img/ui/wb_logo.svg"
+            alt="Wildberries"
+          />
           <h1 className={styles.title}>Wildberries</h1>
           <p className={styles.description}>
             {`theme for `}
             <span className="highlight">{title}</span>
           </p>
         </div>
-        <img src={`/img/screenshots/${port}.png`} />
+        {screenshots && (
+          <img src={`/ports/${port}/screenshots/${screenshots[0]}`} />
+        )}
       </main>
     </>
   );
