@@ -1,4 +1,3 @@
-import React from "react";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { ParsedUrlQuery } from "querystring";
 import styles from "../../styles/Thumbnail.module.css";

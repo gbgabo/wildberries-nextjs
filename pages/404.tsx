@@ -1,9 +1,8 @@
-import React, { ReactElement } from "react";
 import Link from "next/link";
 import Head from "next/head";
 import styles from "../styles/FourOhFour.module.css";
 
-export default function FourOhFour(): ReactElement {
+export default function FourOhFour() {
   return (
     <>
       <Head>

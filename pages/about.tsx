@@ -1,4 +1,3 @@
-import React, { ReactElement } from "react";
 import type { GetStaticProps } from "next";
 import Head from "next/head";
 import { Footer, Navbar, ExtendedFab } from "../components";
@@ -18,7 +17,7 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 };
 
-export default function About({ ogImage }: Props): ReactElement {
+export default function About({ ogImage }: Props) {
   const backgroundColors = ["#19002e", "#240041", "#900048"];
   const foregroundColors = ["#ff0e82", "#c79bff", "#00ffb7"];
   const auxiliarColors = ["#399ee6", "#ffd700", "#d70040", "#ff4500"];
