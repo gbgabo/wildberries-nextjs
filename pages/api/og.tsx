@@ -1,24 +1,26 @@
 import { ImageResponse } from "@vercel/og";
 import { NextRequest } from "next/server";
-import styles from "../../styles/Thumbnail.module.css";
-import wb_logo from "../../public/img/ui/wb_logo.svg";
-import { getPort } from "../../lib/ports";
 
 export const config = {
   runtime: "experimental-edge",
 };
 
+const url = new URL(
+  "../../public/fonts/JetBrainsMono-Medium.ttf",
+  import.meta.url
+) as unknown as RequestInfo;
+
 // Make sure the font exists in the specified path:
-const font = fetch(
-  new URL("../../public/fonts/JetBrainsMono-Medium.ttf", import.meta.url)
-).then((res) => res.arrayBuffer());
+const font = fetch(url).then((res) => res.arrayBuffer());
 
 export default async function handler(req: NextRequest) {
   const fontData = await font;
   try {
     const { searchParams } = new URL(req.url);
 
-    // ?title=<title>
+    const hasTitle = searchParams.has("title");
+    const title = hasTitle ? searchParams.get("title") : "port title";
+
     const hasPort = searchParams.has("port");
     const port = hasPort ? searchParams.get("port") : "vscode";
 
@@ -92,7 +94,7 @@ export default async function handler(req: NextRequest) {
                     marginLeft: "20px",
                   }}
                 >
-                  {port}
+                  {title}
                 </span>
               </p>
             </div>
