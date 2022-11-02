@@ -2,22 +2,22 @@ import type { GetStaticProps } from "next";
 import Head from "next/head";
 import { Footer, Navbar, ExtendedFab } from "../components";
 import styles from "../styles/About.module.css";
-import getOgImage from "../lib/getOgImage";
+// import getOgImage from "../lib/getOgImage";
 
-interface Props {
-  ogImage: string;
-}
+// interface Props {
+//   ogImage: string;
+// }
 
-export const getStaticProps: GetStaticProps = async () => {
-  const ogImage = await getOgImage(`thumbnail`);
-  return {
-    props: {
-      ogImage,
-    },
-  };
-};
+// export const getStaticProps: GetStaticProps = async () => {
+//   const ogImage = await getOgImage(`thumbnail`);
+//   return {
+//     props: {
+//       ogImage,
+//     },
+//   };
+// };
 
-export default function About({ ogImage }: Props) {
+export default function About() {
   const backgroundColors = ["#19002e", "#240041", "#900048"];
   const foregroundColors = ["#ff0e82", "#c79bff", "#00ffb7"];
   const auxiliarColors = ["#399ee6", "#ffd700", "#d70040", "#ff4500"];
@@ -51,7 +51,7 @@ export default function About({ ogImage }: Props) {
   return (
     <>
       <Head>
-        <meta name="og:image" content={ogImage} />
+        <meta name="og:image" content="https://wildberries.style/api/og" />
 
         <title>About Wildberries</title>
         <meta property="og:title" content="About Wildberries" key="ogtitle" />

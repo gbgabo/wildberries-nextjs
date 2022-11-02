@@ -73,7 +73,7 @@ export default function Port({
       <Head>
         <meta
           name="og:image"
-          content={`/api/og?port=${port}${
+          content={`https://wildberries.style/api/og?port=${port}&title=${title}${
             screenshots ? `&image=${screenshots[0]}` : null
           }`}
         />
