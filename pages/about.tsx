@@ -2,20 +2,6 @@ import type { GetStaticProps } from "next";
 import Head from "next/head";
 import { Footer, Navbar, ExtendedFab } from "../components";
 import styles from "../styles/About.module.css";
-// import getOgImage from "../lib/getOgImage";
-
-// interface Props {
-//   ogImage: string;
-// }
-
-// export const getStaticProps: GetStaticProps = async () => {
-//   const ogImage = await getOgImage(`thumbnail`);
-//   return {
-//     props: {
-//       ogImage,
-//     },
-//   };
-// };
 
 export default function About() {
   const backgroundColors = ["#19002e", "#240041", "#900048"];

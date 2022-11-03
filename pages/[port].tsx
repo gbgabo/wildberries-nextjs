@@ -4,7 +4,6 @@ import Link from "next/link";
 import styles from "../styles/Port.module.css";
 import heroStyles from "../styles/Hero.module.css";
 import Image from "next/image";
-// import getOgImage from "../lib/getOgImage";
 import { getPort, getPorts } from "../lib/ports";
 import {
   Footer,
@@ -20,12 +19,10 @@ import remarkGfm from "remark-gfm";
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const port = context.params!.port as string;
-  // const ogImage = await getOgImage(`thumbnail/${port}`);
   const portProps = await getPort(port);
   return {
     props: {
       ...portProps,
-      // ogImage,
     },
   };
 };
@@ -52,7 +49,6 @@ export default function Port({
   screenshots,
   instructions,
   assets,
-  ogImage,
 }: Port) {
   const slides =
     screenshots &&

@@ -4,7 +4,6 @@ import Link from "next/link";
 import styles from "../styles/Home.module.css";
 import heroStyles from "../styles/Hero.module.css";
 import { getPorts } from "../lib/ports";
-// import getOgImage from "../lib/getOgImage";
 import {
   Footer,
   Hero,
@@ -19,16 +18,13 @@ interface Props {
     port: string;
     title: string;
   }[];
-  ogImage: string;
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  // const ogImage = await getOgImage(`thumbnail`);
   const portsData = getPorts();
   return {
     props: {
       portsData,
-      // ogImage,
     },
   };
 };
