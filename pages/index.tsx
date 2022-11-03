@@ -4,7 +4,6 @@ import Link from "next/link";
 import styles from "../styles/Home.module.css";
 import heroStyles from "../styles/Hero.module.css";
 import { getPorts } from "../lib/ports";
-import getOgImage from "../lib/getOgImage";
 import {
   Footer,
   Hero,
@@ -19,16 +18,13 @@ interface Props {
     port: string;
     title: string;
   }[];
-  ogImage: string;
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const ogImage = await getOgImage(`thumbnail`);
   const portsData = getPorts();
   return {
     props: {
       portsData,
-      ogImage,
     },
   };
 };
@@ -52,12 +48,12 @@ const slides = [
   },
 ];
 
-export default function Home({ portsData, ogImage }: Props) {
+export default function Home({ portsData }: Props) {
   return (
     <>
       <Navbar />
       <Head>
-        <meta name="og:image" content={ogImage} />
+        <meta name="og:image" content="https://wildberries.style/api/og" />
 
         <title>Wildberries - A dark theme for purple lovers</title>
         <meta property="og:title" content="Wildberries" key="ogtitle" />

@@ -9,11 +9,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 50%;
-  min-width: 500px;
-  position: absolute;
-  left: 0;
-  z-index: 5;
+  min-width: 50vw;
   height: 100vh;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 
@@ -49,20 +45,10 @@
 .main {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  background-color: var(--background-darker);
-  flex-wrap: wrap;
   min-height: 100vh;
-  padding: 4%;
-  position: relative;
-  z-index: 4;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
 .main > img {
   height: 100vh;
-  position: absolute;
   right: 0;
 }
