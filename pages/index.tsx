@@ -66,7 +66,7 @@ export default function Home({ portsData }: Props) {
         />
         <link
           rel="preload"
-          href="/fonts/JetBrainsMono-Regular.ttf"
+          href="/fonts/JetBrainsMono-VariableFont_wght.ttf"
           as="font"
           crossOrigin=""
         />
