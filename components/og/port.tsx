@@ -61,7 +61,10 @@ export default function Port({ port, title, image }: Props) {
   return (
     <div style={styles.container}>
       <div
-        style={{ ...styles.description, width: `${image ? "50vw" : "100vw"}` }}
+        style={{
+          ...styles.description,
+          width: `${image && port ? "50vw" : "100vw"}`,
+        }}
       >
         <img
           style={styles.logo}
@@ -74,7 +77,7 @@ export default function Port({ port, title, image }: Props) {
           <span style={styles.highlight}>{title}</span>
         </p>
       </div>
-      {image && (
+      {image && port && (
         <div style={styles.imageContainer}>
           <img
             style={{ width: "100%" }}

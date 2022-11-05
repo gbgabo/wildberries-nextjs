@@ -24,10 +24,10 @@ export default async function handler(req: NextRequest) {
     const title = hasTitle ? searchParams.get("title") : "port title";
 
     const hasPort = searchParams.has("port");
-    const port = hasPort ? searchParams.get("port") : "vscode";
+    const port = searchParams.get("port");
 
     const hasImage = searchParams.has("image");
-    const image = hasImage ? searchParams.get("image") : "vscode.png";
+    const image = searchParams.get("image");
 
     const isIndex = !hasImage && !hasPort && !hasTitle;
 
