@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @font-face {
   font-family: "JetBrains Mono";
   src: url("/fonts/JetBrainsMono-VariableFont_wght.ttf");
@@ -92,17 +96,21 @@ body::-webkit-scrollbar {
   width: 6px;
   height: 6px;
 }
+
 body::-webkit-scrollbar-track {
   border-radius: 10px;
   background: rgba(0, 0, 0, 0.1);
 }
+
 body::-webkit-scrollbar-thumb {
   border-radius: 10px;
   background: rgba(199, 155, 255, 0.4);
 }
+
 body::-webkit-scrollbar-thumb:hover {
   background: rgba(199, 155, 255, 1);
 }
+
 body::-webkit-scrollbar-thumb:active {
   background: rgba(0, 255, 183, 0.6);
 }
@@ -127,19 +135,28 @@ body::-webkit-scrollbar-thumb:active {
 
 #instructions ol,
 #instructions ul {
-  counter-reset: li; /* Initiate a counter */
-  margin-left: 0; /* Remove the default left margin */
-  padding-left: 0; /* Remove the default left padding */
+  counter-reset: li;
+  /* Initiate a counter */
+  margin-left: 0;
+  /* Remove the default left margin */
+  padding-left: 0;
+  /* Remove the default left padding */
 }
-#instructions ol > li,
-#instructions ul > li {
-  position: relative; /* Create a positioning context */
-  margin: 20px 0px 20px 2em; /* Give each list item a left margin to make room for the numbers */
-  padding: 4px 0px 4px 16px; /* Add some spacing around the content */
-  list-style: none; /* Disable the normal item numbering */
+
+#instructions ol>li,
+#instructions ul>li {
+  position: relative;
+  /* Create a positioning context */
+  margin: 20px 0px 20px 2em;
+  /* Give each list item a left margin to make room for the numbers */
+  padding: 4px 0px 4px 16px;
+  /* Add some spacing around the content */
+  list-style: none;
+  /* Disable the normal item numbering */
 }
-#instructions ol > li::before,
-#instructions ul > li:before {
+
+#instructions ol>li::before,
+#instructions ul>li:before {
   position: absolute;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -151,9 +168,11 @@ body::-webkit-scrollbar-thumb:active {
   margin-right: 8px;
 }
 
-#instructions ol > li:before {
-  content: counter(li); /* Use the counter as content */
-  counter-increment: li; /* Increment the counter by 1 */
+#instructions ol>li:before {
+  content: counter(li);
+  /* Use the counter as content */
+  counter-increment: li;
+  /* Increment the counter by 1 */
   top: -3px;
   left: -2em;
   /* Some space between the number and the content in browsers that support
@@ -163,7 +182,7 @@ body::-webkit-scrollbar-thumb:active {
   width: 2em;
 }
 
-#instructions ul > li:before {
+#instructions ul>li:before {
   content: "•";
   left: -1.6em;
   border-radius: 35%;
@@ -175,10 +194,12 @@ body::-webkit-scrollbar-thumb:active {
 #instructions li ul {
   margin-top: 6px;
 }
+
 #instructions ol ol li:last-child {
   margin-bottom: 0;
 }
-#instructions li > p {
+
+#instructions li>p {
   margin: 0;
 }
 
