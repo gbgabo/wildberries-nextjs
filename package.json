@@ -25,8 +25,8 @@
     "@types/react-copy-to-clipboard": "^5.0.2",
     "@types/react-syntax-highlighter": "^13.5.2",
     "autoprefixer": "^10.4.16",
-    "eslint": "7.32.0",
-    "eslint-config-next": "11.1.2",
+    "eslint": "^8.53.0",
+    "eslint-config-next": "^14.0.2",
     "postcss": "^8.4.31",
     "tailwindcss": "^3.3.5",
     "typescript": "^5.2.2"
