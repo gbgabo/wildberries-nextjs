@@ -11,6 +11,18 @@
 }
 
 :root {
+  --wb-dark-purple: #240041;
+  --wb-darker-purple: #19002e;
+  --wb-acid-green: #00ffb7;
+  --wb-cherry: #900048;
+  --wb-pink: #ff0e82;
+  --wb-light-purple: #c79bff;
+  --wb-grape: #752dce;
+  --wb-pastel-purple: #e7d4ff;
+  --wb-muted-purple: #ecdeff;
+
+
+
   --black-berry: #19002e;
   --grape: #240041;
   --cherry: #900048;
