@@ -2,7 +2,6 @@ import { GetStaticPaths, GetStaticProps } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import styles from "../styles/Port.module.css";
-import heroStyles from "../styles/Hero.module.css";
 import Image from "next/image";
 import { getPort, getPorts } from "../lib/ports";
 import {
@@ -95,10 +94,15 @@ export default function Port({
         />
       </Head>
       <Hero>
-        <div className={heroStyles.head}>
-          <h1 className={heroStyles.title}>Wildberries</h1>
+        <div
+          className="flex flex-col justify-center items-center h-[80vh] w-screen min-w-0 
+                      md:items-start md:h-[85vh] md:w-[44%] md:min-w-[500px]"
+        >
+          <h1 className="m-0 font-semibold text-4xl md:text-5xl">
+            Wildberries
+          </h1>
 
-          <div className={heroStyles.description}>
+          <div className="inline my-8 mx-0 text-xl md:text-2xl text-light-purple max-w-[75%]">
             <>
               {`A dark purple theme for `}
               <span className="highlight">{title}</span>
