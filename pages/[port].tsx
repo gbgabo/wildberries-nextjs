@@ -1,20 +1,12 @@
-import { GetStaticPaths, GetStaticProps } from "next";
-import Head from "next/head";
-import Link from "next/link";
-import styles from "../styles/Port.module.css";
-import Image from "next/image";
-import { getPort, getPorts } from "../lib/ports";
-import {
-  Footer,
-  Hero,
-  Navbar,
-  ExtendedFab,
-  Code,
-  Slider,
-  Button,
-} from "../components";
-import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm";
+import { GetStaticPaths, GetStaticProps } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+import styles from '../styles/Port.module.css';
+import Image from 'next/image';
+import { getPort, getPorts } from '../lib/ports';
+import { Footer, Hero, Navbar, ExtendedFab, Code, Slider, Button } from '../components';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const port = context.params!.port as string;
@@ -41,24 +33,12 @@ export const getStaticPaths: GetStaticPaths = async () => {
   };
 };
 
-export default function Port({
-  port,
-  title,
-  platform,
-  screenshots,
-  instructions,
-  assets,
-}: Port) {
+export default function Port({ port, title, platform, screenshots, instructions, assets }: Port) {
   const slides =
     screenshots &&
     screenshots.map((screenshot) => {
       return {
-        element: (
-          <img
-            alt={`${port} screenshot`}
-            src={`/ports/${port}/screenshots/${screenshot}`}
-          />
-        ),
+        element: <img alt={`${port} screenshot`} src={`/ports/${port}/screenshots/${screenshot}`} />,
       };
     });
 
@@ -76,33 +56,19 @@ export default function Port({
         <title>{title} theme - Wildberries</title>
         <meta property="og:title" content="Wildberries" key="ogtitle" />
 
-        <meta
-          name="description"
-          content={`A dark purple theme for ${title} and many other apps`}
-        />
-        <meta
-          property="og:description"
-          content={`A dark purple theme for ${title} and many other apps`}
-          key="ogdesc"
-        />
+        <meta name="description" content={`A dark purple theme for ${title} and many other apps`} />
+        <meta property="og:description" content={`A dark purple theme for ${title} and many other apps`} key="ogdesc" />
 
-        <link
-          rel="preload"
-          href="/fonts/JetBrainsMono-VariableFont_wght.ttf"
-          as="font"
-          crossOrigin=""
-        />
+        <link rel="preload" href="/fonts/JetBrainsMono-VariableFont_wght.ttf" as="font" crossOrigin="" />
       </Head>
       <Hero>
         <div
-          className="flex flex-col justify-center items-center h-[80vh] w-screen min-w-0 
-                      md:items-start md:h-[85vh] md:w-[44%] md:min-w-[500px]"
+          className="flex h-[80vh] w-screen min-w-0 flex-col items-center justify-center 
+                      md:h-[85vh] md:w-[44%] md:min-w-[500px] md:items-start"
         >
-          <h1 className="m-0 font-semibold text-4xl md:text-5xl">
-            Wildberries
-          </h1>
+          <h1 className="m-0 text-4xl font-semibold md:text-5xl">Wildberries</h1>
 
-          <div className="inline my-8 mx-0 text-xl md:text-2xl text-light-purple max-w-[75%]">
+          <div className="mx-0 my-8 inline max-w-[75%] text-xl text-light-purple md:text-2xl">
             <>
               {`A dark purple theme for `}
               <span className="highlight">{title}</span>
@@ -118,17 +84,13 @@ export default function Port({
 
       <div id="instructions" className={styles.instructions}>
         <div className={styles.description}>
-          <img
-            alt="brush icon"
-            className={styles.sectionIcon}
-            src="/icons/brush.svg"
-          />
+          <img alt="brush icon" className={styles.sectionIcon} src="/icons/brush.svg" />
           <p>Installation</p>
         </div>
 
         <ReactMarkdown
           remarkPlugins={[remarkGfm]}
-          className={styles["instructions-content"]}
+          className={styles['instructions-content']}
           components={{
             code({ node, inline, className, children, ...props }) {
               return inline ? (
@@ -147,12 +109,8 @@ export default function Port({
             return (
               <div key={index}>
                 <p className={styles.asset}>{asset}</p>
-                <a
-                  className={styles.button}
-                  href={`/ports/${port}/assets/${asset}`}
-                >
-                  <img alt="download icon" src="/icons/file_download.svg" />{" "}
-                  Download
+                <a className={styles.button} href={`/ports/${port}/assets/${asset}`}>
+                  <img alt="download icon" src="/icons/file_download.svg" /> Download
                 </a>
               </div>
             );

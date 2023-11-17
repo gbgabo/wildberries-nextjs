@@ -1,4 +1,4 @@
-import React, { ReactElement, ReactNode } from "react";
+import React, { ReactElement, ReactNode } from 'react';
 
 interface Props {
   children: ReactNode;
@@ -6,7 +6,7 @@ interface Props {
 
 export default function Hero({ children }: Props): ReactElement {
   return (
-    <main className="flex flex-row content-center items-center justify-center bg-darker-purple flex-wrap min-h-screen md:p-20 relative z-10 shadow-lg bg-gradient-to-t from-darker-purple from-60% md:from-30% to-cherry">
+    <main className="relative z-10 flex min-h-screen flex-row flex-wrap content-center items-center justify-center bg-darker-purple bg-gradient-to-t from-darker-purple from-60% to-cherry shadow-lg md:from-30% md:p-20">
       {children}
     </main>
   );
