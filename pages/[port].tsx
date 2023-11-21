@@ -61,24 +61,17 @@ export default function Port({ port, title, platform, screenshots, instructions,
 
         <link rel="preload" href="/fonts/JetBrainsMono-VariableFont_wght.ttf" as="font" crossOrigin="" />
       </Head>
-      <Hero>
-        <div
-          className="flex h-[80vh] w-screen min-w-0 flex-col items-center justify-center 
-                      md:h-[85vh] md:w-[44%] md:min-w-[500px] md:items-start"
-        >
-          <h1 className="m-0 text-4xl font-semibold md:text-5xl">Wildberries</h1>
-
-          <div className="mx-0 my-8 inline max-w-[75%] text-xl text-light-purple md:text-2xl">
-            <>
-              {`A dark purple theme for `}
-              <span className="highlight">{title}</span>
-              {` and many other apps`}
-            </>
+      <Hero
+        title="Wildberries"
+        subtitle={
+          <div className="my-8 text-xl text-light-purple md:text-2xl">
+            {`A dark purple theme for `}
+            <span className="highlight">{title}</span>
+            {` and many other apps`}
           </div>
-          <Button href="#instructions" icon="brush">
-            Apply Theme
-          </Button>
-        </div>
+        }
+        cta={{ text: 'Apply Theme', href: '#instructions', icon: 'brush' }}
+      >
         {slides && <Slider slides={slides} />}
       </Hero>
 

@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import styles from '../styles/Home.module.css';
 import { getPorts } from '../lib/ports';
-import { Footer, Hero, Navbar, ExtendedFab, Slider, Button } from '../components';
+import { Footer, Hero, Navbar, ExtendedFab, Slider, Button, Logo } from '../components';
 
 interface Props {
   portsData: {
@@ -49,24 +49,11 @@ export default function Home({ portsData }: Props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Hero>
-        <div
-          className="flex h-[80vh] w-screen min-w-0 flex-col items-center justify-center 
-                      md:h-[85vh] md:w-[44%] md:min-w-[500px] md:items-start"
-        >
-          <div className="flex w-full flex-wrap items-center justify-center gap-6 md:justify-start">
-            <img className="h-44 w-44 md:h-36 md:w-36" src="/img/ui/wb_logo.svg" alt="Wildberries" />
-            <h1 className="m-0 text-4xl font-semibold md:text-5xl">Wildberries</h1>
-          </div>
-
-          <div className="mx-0 my-8 inline max-w-[75%] text-xl text-light-purple md:text-2xl">
-            An experimental dark theme for people who love purple
-          </div>
-
-          <Button href="#ports" icon="brush">
-            Install Wildberries
-          </Button>
-        </div>
+      <Hero
+        title={<Logo />}
+        subtitle="An experimental dark theme for people who love purple"
+        cta={{ text: 'Install Wildberries', href: '#ports', icon: 'brush' }}
+      >
         <Slider slides={slides} />
       </Hero>
 
