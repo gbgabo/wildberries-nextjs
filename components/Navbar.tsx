@@ -1,5 +1,4 @@
-import React, { Fragment, ReactElement } from 'react';
-import styles from '../styles/Navbar.module.css';
+import React, { ReactElement } from 'react';
 import Link from 'next/link';
 import Logo from './Logo';
 
