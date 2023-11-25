@@ -1,6 +1,7 @@
-import React, { ReactElement } from "react";
-import styles from "../styles/Navbar.module.css";
-import Link from "next/link";
+import React, { Fragment, ReactElement } from 'react';
+import styles from '../styles/Navbar.module.css';
+import Link from 'next/link';
+import Logo from './Logo';
 
 interface Props {
   port?: string;
@@ -8,19 +9,18 @@ interface Props {
 
 export default function Navbar({ port }: Props): ReactElement {
   return (
-    <div className={styles.bar}>
+    <div className="fixed top-0 z-10 h-20 w-screen bg-darker-purple shadow-lg">
       <Link href="/">
-        <a className={styles.logo}>
-          <img alt="wildberries" src="/img/ui/wb_logo.svg" />
-
-          <div className={styles.text}>
-            <h1>Wildberries&ensp;</h1>
-            {port && (
-              <p>
-                for <span className="highlight">{port}</span>
-              </p>
-            )}
-          </div>
+        <a className="m-auto flex h-full w-fit flex-row flex-nowrap content-center items-center justify-center p-4 text-xl">
+          <Logo
+            concat={
+              port && (
+                <span className="text-sm">
+                  for <span className="highlight">{port}</span>
+                </span>
+              )
+            }
+          />
         </a>
       </Link>
     </div>

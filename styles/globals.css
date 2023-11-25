@@ -128,11 +128,7 @@ body::-webkit-scrollbar-thumb:active {
 }
 
 .highlight {
-  background-color: var(--secondary-foreground);
-  color: var(--background-darker);
-  border-radius: 5px;
-  padding: 5px 10px;
-  white-space: pre;
+  @apply bg-light-purple text-darker-purple rounded px-2 py-1 whitespace-pre;
 }
 
 .berry {

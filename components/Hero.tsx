@@ -16,7 +16,7 @@ interface Props {
 export default function Hero({ children, title, subtitle, cta }: Props): ReactElement {
   return (
     <main
-      className="relative z-10 grid min-h-screen grid-rows-2 content-center items-center justify-center 
+      className="relative z-20 grid min-h-screen grid-rows-2 content-center items-center justify-center 
                 bg-darker-purple bg-gradient-to-t from-darker-purple from-60% to-cherry p-10 shadow-lg 
                   md:grid-cols-2 md:grid-rows-1 md:from-30% md:p-40"
     >
