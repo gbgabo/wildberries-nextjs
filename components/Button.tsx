@@ -6,6 +6,7 @@ export type Props = {
   children: string;
   variant?: 'primary' | 'secondary';
   icon?: string;
+  fab?: boolean;
 };
 
 const variants = {
@@ -13,11 +14,13 @@ const variants = {
   secondary: 'bg-light-purple text-darker-purple hover:bg-darker-purple hover:text-light-purple ',
 };
 
-export default function Button({ href, children, variant = 'primary', icon }: Props): ReactElement {
+export default function Button({ href, children, variant = 'primary', icon, fab }: Props): ReactElement {
   return (
     <Link href={href}>
       <a
-        className={`${variants[variant]} flex items-center justify-center gap-3 rounded-xl p-5 text-lg transition-all ease-out`}
+        className={`${variants[variant]} ${
+          (fab && 'rounded-full shadow-md') || 'rounded-xl'
+        } flex items-center justify-center gap-3 p-5 text-lg transition-all ease-out`}
       >
         {icon && <img alt={icon} src={`/icons/${icon}.svg`} />}
         {children}
