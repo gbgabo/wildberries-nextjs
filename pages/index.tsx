@@ -71,7 +71,7 @@ export default function Home({ portsData }: Props) {
           })}
         </div>
       </section>
-      <ExtendedFab href="/about" variant="secondary" icon="pallete">
+      <ExtendedFab href="/about" icon="pallete">
         About Wildberries
       </ExtendedFab>
       <Footer />

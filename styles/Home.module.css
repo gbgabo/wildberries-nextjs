@@ -12,6 +12,8 @@
 
 .ports {
   padding: 5rem 5rem;
+  background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='32' height='32' patternTransform='scale(1) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(273, 100%, 9%, 1)'/><path d='M37.657 10.343l-4.243 4.243m-2.828 2.828l-4.243 4.243m11.314 0l-4.243-4.243m-2.828-2.828l-4.243-4.243m-20.686 0l-4.243 4.243m-2.828 2.828l-4.243 4.243m11.314 0l-4.243-4.243m-2.828-2.828l-4.243-4.243'  stroke-linecap='square' stroke-width='0.5' stroke='hsla(266, 100%, 80%, 0.51)' fill='none'/><path d='M16-8v6m0 4v6m8-8h-6m-4 0H8m8 24v6m0 4v6m8-8h-6m-4 0H8'  stroke-linecap='square' stroke-width='0.5' stroke='hsla(330, 100%, 28%, 0.59)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(-64,-64)' fill='url(%23a)'/></svg>");
+  background-attachment: fixed;
 }
 
 @media (max-width: 500px) {
@@ -25,12 +27,12 @@
   text-decoration: none;
   transition: color 0.15s ease, background-color 0.15s ease,
     box-shadow 0.2s ease, border-radius 0.2s ease;
-  background-color: var(--element-background);
+  background-color: var(--wb-dark-purple);
   color: var(--element-foreground);
+  border: 2px solid var(--wb-cherry);
   padding: 1.5rem;
   text-align: left;
   border-radius: 10px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
 .card:hover,
@@ -38,7 +40,6 @@
 .card:active {
   color: var(--element-background);
   background-color: var(--element-foreground);
-  border-radius: 30px;
 }
 
 .card b {
@@ -64,6 +65,7 @@
     width: 100%;
     grid-template-columns: 1fr;
   }
+
   .description {
     font-size: 1.3rem;
   }
