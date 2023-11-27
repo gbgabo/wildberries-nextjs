@@ -34,7 +34,9 @@ export default function BioCard({ top, bottom, image, href, variant = 'secondary
           />
         )}
       </div>
-      <p className={`col-span-3 whitespace-pre rounded py-1 ${variants[variant].button}`}>{bottom}</p>
+      <p className={`col-span-3 whitespace-pre rounded py-1 transition-all ease-out ${variants[variant].button}`}>
+        {bottom}
+      </p>
     </a>
   );
 }
