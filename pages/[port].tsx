@@ -7,6 +7,7 @@ import { getPort, getPorts } from '../lib/ports';
 import { Footer, Hero, Navbar, ExtendedFab, Code, Slider, Button } from '../components';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import { Icon } from '@iconify/react';
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const port = context.params!.port as string;
@@ -70,14 +71,14 @@ export default function Port({ port, title, platform, screenshots, instructions,
             {` and many other apps`}
           </div>
         }
-        cta={{ text: 'Apply Theme', href: '#instructions', icon: 'brush' }}
+        cta={{ text: 'Apply Theme', href: '#instructions', icon: 'material-symbols:brush' }}
       >
         {slides && <Slider slides={slides} />}
       </Hero>
 
       <div id="instructions" className={styles.instructions}>
         <div className={styles.description}>
-          <img alt="brush icon" className={styles.sectionIcon} src="/icons/brush.svg" />
+          <Icon className={styles.sectionIcon} icon="material-symbols:brush" />
           <p>Installation</p>
         </div>
 
@@ -103,14 +104,14 @@ export default function Port({ port, title, platform, screenshots, instructions,
               <div key={index}>
                 <p className={styles.asset}>{asset}</p>
                 <a className={styles.button} href={`/ports/${port}/assets/${asset}`}>
-                  <img alt="download icon" src="/icons/file_download.svg" /> Download
+                  <Icon className="mr-2" icon="tabler:download" width="1.5rem" /> Download
                 </a>
               </div>
             );
           })}
       </div>
 
-      <ExtendedFab href="/" icon="brush" variant="secondary">
+      <ExtendedFab href="/" icon="bx:brush" variant="secondary">
         Check all ports
       </ExtendedFab>
 
