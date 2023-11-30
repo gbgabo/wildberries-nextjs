@@ -8,7 +8,7 @@ interface Props {
 
 export default function Navbar({ port }: Props): ReactElement {
   return (
-    <div className="fixed top-0 z-10 h-20 w-screen bg-darker-purple shadow-lg">
+    <div className="fixed top-0 z-20 h-20 w-screen bg-darker-purple shadow-lg">
       <Link href="/">
         <a className="m-auto flex h-full w-fit flex-row flex-nowrap content-center items-center justify-center p-4 text-xl transition-colors ease-out hover:text-light-purple">
           <Logo
