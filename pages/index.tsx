@@ -79,7 +79,7 @@ export default function Home({ portsData }: Props) {
       <ExtendedFab href="/about" icon="heroicons-outline:color-swatch">
         About Wildberries
       </ExtendedFab>
-      <Footer />
+      <Footer variant="secondary" />
     </>
   );
 }

@@ -7,7 +7,7 @@ interface Props {
 
 const variants = {
   primary: 'bg-gradient-to-t from-cherry to-darker-purple to-40%',
-  secondary: 'bg-gradient-to-t from-light-purple to-darker-purple from-[-50%] to-40%',
+  secondary: 'bg-gradient-to-t from-dark-purple to-darker-purple from-[-50%] to-40%',
 };
 
 export default function Footer({ variant = 'primary' }: Props): ReactElement {

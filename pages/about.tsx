@@ -110,7 +110,7 @@ export default function About() {
       <ExtendedFab href="/" icon="bx:brush" variant="secondary">
         Check all theme ports
       </ExtendedFab>
-      <Footer variant="secondary" />
+      <Footer />
     </div>
   );
 }
