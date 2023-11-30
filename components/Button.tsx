@@ -1,4 +1,5 @@
 import React, { ReactElement } from 'react';
+import { Icon } from '@iconify/react';
 import Link from 'next/link';
 
 export type Props = {
@@ -19,11 +20,11 @@ export default function Button({ href, children, variant = 'primary', icon, fab 
     <Link href={href}>
       <a
         className={`${variants[variant]} ${
-          (fab && 'rounded-full shadow-md') || 'rounded-xl'
-        } flex items-center justify-center gap-3 p-5 text-lg transition-all ease-out`}
+          (fab && 'rounded-3xl shadow-md') || 'rounded-xl'
+        } grid grid-cols-7 items-center justify-center gap-2 p-5 font-bold transition-all ease-out`}
       >
-        {icon && <img alt={icon} src={`/icons/${icon}.svg`} />}
-        {children}
+        {icon && <Icon className="col-span-1" height="100%" width="auto" icon={icon} />}
+        <span className="col-span-6 whitespace-nowrap py-[1px]">{children}</span>
       </a>
     </Link>
   );

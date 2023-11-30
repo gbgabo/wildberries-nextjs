@@ -51,7 +51,7 @@ export default function Home({ portsData }: Props) {
       <Hero
         title={<Logo />}
         subtitle="An experimental dark theme for people who love purple"
-        cta={{ text: 'Install Wildberries', href: '#ports', icon: 'brush' }}
+        cta={{ text: 'Install Wildberries', href: '#ports', icon: 'material-symbols:brush' }}
       >
         <Slider slides={slides} />
       </Hero>
@@ -76,7 +76,7 @@ export default function Home({ portsData }: Props) {
           })}
         </div>
       </section>
-      <ExtendedFab href="/about" icon="pallete">
+      <ExtendedFab href="/about" icon="heroicons-outline:color-swatch">
         About Wildberries
       </ExtendedFab>
       <Footer />

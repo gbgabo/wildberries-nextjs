@@ -107,7 +107,7 @@ export default function About() {
           </div>
         </div>
       </div>
-      <ExtendedFab href="/" icon="brush" variant="secondary">
+      <ExtendedFab href="/" icon="bx:brush" variant="secondary">
         Check all theme ports
       </ExtendedFab>
       <Footer variant="secondary" />
