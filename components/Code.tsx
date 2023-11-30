@@ -2,6 +2,7 @@ import React, { ReactElement, ReactNode, useState } from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { prism } from '../styles/highlight';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
+import { Icon } from '@iconify/react';
 
 interface Props {
   children: ReactNode;
@@ -27,17 +28,10 @@ export default function Code({ children, className = '', style = prism }: Props)
             }, 1000);
           }}
         >
-          <img
-            style={
-              copied
-                ? {
-                    filter: 'invert(83%) sepia(95%) saturate(4281%) hue-rotate(81deg) brightness(99%) contrast(106%)',
-                  }
-                : {
-                    filter: 'invert(28%) sepia(91%) saturate(7000%) hue-rotate(322deg) brightness(103%) contrast(101%)',
-                  }
-            }
-            src={copied ? '/icons/done.svg' : '/icons/content_copy.svg'}
+          <Icon
+            className={copied ? 'text-acid-green' : 'text-pink'}
+            icon={copied ? 'tabler:copy-check' : 'tabler:copy'}
+            width="1.7rem"
           />
         </CopyToClipboard>
       </div>
