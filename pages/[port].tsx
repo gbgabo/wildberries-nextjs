@@ -8,6 +8,7 @@ import { Footer, Hero, Navbar, ExtendedFab, Code, Slider, Button } from '../comp
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { Icon } from '@iconify/react';
+import Layout from '../components/Layout';
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const port = context.params!.port as string;
@@ -35,87 +36,71 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export default function Port({ port, title, platform, screenshots, instructions, assets }: Port) {
-  const slides =
-    screenshots &&
-    screenshots.map((screenshot) => {
-      return {
-        element: <img alt={`${port} screenshot`} src={`/ports/${port}/screenshots/${screenshot}`} />,
-      };
-    });
+  const meta = {
+    title: `${port} theme - Wildberries`,
+    description: `A dark purple theme for ${port} and many other apps`,
+    image: `https://wildberries.style/api/og?port=${port}&title=${title}${
+      screenshots ? `&image=${screenshots[0]}` : null
+    }`,
+  };
+
+  const hero = {
+    title: 'Wildberries',
+    subtitle: (
+      <div className="my-8 text-xl text-light-purple md:text-2xl">
+        {`A dark purple theme for `}
+        <span className="highlight">{title}</span>
+        {` and many other apps`}
+      </div>
+    ),
+    cta: { text: 'Apply Theme', href: '#instructions', icon: 'material-symbols:brush' },
+    slides: screenshots?.map((screenshot) => {
+      return `/ports/${port}/screenshots/${screenshot}`;
+    }),
+  };
 
   return (
     <>
-      <Navbar port={title} />
-      <Head>
-        <meta
-          name="og:image"
-          content={`https://wildberries.style/api/og?port=${port}&title=${title}${
-            screenshots ? `&image=${screenshots[0]}` : null
-          }`}
-        />
-
-        <title>{title} theme - Wildberries</title>
-        <meta property="og:title" content="Wildberries" key="ogtitle" />
-
-        <meta name="description" content={`A dark purple theme for ${title} and many other apps`} />
-        <meta property="og:description" content={`A dark purple theme for ${title} and many other apps`} key="ogdesc" />
-
-        <link rel="preload" href="/fonts/JetBrainsMono-VariableFont_wght.ttf" as="font" crossOrigin="" />
-      </Head>
-      <Hero
-        title="Wildberries"
-        subtitle={
-          <div className="my-8 text-xl text-light-purple md:text-2xl">
-            {`A dark purple theme for `}
-            <span className="highlight">{title}</span>
-            {` and many other apps`}
+      <Layout meta={meta} hero={hero} port={port}>
+        <div id="instructions" className={styles.instructions}>
+          <div className={styles.description}>
+            <Icon className={styles.sectionIcon} icon="material-symbols:brush" />
+            <p>Installation</p>
           </div>
-        }
-        cta={{ text: 'Apply Theme', href: '#instructions', icon: 'material-symbols:brush' }}
-      >
-        {slides && <Slider slides={slides} />}
-      </Hero>
 
-      <div id="instructions" className={styles.instructions}>
-        <div className={styles.description}>
-          <Icon className={styles.sectionIcon} icon="material-symbols:brush" />
-          <p>Installation</p>
+          <ReactMarkdown
+            remarkPlugins={[remarkGfm]}
+            className={styles['instructions-content']}
+            components={{
+              code({ node, inline, className, children, ...props }) {
+                return inline ? (
+                  <code className={className}>{children}</code>
+                ) : (
+                  <Code className={className}>{children}</Code>
+                );
+              },
+            }}
+          >
+            {instructions}
+          </ReactMarkdown>
+
+          {assets &&
+            assets.map((asset, index) => {
+              return (
+                <div key={index}>
+                  <p className={styles.asset}>{asset}</p>
+                  <a className={styles.button} href={`/ports/${port}/assets/${asset}`}>
+                    <Icon className="mr-2" icon="tabler:download" width="1.5rem" /> Download
+                  </a>
+                </div>
+              );
+            })}
         </div>
 
-        <ReactMarkdown
-          remarkPlugins={[remarkGfm]}
-          className={styles['instructions-content']}
-          components={{
-            code({ node, inline, className, children, ...props }) {
-              return inline ? (
-                <code className={className}>{children}</code>
-              ) : (
-                <Code className={className}>{children}</Code>
-              );
-            },
-          }}
-        >
-          {instructions}
-        </ReactMarkdown>
-
-        {assets &&
-          assets.map((asset, index) => {
-            return (
-              <div key={index}>
-                <p className={styles.asset}>{asset}</p>
-                <a className={styles.button} href={`/ports/${port}/assets/${asset}`}>
-                  <Icon className="mr-2" icon="tabler:download" width="1.5rem" /> Download
-                </a>
-              </div>
-            );
-          })}
-      </div>
-
-      <ExtendedFab href="/" icon="bx:brush" variant="secondary">
-        Check all ports
-      </ExtendedFab>
-
-      <Footer />
+        <ExtendedFab href="/" icon="bx:brush" variant="secondary">
+          Check all ports
+        </ExtendedFab>
+      </Layout>
     </>
   );
 }
