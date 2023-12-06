@@ -58,7 +58,8 @@ export default function Port({ port, title, platform, screenshots, instructions,
     <>
       <Layout meta={meta} port={port}>
         <Hero {...hero} />
-        <div id="instructions" className="mx-auto max-w-4xl px-4 pb-4">
+
+        <div id="instructions" className="mx-auto max-w-4xl px-4 pb-4 text-[#D1D5DB] lg:text-xl">
           <div className="mx-auto my-8 flex max-w-4xl items-center justify-center gap-4 text-2xl text-light-purple">
             <Icon className="h-10 w-10 p-1" icon="material-symbols:brush" />
             <p>Instalation</p>
@@ -73,6 +74,13 @@ export default function Port({ port, title, platform, screenshots, instructions,
                   <code className={className}>{children}</code>
                 ) : (
                   <Code className={className}>{children}</Code>
+                );
+              },
+              a({ children, ...props }) {
+                return (
+                  <a className="text-pink no-underline transition-colors ease-linear hover:text-acid-green">
+                    {children}
+                  </a>
                 );
               },
             }}
