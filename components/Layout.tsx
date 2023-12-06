@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { Navbar, Footer } from './';
+import { TopBar, Footer } from './';
 import React, { ReactElement, ReactNode } from 'react';
 
 interface CallToAction {
@@ -24,7 +24,7 @@ interface Props {
 export default function Layout({ meta, children, port, variant = 'primary' }: Props): ReactElement {
   return (
     <>
-      <Navbar port={port} />
+      <TopBar port={port} />
       <Head>
         <meta name="og:image" content={meta.image} />
 
