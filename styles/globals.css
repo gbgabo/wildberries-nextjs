@@ -72,8 +72,9 @@ h3 {
 }
 
 a {
-  color: inherit;
+  color: var(--wb-acid-green);
   text-decoration: none;
+  line-break: anywhere;
 }
 
 * {

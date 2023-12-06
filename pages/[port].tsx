@@ -1,9 +1,6 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
-import Link from 'next/link';
-import styles from '../styles/Port.module.css';
-import Image from 'next/image';
 import { getPort, getPorts } from '../lib/ports';
-import { ExtendedFab, Code, Layout, Hero } from '../components';
+import { ExtendedFab, Code, Layout, Hero, Button } from '../components';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { Icon } from '@iconify/react';
@@ -61,15 +58,15 @@ export default function Port({ port, title, platform, screenshots, instructions,
     <>
       <Layout meta={meta} port={port}>
         <Hero {...hero} />
-        <div id="instructions" className={styles.instructions}>
-          <div className={styles.description}>
-            <Icon className={styles.sectionIcon} icon="material-symbols:brush" />
-            <p>Installation</p>
+        <div id="instructions" className="mx-auto max-w-4xl px-4 pb-4">
+          <div className="mx-auto my-8 flex max-w-4xl items-center justify-center gap-4 text-2xl text-light-purple">
+            <Icon className="h-10 w-10 p-1" icon="material-symbols:brush" />
+            <p>Instalation</p>
           </div>
 
           <ReactMarkdown
             remarkPlugins={[remarkGfm]}
-            className={styles['instructions-content']}
+            className="pb-8"
             components={{
               code({ node, inline, className, children, ...props }) {
                 return inline ? (
@@ -87,10 +84,10 @@ export default function Port({ port, title, platform, screenshots, instructions,
             assets.map((asset, index) => {
               return (
                 <div key={index}>
-                  <p className={styles.asset}>{asset}</p>
-                  <a className={styles.button} href={`/ports/${port}/assets/${asset}`}>
-                    <Icon className="mr-2" icon="tabler:download" width="1.5rem" /> Download
-                  </a>
+                  <p className="m-auto w-fit rounded-t-lg bg-darker-purple p-4 text-light-purple">{asset}</p>
+                  <Button href={`/ports/${port}/assets/${asset}`} icon="tabler:download">
+                    Download
+                  </Button>
                 </div>
               );
             })}
