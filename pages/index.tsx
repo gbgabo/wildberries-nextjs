@@ -1,8 +1,7 @@
 import type { GetStaticProps } from 'next';
-import Head from 'next/head';
 import Link from 'next/link';
 import { getPorts } from '../lib/ports';
-import { ExtendedFab, Layout, Logo } from '../components';
+import { ExtendedFab, Hero, Layout, Logo } from '../components';
 
 interface Props {
   portsData: {
@@ -20,12 +19,6 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 };
 
-const slides = [
-  '/ports/vscode/screenshots/vscode.png',
-  '/ports/duckduckgo/screenshots/duckduckgo.png',
-  '/ports/gtk/screenshots/gtk.png',
-];
-
 const meta = {
   title: 'Wildberries',
   description: 'A dark theme for purple lovers',
@@ -36,13 +29,18 @@ const hero = {
   title: <Logo />,
   subtitle: 'An experimental dark theme for people who love purple',
   cta: { text: 'Apply Theme', href: '#instructions', icon: 'material-symbols:brush' },
-  slides: slides,
+  slides: [
+    '/ports/vscode/screenshots/vscode.png',
+    '/ports/duckduckgo/screenshots/duckduckgo.png',
+    '/ports/gtk/screenshots/gtk.png',
+  ],
 };
 
 export default function Home({ portsData }: Props) {
   return (
     <>
-      <Layout hero={hero} meta={meta}>
+      <Layout meta={meta} variant="secondary">
+        <Hero {...hero} />
         <section
           id="ports"
           className="bg-fixed p-8 md:p-20"

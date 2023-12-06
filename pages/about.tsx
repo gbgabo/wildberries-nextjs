@@ -73,7 +73,7 @@ export default function About() {
           />
         </div>
         <div>
-          <div className="mx-auto max-w-6xl rounded-b-lg px-6 py-10 text-lg leading-8 backdrop-blur-sm sm:px-6 md:px-16">
+          <div className="mx-auto max-w-6xl rounded-b-lg px-6 py-10 text-lg leading-8 text-[#D1D5DB] backdrop-blur-sm sm:px-6 md:px-16">
             <h2 className="m-0 pb-10 text-center text-xl font-bold">Wildberries can be the color theme for you</h2>
             <p className="mb-5">
               And yeah, it&apos;s not for everyone, but once I couldn&apos;t find any color theme for my daily

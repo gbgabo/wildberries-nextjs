@@ -1,14 +1,12 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
-import Head from 'next/head';
 import Link from 'next/link';
 import styles from '../styles/Port.module.css';
 import Image from 'next/image';
 import { getPort, getPorts } from '../lib/ports';
-import { Footer, Hero, Navbar, ExtendedFab, Code, Slider, Button } from '../components';
+import { ExtendedFab, Code, Layout, Hero } from '../components';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { Icon } from '@iconify/react';
-import Layout from '../components/Layout';
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const port = context.params!.port as string;
@@ -61,7 +59,8 @@ export default function Port({ port, title, platform, screenshots, instructions,
 
   return (
     <>
-      <Layout meta={meta} hero={hero} port={port}>
+      <Layout meta={meta} port={port}>
+        <Hero {...hero} />
         <div id="instructions" className={styles.instructions}>
           <div className={styles.description}>
             <Icon className={styles.sectionIcon} icon="material-symbols:brush" />

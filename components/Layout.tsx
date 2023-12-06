@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { Hero, Navbar, Slider, Footer } from './';
+import { Navbar, Footer } from './';
 import React, { ReactElement, ReactNode } from 'react';
 
 interface CallToAction {
@@ -14,30 +14,14 @@ interface MetaTags {
   image: string;
 }
 
-interface HeroElements {
-  title: string | ReactNode;
-  subtitle?: string | ReactNode;
-  cta?: CallToAction;
-  slides?: string[] | null;
-}
-
 interface Props {
   meta: MetaTags;
-  hero?: HeroElements;
   children?: ReactNode;
   port?: string;
+  variant?: 'primary' | 'secondary';
 }
 
-export default function Layout({ meta, hero, children, port }: Props): ReactElement {
-  const slideList =
-    hero &&
-    hero.slides &&
-    hero.slides.map((screenshot) => {
-      return {
-        element: <img alt={`port screenshot`} src={screenshot} />,
-      };
-    });
-
+export default function Layout({ meta, children, port, variant = 'primary' }: Props): ReactElement {
   return (
     <>
       <Navbar port={port} />
@@ -53,13 +37,8 @@ export default function Layout({ meta, hero, children, port }: Props): ReactElem
         <link rel="preload" href="/fonts/JetBrainsMono-VariableFont_wght.ttf" as="font" crossOrigin="" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {hero && (
-        <Hero title={hero.title} subtitle={hero.subtitle} cta={hero.cta}>
-          {slideList && <Slider slides={slideList} />}
-        </Hero>
-      )}
       {children}
-      <Footer />
+      <Footer variant={variant} />
     </>
   );
 }
