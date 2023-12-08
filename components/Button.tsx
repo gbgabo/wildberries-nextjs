@@ -21,7 +21,7 @@ export default function Button({ href, children, variant = 'primary', icon, fab 
       <a
         className={`${variants[variant]} ${
           (fab && 'rounded-3xl shadow-md') || 'rounded-xl'
-        } grid grid-cols-[fit-content(200px)_auto] items-center justify-center gap-4 p-5 font-bold transition-all ease-out`}
+        } grid grid-cols-[fit-content(200px)_auto] items-center justify-center gap-4 p-5 font-semibold tracking-wide transition-all ease-out`}
       >
         {icon && <Icon className="col-span-1" height="100%" width="auto" icon={icon} />}
         <span className="whitespace-nowrap py-[1px]">{children}</span>
