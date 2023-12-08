@@ -2,14 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: "JetBrains Mono";
-  src: url("/fonts/JetBrainsMono-VariableFont_wght.ttf");
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-}
-
 :root {
   --wb-dark-purple: #240041;
   --wb-darker-purple: #19002e;
@@ -47,7 +39,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "JetBrains Mono", monospace, -apple-system, BlinkMacSystemFont,
+  font-family: 'JetBrains Mono Variable', sans-serif, monospace, -apple-system, BlinkMacSystemFont,
     Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
     Helvetica Neue, sans-serif;
   background-color: var(--background-dark);

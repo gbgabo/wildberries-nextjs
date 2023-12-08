@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fontsource-variable/jetbrains-mono": "^5.0.19",
     "@vercel/og": "^0.0.20",
     "gray-matter": "^4.0.3",
     "next": "^12.2.3",

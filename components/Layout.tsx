@@ -34,7 +34,6 @@ export default function Layout({ meta, children, port, variant = 'primary' }: Pr
         <meta name="description" content={meta.description} />
         <meta property="og:description" content={meta.description} key="ogdesc" />
 
-        <link rel="preload" href="/fonts/JetBrainsMono-VariableFont_wght.ttf" as="font" crossOrigin="" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       {children}
