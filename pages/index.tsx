@@ -27,7 +27,7 @@ const meta = {
 
 const hero = {
   title: (
-    <div className="h-16 w-max text-3xl md:h-24 md:text-5xl">
+    <div className="h-16 w-max text-3xl md:h-28 md:text-5xl">
       <Logo />
     </div>
   ),
