@@ -26,7 +26,11 @@ const meta = {
 };
 
 const hero = {
-  title: <Logo />,
+  title: (
+    <div className="h-16 w-max text-3xl md:h-24 md:text-5xl">
+      <Logo />
+    </div>
+  ),
   subtitle: 'An experimental dark theme for people who love purple',
   cta: { text: 'Apply Theme', href: '#instructions', icon: 'material-symbols:brush' },
   slides: [
