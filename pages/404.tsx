@@ -1,6 +1,5 @@
-import Link from "next/link";
-import Head from "next/head";
-import styles from "../styles/FourOhFour.module.css";
+import Head from 'next/head';
+import { Button } from '../components';
 
 export default function FourOhFour() {
   return (
@@ -10,29 +9,20 @@ export default function FourOhFour() {
         <meta property="og:title" content="404" key="ogtitle" />
 
         <meta name="description" content="Nothing fruitful here!" />
-        <meta
-          property="og:description"
-          content="Nothing fruitful here!"
-          key="ogdesc"
-        />
+        <meta property="og:description" content="Nothing fruitful here!" key="ogdesc" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className={styles.container}>
-        <div className={styles.section}>
-          <h1>404</h1>
+      <div className="flex h-screen flex-col flex-nowrap content-center items-center justify-center">
+        <div className="flex h-fit w-screen flex-col flex-nowrap content-center items-center justify-center bg-darker-purple py-20">
+          <h1 className="text-9xl font-extrabold">404</h1>
           <h2>Nothing fruitful to find here</h2>
-          <div className={styles.options}>
-            <Link href="/">
-              <a>
-                Available ports <img src="/icons/brush.svg" />
-              </a>
-            </Link>
-            <Link href="/about">
-              <a>
-                About Wildberries
-                <img src="/icons/pallete.svg" />
-              </a>
-            </Link>
+          <div className="flex flex-col gap-4 md:flex-row">
+            <Button href="/" icon="brush">
+              Available ports
+            </Button>
+            <Button href="/about" icon="pallete">
+              About Wildberries
+            </Button>
           </div>
         </div>
       </div>
