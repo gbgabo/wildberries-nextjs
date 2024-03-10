@@ -29,8 +29,8 @@ export default function Hero({ children, title, subtitle, slides, cta }: Props):
   return (
     <main
       className="relative z-20 grid min-h-screen grid-rows-2 content-center items-center justify-center gap-16 bg-darker-purple 
-                bg-gradient-to-t from-darker-purple from-60% to-cherry p-10 shadow-lg md:grid-cols-2 
-                  md:grid-rows-1 md:gap-0 md:from-30% md:p-40"
+                bg-gradient-to-t from-darker-purple from-80% to-cherry p-10 shadow-lg md:grid-cols-2 
+                md:grid-rows-1 md:gap-0 md:bg-gradient-to-tl md:from-60% md:to-95% md:p-40"
     >
       <div className="flex flex-col items-center justify-center md:mr-56 md:items-start">
         <h1 className="m-0 text-4xl font-semibold md:text-5xl">{title}</h1>
