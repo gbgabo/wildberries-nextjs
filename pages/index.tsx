@@ -32,7 +32,7 @@ const hero = {
     </div>
   ),
   subtitle: 'An experimental dark theme for people who love purple',
-  cta: { text: 'Apply Theme', href: '#instructions', icon: 'material-symbols:brush' },
+  cta: { text: 'Apply Theme', href: '#ports', icon: 'material-symbols:brush' },
   slides: [
     '/ports/vscode/screenshots/vscode.png',
     '/ports/duckduckgo/screenshots/duckduckgo.png',
