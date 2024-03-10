@@ -69,11 +69,12 @@ export default function Port({ port, title, platform, screenshots, instructions,
             remarkPlugins={[remarkGfm]}
             className="pb-8"
             components={{
-              code({ node, inline, className, children, ...props }) {
-                return inline ? (
-                  <code className={className}>{children}</code>
-                ) : (
+              code({ node, className, children, ...props }) {
+                const match = /language-(\w+)/.exec(className || '');
+                return match ? (
                   <Code className={className}>{children}</Code>
+                ) : (
+                  <code className={className}>{children}</code>
                 );
               },
               a({ children, ...props }) {
