@@ -1,3 +1,5 @@
+> ## ⚠️ Notice: Legacy project, [active project available at gbgabo/wildberries](https://github.com/gbgabo/wildberries)
+
 <div align="center">
 <img src="./public/img/ui/wb_brand.svg" alt="Wildberries" width="500px">
 <h2>An experimental dark theme for people who love purple 🍒</h2>
